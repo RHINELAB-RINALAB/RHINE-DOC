@@ -1,0 +1,9 @@
+[1] Config.pm:308> INFO - This is Biber 2.20
+[2] Config.pm:311> INFO - Logfile is 'DOC-OR-04.blg'
+[224] biber-MSWIN64:340> INFO - === 
+[289] Biber.pm:420> INFO - Reading 'DOC-OR-04.bcf'
+[490] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
+[527] bbl.pm:676> INFO - Writing 'DOC-OR-04.bbl' with encoding 'UTF-8'
+[528] bbl.pm:779> INFO - Output to DOC-OR-04.bbl
+[528] Biber.pm:131> WARN - The file 'DOC-OR-04.bcf' does not contain any citations!
+[528] Biber.pm:133> INFO - WARNINGS: 1

@@ -1,0 +1,15 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'main.blg'
+[190] biber-MSWIN64:340> INFO - === 
+[246] Biber.pm:420> INFO - Reading 'main.bcf'
+[436] Biber.pm:994> INFO - Found 5 citekeys in bib section 0
+[461] Biber.pm:4463> INFO - Processing section 0
+[482] Biber.pm:4654> INFO - Looking for bibtex file 'bibb.bib' for section 0
+[549] bibtex.pm:1713> INFO - LaTeX decoding ...
+[563] bibtex.pm:1519> INFO - Found BibTeX data source 'bibb.bib'
+[722] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[723] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[723] Biber.pm:4283> INFO - Sorting list 'anyt/global//global/global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[723] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[740] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[745] bbl.pm:779> INFO - Output to main.bbl

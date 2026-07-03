@@ -1,0 +1,20 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Specification}{2}{}%
+\contentsline {subsubsection}{\numberline {1.1.1}Document code, priority}{2}{}%
+\contentsline {subsubsection}{\numberline {1.1.2}Body of issue}{2}{}%
+\contentsline {subsubsection}{\numberline {1.1.3}Date and Version}{2}{}%
+\contentsline {section}{\numberline {2}Laboratory specification}{3}{}%
+\contentsline {section}{\numberline {3}Institutional organization}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Research division}{5}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Artificial Intelligence Group}{5}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Mathematical and Physics (theoretical) Group}{6}{}%
+\contentsline {subsubsection}{\numberline {3.1.3}Specialized - Modelling Group}{8}{}%
+\contentsline {subsection}{\numberline {3.2}Organization and Logistics Division}{8}{}%
+\contentsline {subsection}{\numberline {3.3}Pedagogy Division}{8}{}%
+\contentsline {section}{\numberline {4}Recruitments}{9}{}%
+\contentsline {subsection}{\numberline {4.1}Training regime}{10}{}%
+\contentsline {section}{\numberline {5}Logistics}{10}{}%
+\contentsline {subsection}{\numberline {5.1}Publication format and website}{10}{}%
+\contentsline {subsection}{\numberline {5.2}Storage options and deployments}{11}{}%
+\contentsline {section}{\numberline {6}Funding and costs}{11}{}%

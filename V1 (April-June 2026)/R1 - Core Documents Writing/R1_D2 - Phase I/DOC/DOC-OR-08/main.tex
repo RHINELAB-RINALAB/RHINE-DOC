@@ -1,0 +1,302 @@
+% ----------
+% Tech report template
+% 
+% ----------
+
+% --------- PACKAGE --------- %
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amsbsy}
+\usepackage{bm} % normal text bold font inside math environments
+\usepackage{stmaryrd} % Saint Mary of stuff computer science typographic symbol
+\usepackage{geometry}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[russian,english]{babel}
+\usepackage[runin]{abstract}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{enumitem}
+%\usepackage{piton} % Without this enable, it might not work for the listing package. Switch to LuaLateX if you want to use this option, however. 
+\usepackage{fancyhdr}
+%\usepackage{helvet}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+%\usepackage[scaled=0.90]{helvet} % Font 1 for package
+%\usepackage[scaled=0.85]{beramono} % Font 2 for package. If you want this configuration, change this with the following configuration, or rather just comment the other one out
+\usepackage{mlmodern}
+\usepackage{xcolor}
+
+\definecolor{GCColor}{HTML}{B35A00}     % Burnt orange
+\definecolor{SCColor}{HTML}{8C4A00}     % Dark copper
+\definecolor{IDXColor}{HTML}{6E2C00}    % Dark rust
+
+\definecolor{SCOptColor}{HTML}{A66A2C}  % Muted copper
+\definecolor{STOptColor}{HTML}{8A6A3A}  % Dark amber-brown
+\definecolor{IDXOptColor}{HTML}{6F6F6F} % Neutral dark grey
+
+\usepackage{tcolorbox}
+\usepackage{fancyvrb}
+
+% Bibliography
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+
+% --------- PACKAGE --------- %
+\input{preamble.tex}
+\addbibresource{bibb.bib} %Imports bibliography file
+
+\newtheorem{org}{Organization}[section]
+
+% ----------
+% Variables
+% ----------
+
+\title{\textbf{Cost reporting} \\ Intended resource usage and monetary proposal} % Full title of your tech report
+\runningtitle{} % Short title
+\author{Fujimiya Amane (Bui Gia Khanh) \\ {\small as RHINELAB Leader, Founder and Principal Director}} % Full list of authors
+\runningauthor{Amane et al.} % Short list of authors
+\affiliation{} % Affiliation e.g. University or Company
+\department{RHINELAB-RINALAB} % Department or Office
+\memoid{DOC-OR-08} % ID of the tech report
+\theyear{2026} % year of the tech report
+\mydate{\today} %the date
+
+
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+%\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+%  breakable=true,
+%  listing engine=minted,
+%  listing only,
+%  minted language=#2,
+%  minted style=default,
+%  minted options={%
+%    linenos,
+%    gobble=0,
+%    breaklines=true,
+%    breakafter=,,
+%    fontsize=\small,
+%    numbersep=8pt,
+%    #1},
+%  boxsep=0pt,
+%  left skip=0pt,
+%  right skip=0pt,
+%  left=25pt,
+%  right=0pt,
+%  top=3pt,
+%  bottom=3pt,
+%  arc=5pt,
+%  leftrule=0pt,
+%  rightrule=0pt,
+%  bottomrule=2pt,
+%  toprule=2pt,
+%  colback=bg,
+%  colframe=orange!70,
+%  enhanced,
+%  overlay={%
+%    \begin{tcbclipinterior}
+%    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+%    \end{tcbclipinterior}},
+%  #3}
+
+% Python preset environment. 
+\newcommand{\pyobject}[1]{\fbox{\color{red}{\texttt{#1}}}}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+% Inline python highlighting (Might not look great, but eh)
+\lstset{language=Python,keywordstyle={\bfseries \color{blue}}}
+
+
+% ----------
+% actual document
+% ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    \noindent
+    This document outlines the specific details entailing the \textit{logistical requirement} and proposal, to IGNITE institute, and financial support scope and purposes in negotiation thereof, for the upcoming \textbf{Phase I} active research period of RHINELAB. Key notions are introduced for RHINELAB's purpose, financial support incentives, declared goals and tasks, and scope for financial usage. 
+
+    \keywords{}
+\end{abstract}
+
+\vspace{2.5cm}
+
+
+
+\thispagestyle{firstpage}
+
+\pagebreak
+
+% ----------
+% End of first page
+% ----------
+
+\newgeometry{} % Redefine geometries (normal margins)
+
+\section{Specification}
+\label{sec:spec}
+
+Provide specification details, metaprogramming. 
+
+\subsection{Document code, priority}
+
+{\footnotesize
+Provide document codes, additional document code, purpose, organization, authorship and anyone contributing to the report, identification of purpose (proposal, or research, indexing 01). Priority code, additional conditions. Does it override anything, or add to anything?
+}
+
+Document codes DOC-OR-08, Serial 08, code DOC, additional code OR. Used for declaration on purpose, goals, tasks, financial request and usage of monetary resources per specification. Intended to deliver to IGNITE Institute, Hanoi, Vietnam. 
+
+\subsection{Body of issue}
+
+{\footnotesize
+Who issue, team or departmental attachment. 
+}
+
+\textsf{RHINELAB@CAD} Central Administrator, Laboratory Leader. 
+
+\subsection{Date and Version}
+
+Finished provisionally on arrival, v1 (16/06/26), variations on completion days and addition post-official release. 
+
+
+%\section{Citations}
+%Items that are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion} together with Einstein's journal paper \cite{einstein} and Dirac's book \cite{dirac}---which are physics-related items. Next, citing two of Knuth's books: \textit{Fundamental Algorithms} \cite{knuth-fa} and \textit{The Art of Computer Programming} \cite{knuthwebsite}.
+
+%\medskip
+
+%\printbibliography %Prints bibliography
+\section{Introduction}
+
+After the inclusion and intention of incorporating support and institutional adherence to IGNITE Institute (Institute of Generative New Intelligence Technology and Education, Hanoi, Vietnam), basing on previous informal discussion about RHINELAB relying on supports and graceful backing of the institute, there exists the need for a \textbf{provisional} collaborative framework on support and financial request from the institute, to specialized laboratory such as RHINELAB of present for its internal operation and maintenance. Basing on shared details, shared mission and goals, with otherwise preferable timeline and intended workload, this document serves as a provisional, first-account statement inclusion of what the laboratory will do, what it will have to achieve, what can be made possible for the lab to work to its greatest effect, and what entails the current structure of the laboratory for that support alone. We note that it is a \textbf{provisional document}, so much so is to outline the \textit{intended purpose} of the laboratory work, and if the need for formal documentation arise, it will be dependent on details provided here and subsequent documents. 
+
+\subsection{Preliminary details on RHINELAB}
+
+As seen in its website for more details\footnote{The main website of RHINELAB can be found in https://rhinelab-rinalab.github.io/about.html respectively.}. In general, RHINELAB focuses on theoretical research, or on presumption being theoretical physics, theoretical artificial intelligence and automata theories, is an \textbf{open-source} (all knowledge and academic infrastructures are ideally open to general public) laboratory/research group focusing on the following list of topics:
+\begin{enumerate}[topsep=0pt,itemsep=0pt]
+    \item \textbf{Theoretical computer science:} the study of computer or generally, dynamic processing constructs, of whom are to be said of automatic(on), and their structural configurations.
+    \item Mathematical studies of abstract objects.
+    \item Theory of modelling. Application of such to physics and tangent fields. 
+    \item Theoretical artificial intelligence and artificial intelligence deployment system (LLM, which falls into that category).
+    \item Physical system modelling and theoretical evaluations.
+\end{enumerate}
+
+At the current stage of development, we are mostly concerned with the theoretical aspect, including touching on simulation and stress-testing systems. The focus objectives and main activities of RHINELAB are then focused on \textbf{foundational knowledge building}, \textit{repository of knowledge construction} (wiki-style), creating a concentrated mass of scientific activities and discourses on innovative, novel, original further to all manner of critiques and contribution; \textbf{deep research} on topics, inquiries, assumptions, and so on, and \textit{modern state-of-the-art} pursuits of specialized fields like AI, and computer science utilization. 
+
+We are also an \textbf{intellectual club} in additional to being a laboratory, thus giving us responsibilities and goals to create \textbf{community}, activities regarding such, and funding for \textbf{intellectual events/organization} and infrastructures, either in Vietnam or globally, so to speak. 
+
+\section{Purpose}
+
+The purpose of RHINELAB is rather \textit{unique in mission and scope}, for it also intends to research, for example, on the epistemology of research, science; for foundational investigation of scientific fields like artificial intelligence, and all. However, since our goal is to align RHINELAB's available vision and mission to IGNITE institute, we first need to see what is the central-line goal that made up the institute's perspective, at least from what is publicly available that we can access of, for the forefront of the institute itself. 
+
+\subsection{From the institute's perspective}
+
+From IGNITE institute, at least outlined in its website deliverance\footnote{see in https://ignitein.org/en in the purpose and vision pages.}, we can have the following information regarding such. 
+
+\subsubsection{Vision - Mission}
+
+\begin{enumerate}[itemsep=1pt,topsep=1pt]
+    \item To become a leading Think Tank in theory, science and technology strategy, and solutions for building a future society based on Technology and Education.
+    \item To construct new and advanced thinking frameworks to prepare for the era of Global Awakening and Vietnam's breakthrough development.
+    \item Innovative Culture - Awakened Humanity - Soft Power.
+\end{enumerate}
+
+\subsubsection{Objectives}
+\begin{enumerate}[topsep=0pt,itemsep=0pt]
+    \item Elevating awareness of human mission. 
+    \item Fostering creating thinking and knowledge using AI. 
+    \item Developing new theories for the future society. 
+    \item Cultivating mindful individuals and a culture of innovation. 
+\end{enumerate}
+
+\subsubsection{Main activities}
+
+\begin{enumerate}[topsep=0pt,itemsep=0pt]
+    \item Research on the development trends of human society under the influence of awakened intelligence, artificial intelligence, and soft power.
+    \item Study of major strategic theories, geopolitics, and global living spaces aimed at promoting Vietnam's socio-economic development.
+    \item Development of strategies for science and technology, innovation, digital transformation, AI, data, living environments, soft power, and international security.
+    \item Exploration of liberal education methods, strategies for science and technology, innovation culture, soft power, human potential, spiritual culture, awakening, and the structure of consciousness.
+    \item Training programs in talent development, strategic skills, and systemic architectural thinking.
+    \item Research and application of advanced technologies — especially AI, biotechnology, quantum science, automation, and intelligent semiconductor electronics.
+\end{enumerate}
+
+\subsection{From RHINELAB's perspective}
+
+From RHINELAB perspectives, we are currently in \textbf{Phase I}. Specifically, the details of phase I is as followed. We note that phase I will \textit{end} on \textbf{September 2027}, thus to move on to Phase II for our operations on intensive researches. 
+
+\subsubsection{Vision - Mission}
+
+\begin{enumerate}[topsep=0pt,itemsep=0pt]
+    \item To become an open-source, open-knowledge, innovative and creative \textbf{research laboratory} with both edges and foundations. 
+    \item To become an international laboratory, more so not restricted to Vietnam. 
+    \item To research and create preliminary platforms that would be used for knowledge system, foundations for knowledge, educations, knowledge distributions and creations, specifically in physics and AI later in Phase II of the laboratory development timeline. 
+    \item To create the precursor form a new or revision of the old scholar's tradition on scientific thinking and discourses, intellectual debates and innovations. 
+\end{enumerate}
+
+\subsubsection{Objective}
+
+Subsequently so, our objectives are: 
+
+\begin{enumerate}[topsep=0pt,itemsep=0pt]
+    \item Elevating the importance of \textbf{foundational knowledge}. 
+    \item Create and elevate the position of \textbf{logistical construction} in research culture and our own operation. 
+    \item Develop new theories, creating novel synthesis and producing `cutting-edge research' and as well as `deep research', not just in the form of technology utilization but in culture, in mindset and in the \textit{question-first} research paradigm. 
+    \item Create stable infrastructure for development and expansion of research activities, within criteria like open-source and open-knowledge architecture. Create online international forums for said activities. 
+    \item Developing human intellectuals to the standard of the laboratory and beyond. 
+\end{enumerate}
+
+\subsubsection{Main activities}
+
+Our main activities, specifically for the constraints of Phase I, is as followed. 
+
+\begin{enumerate}[topsep=0pt,itemsep=0pt]
+    \item Research on \textbf{philosophy of science}, the philosophy of fields of sciences, as well as the epistemology of science, pedagogical science, and education. 
+    \item Research on fundamentals of artificial intelligence (theoretical and practicals), theoretical computer science, theoretical and foundational physics/biology, and the general foundational knowledge thereof. 
+    \item Develop pedagogical system for delivering knowledge aside from cold knowledge system. 
+    \item Research on \textbf{intellectual logistics system} and research management interface in general, and ways to decouple research activities from immense bureaucratic overhead without losing the human intellectual in the system. 
+    \item Developing \textbf{platforms} and logistics, \textbf{knowledge archival and creative system} on foundational and modern knowledge. 
+    \item Creating the modern scientist regimen of know-how and preliminary entry barrier for sufficient intellectual activities, and building such system to maturity. 
+    \item Recruit and train people, to develop their skills according to the regimen, training of critical and foundational thinking, question-first mentality and structural thinking. 
+    \item Research on foundational artificial intelligence, specifically on the conceptualization of artificial intelligence and its varied form, the distillation of the overloaded words like consciousness in its forms and uncertainties. 
+\end{enumerate}
+
+Said are our objectives, main activities and the ultimate Phase-X vision of RHINELAB as of date. Such can be provisional or given as in need, however our goal is not simply to research, but to create an \textbf{ecosystem of modern research science} in general, and distillation of pathological, \textit{hidden curriculum} and fragmented development of contemporary scientific system. 
+
+\section{Financial support}
+
+While we are relying on \textbf{open-source and free} architecture to deliver our contents and working space, such is rather preferable, under terms and conditions, for the institute to provide us with reasonable monetary incentives and provisions. Said are to cover the architectures and maintenance work of the laboratory system in general, but also as funding for many of its activities, mostly online and remote, to foster the community that would be formed down the road. Here are some of the outlined logistical requisition and request from us. 
+
+To obtain such fund, we also agree to partake on specific, within-scope and within-capability tasks that the institute would be able to assign for us, if there is any as a side contribution. Our development and research system can also be contributed to capabilities of the institute as well, as per our agreement and the dependency there of the laboratory is, to the institute with their generous support. As such, we will be able to extend our labour in such manner. 
+
+\subsection{Logistics}
+
+Concurrently, we would like to request the usage of, some of the following: 
+
+\begin{enumerate}
+    \item \textbf{Cloudflare Pages} on the level of \textbf{Pro} subscription. This comes at the price of \textbf{20\$ a month}, with support of: 5 concurrent builds, 5,000 builds per months, 250 custom domains per project, unlimited site, static requests and bandwidth for accessibility. We use this for now as the fundamental block of knowledge and laboratory organization system. 
+    \item \textbf{Github Team} for the level of Team subcription. As of date, we have one maintaining account, for \textbf{4 \$ a month}. This includes usage of GitHub Copilot (in add-on), GitHub Models, Advanced Security and organization management, and additional GitHub sandbox. Additionally, 3,000 CI/CD minutes per month, 2GB of packages storage for public repositories, and \textbf{GitHub Pages} websites. 
+    \item \textbf{VPS (Virtual Private Server)}. In case that the institute does not have its own VPS that we can \textit{request for partial shared usage}, we would like to request a low-end, VPS subscription for as much as \textbf{10\$ per month}. This gives us 2vCPU core, 4-8GB RAM, and 50-150GB storages for hosting complex and dynamics website system for our organization experimental case usage. 
+\end{enumerate}
+
+\subsection{Compute cost}
+
+For computation, we would like to request the shared usage to the institute's cloud servicing of AI-training \textbf{NVIDIA H100 GPU}, per negotiated usage per month that can be delivered. This will be used for AI, either generative or non-generative, wider usage of AI in general, simulation of physics, computational biology, computational science in general, and experimental test cases, restricted as such. 
+
+\subsection{Reserve funding}
+
+Optionally, we would like to request some \textbf{fixed reserve funding} for activities and fundamentals. This is used in laboratory operations, but as well as \textbf{club's activity management}, orchestrations, and for buying stuffs that would be needed for the lab to work smoothly, as well as upcoming events' logistics. Nominally so, since this is optional, we would like to have at least fundamentally 20\$ only, and negotiated further on our own ability to host such community events and such. 
+
+\section{Conclusion}
+
+Given the state of this document as \textbf{provisional}, the document is incomplete. It would be central to assume that further negotiation and pushback would be received. Nevertheless, RHINELAB would have to earn its trust to the institute and its capacity throughout this Phase I working, so that to request for this funding in earnest and honesty of capabilities and scope. We hope that the collaboration between the institute and RHINELAB will go in hand as smooth as possible, and our goals will be configured to align as much so, for the benefit of scientific development and fostering a future culture of research. 
+
+\end{document}
+
+% ----------

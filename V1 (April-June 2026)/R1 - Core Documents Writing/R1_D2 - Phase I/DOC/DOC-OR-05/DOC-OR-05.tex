@@ -1,0 +1,331 @@
+% ----------
+% Tech report template
+% 
+% ----------
+
+% --------- PACKAGE --------- %
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amsbsy}
+\usepackage{bm} % normal text bold font inside math environments
+\usepackage{stmaryrd} % Saint Mary of stuff computer science typographic symbol
+\usepackage{geometry}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[runin]{abstract}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{booktabs}
+%\usepackage{piton} % Without this enable, it might not work for the listing package. Switch to LuaLateX if you want to use this option, however. 
+\usepackage{fancyhdr}
+%\usepackage{helvet}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{etoolbox}
+%\usepackage[scaled=0.90]{helvet} % Font 1 for package
+%\usepackage[scaled=0.85]{beramono} % Font 2 for package. If you want this configuration, change this with the following configuration, or rather just comment the other one out
+\usepackage{mlmodern}
+\usepackage{xcolor}
+
+% Bibliography
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+
+% --------- PACKAGE --------- %
+\input{preamble.tex}
+\addbibresource{bibb.bib} %Imports bibliography file
+
+
+% ----------
+% Variables
+% ----------
+
+\title{\textbf{Organization Statement} \\ Pillar and Philosophical Centre of RHINELAB} % Full title of your tech report
+\runningtitle{Foundational assessment} % Short title
+\author{Fujimiya Amane (Bui Gia Khanh)} % Full list of authors
+\runningauthor{Amane et al.} % Short list of authors
+\affiliation{} % Affiliation e.g. University or Company
+\department{RHINELAB - Core Management Division} % Department or Office
+\memoid{DOC-OR-05v3} % ID of the tech report
+\theyear{2026} % year of the tech report
+\mydate{May, 2026} %the date
+\usepackage{tcolorbox}
+\usepackage{fancyvrb}
+
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+%\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+%  breakable=true,
+%  listing engine=minted,
+%  listing only,
+%  minted language=#2,
+%  minted style=default,
+%  minted options={%
+%    linenos,
+%    gobble=0,
+%    breaklines=true,
+%    breakafter=,,
+%    fontsize=\small,
+%    numbersep=8pt,
+%    #1},
+%  boxsep=0pt,
+%  left skip=0pt,
+%  right skip=0pt,
+%  left=25pt,
+%  right=0pt,
+%  top=3pt,
+%  bottom=3pt,
+%  arc=5pt,
+%  leftrule=0pt,
+%  rightrule=0pt,
+%  bottomrule=2pt,
+%  toprule=2pt,
+%  colback=bg,
+%  colframe=orange!70,
+%  enhanced,
+%  overlay={%
+%    \begin{tcbclipinterior}
+%    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+%    \end{tcbclipinterior}},
+%  #3}
+
+% Python preset environment. 
+\newcommand{\pyobject}[1]{\fbox{\color{red}{\texttt{#1}}}}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+% Inline python highlighting (Might not look great, but eh)
+\lstset{language=Python,keywordstyle={\bfseries \color{blue}}}
+
+
+% ----------
+% actual document
+% ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    \noindent
+    This document serves only a rather short purpose - to simply set an account chiefly on how to tackle, or how to manage AI usage in the laboratory at large, and how to manage contents and quality checking in the age where AI tools are extending. 
+
+    \keywords{Policy, statement, articulation, foundation, philosophy}
+\end{abstract}
+
+\vspace{2.5cm}
+
+
+
+\thispagestyle{firstpage}
+
+\pagebreak
+
+% ----------
+% End of first page
+% ----------
+
+\newgeometry{} % Redefine geometries (normal margins)
+
+\section{Specification}
+\label{sec:spec}
+
+This is a foundational philosophical manifesto, principle outlining. Of such, the details are given of the document in itself, and no fruther information is required. 
+\subsection{Document code, priority}
+
+%Provide document codes, additional document code, purpose, organization, authorship and anyone contributing to the report, identification of purpose (proposal, or research, indexing 01). Priority code, additional conditions. Does it override anything, or add to anything?
+
+Document code DOC-OR-05 (additional code None), a \textbf{principle manifesto} of the laboratory on itself. Authored by Fujimiya Amane (Bui Gia Khanh) in accordance of Core Management Division. Priority R0 as absolute, non-negotiation statement or analysis. Overriding None. 
+
+\subsection{Body of issue}
+
+Core Management Division
+
+\subsection{Date and Version}
+
+%Version specification across versions, and similarly date of construction. \textbf{Do not remove old dates}, for versioning record. 
+
+Initial final version 1, finished (5/11/2026). Most of the contents are done. 
+
+Second version revision 2, finished (5/12/2025). Fixing a few loopholes in capacity. 
+
+Third version, revision 3, finished (5/12/2025). Adding some clarification. 
+
+\section{Introduction}
+
+In light of the recent event, there exists the demand and perhaps necessity to state and conform with the \textbf{core, non-negotiable} principle of RHINELAB, from now to the foreseeable future, under determination of its founder, and of the absolute resolve that such will take precedent under \textbf{any} form of development in the future, of its mission at large, and its belief at will. As such, \textit{no one is allowed} to stray from these pillars, and of such if anyone are to push forth any form of proposal, they can be rejected on this ground of what to be stated as the ground confirmation, such is to also indicate they \textit{never seriously involves in the lab or institute in itself}, but with their own version, their own interpretation, their own warped and insufficient will of such, and thus is not allowed to of such baseline to propose any meaning change.
+
+Some of the philosophy underneath of such would be \textit{fragmented in terms of content density and focus}, since their form would be rather operational. However, such is the design constraint, because the document anticipates such and are designed for such purpose at mind. While this document does not attempt to, nor it has any obligation of, it serves not as the fixed ruleset to follow procedurally, but as \textbf{pillars} - those that would be never be removed, of the founding father in the same breath of purpose, and of which, for there are, defines what RHINELAB is to be, in its core principle. 
+
+We do not claim that the mission encoded in those principles are to be valid elsewhere. Wholesale integration is not welcome, nor we are of what we are doing in the document as it is written of intentions. Let us state that and begin. 
+
+\section{Principle}
+
+The following principles are to be the \textbf{central pillar} of RHINELAB, listed below with logicalization. Some of them would be informal, yet they will have the same strength. There will be \textbf{no question} to the principles as stated. However, first, the mundane principle can be said of the following. 
+
+\begin{quote}
+    \textit{Vocabulary shapes institutional consciousness, and of what remains to be anything, that the name to call, is a mode of mind, and the sense of which the person, the people, and of anyone to actually perceive some, be it ignorance, be it something else.}
+\end{quote}
+
+And finally. Before to move. 
+
+\begin{quote}
+    What to be said below, are mainly of the \textbf{intellectual and work, life inside RHINELAB} there is. It serves no purpose to pervade of someone's personal, and shall not be to be used to claim more than it has to. Of the 20\% being it socially applicable of the social life inside RHINELAB. To keep such at bay, is what to be said of the principles, as one of its goal.
+\end{quote}
+
+This proportion, will \textbf{follow the argument}, as stated. 
+
+\subsection{Non-corporate structure}
+
+We are a research-first, knowledge-first, and discover-first community, thus making its structures experimental, and at most \textit{semiformal}. All form of \textbf{corporate structure} that robs the soul of the institute is never allowed to be pushed into its operation, of which serves no purpose, and of which pursue \textit{monetary or resource acquisition} in the form of corporate process and prioritization. Channels to access collaborations with corporate entities or so are allowed alongside many collaborative purposes with different entities, however no corporate interest might supersede this fundamental principle. 
+
+In such similar sense, the structure of the lab is not allowed to be formed into political, or corporate-style administrative form, such is also included of its \textbf{Core Management Division}, for there exists no Human Resource department but only \textbf{Research Personnel Management Division}, no more no less, different in its role toward which Human Resource, in its own functionality, and of its own name, are with the members of the inner community, as an example. If one argues, deliberately not allowed, that non-corporate structure is necessary for this or that activity, leaving is a choice, or subordination to the larger intact structure of the laboratory; for which under a repeated assertion, no amount of justification agrees with such term. We allow the lost of function and power, be if it destroys what the system stands for, then it is no more than an abhorrent parasite.  
+
+\subsubsection{Framing?}
+
+Under the question of framing, what should be dealt with, if we are to have no argument thereof, for them to say that they are not proposing of something corporate? The decision here is to be of \textbf{neutral ground}. If any one of independence, can look into it and analyze, and come to the edict on themselves that they are not, never, and ever will, be of corporate, then we shall agree on such front and proceed. Of course, this is affected also by the ground of maneuvering, and of their prestige inside what to be considered of the community, of the mass they produced and of the cost they have paid. However, such shall be there, for us to get a baseline to \textbf{trust them}, but simultaneously a baseline for us to \textbf{not trust them}, and for said assertion to be interpreted, and scrutinized on first contact. We accept the cost of slowness in such foundational argument. The exception is the founder for him to be able to push through quickly with adequate amount of support and consideration, and the allowance for acceptance of uncertainty, and within such, as to be said, even the founder needs to be noticed of their own cost. And the founder himself, must realize, that the system will still criticize him, and for that the community will not have its form. Hard decision will have to come, but that is what to be designed of, accountability not just by a singular paper. 
+
+\subsection{To fight against both}
+
+In a system, of with soul, and human in mind, of which is \textbf{constructed by the people themselves}, for which to serve them and others, let us assert this plainly, without respite nor refutation, for a system to operate at will, of its functions and purpose, let it be so:
+\begin{quote}
+    \textit{That no amount of will, and of design, as to be perfect. There exists no future in which are guaranteed, and of any prediction to be correct. There are to be \textbf{contempt}, there are to be \textbf{trust}. We refuse to have so, and we refuse to treat people of \textbf{true evil}, which also rejecting them, and ourselves, of \textbf{true good}, for there are no angels, and there are no gods in the discourse of man.}
+\end{quote}
+
+\subsection{No idealism}
+
+We get to the point of such, where ideal are to be formed, and of which RHINELAB is particularly subjected to its proposition toward that ideal. But let it be clear of such, \textbf{heading toward ideal} does not mean what to be said of RHINELAB can not be wrong, but so are you, of the reader and of the members that would be reading this. There exists \textbf{no world}, where everyone living in harmony, of which the ladder is starkingly flat, and of which the `director' to be full subordinate to what of his researcher, be it as it will there would be no director in existence. Be it may, that \textbf{never can it be}, that power from miniscule to near absolute, to be unaccounted, of which centralization are justified to be good beyond reasons, and such to say that this laboratory does not work within that absolute plateau. Let it taking on the principle:
+
+\begin{quote}
+    \textit{To be balancing is the test of time, and of the will of people here in this lab. Under no amount of temporal distance, be it may of what to be inquired of, that to collapse everything into an ideal. Hold the tension and treasure it, be it may and operate of its manifestation. Do not mistake the person for them to be absolute evil, yet also do not expect the person to be a pure saint. Do not, under any circumstances, to not trust someone, but also to not trust someone too much, and thus be so. Do the balance, strives for them, not to be idealized of the permeated end, for there exists no end but hidden utopia, to dystopian.}
+
+    A lab where authority is unchecked has no tension - and no accountability. A lab where authority doesn't exist has no tension - and no function.
+\end{quote}
+
+Such is the will of the founder, of whom writing this, and be it may, as long as RHINELAB exists, inquire \textbf{no argument}. No one is ever allowed to refute this, be it so invalidated from start. 
+
+\subsection{Rejection of over-formalization}
+
+While formalization is an important step, lest it be a contingent part of any moving institution and community, we \textbf{reject} the notion of over-formalization, and forget of the issues, to be stated and said about rigid structure and of internal `laws', and of the perceived moral compass or sense of philosophical dealing with notions and frameworks of rationalization. By default, RHINELAB is perceived to be formed of the bulk being 80\% informal or quasi-formal, and processing, communications, formal accountancy, auditing, reaching, collaborative audit or decisions, so on, are the other 20\% bulk of what to be formal. Said of such, the informal channel, while still being \textit{audited usually}, and of discourse generally speaking, is \textit{not allowed to be forsaken of}, or forgotten into any consideration. This also in cooperation with the consideration toward which the factor socially, narratively and collaboratively speaking are relevant, \textbf{must not be out of question} whenever any of the proposal forgot such, and so forth. 
+
+In tangent to this, \textbf{context in time} is a necessity, as of an example, where actions and decisions are to be taken with the view, outlook and analysis, such should be the temporal identification, implicit or not, and is to be said of apparent and inherent factor in any given situation. Preferably, such context \textbf{must be inquired of}, and if not, even then, such elaboration or mention of the context should not be considered of deflection or so, but a must to be legitimatized, and considered in-lane with the discussion, and \textit{cannot be collapsed}. 
+
+The second tangent point, explicit of the same topic, is to reject the \textbf{over-abstraction} and loss of register. For once, of a debate, of an inquiry, of certain fixture, let it be \textbf{clear without hedging}, of record or not on the receivant, nor the deliverance, such to be of \textbf{abstraction mismatch}, where one speaks in the language of the simple man, of which deliberately on point, while the other to be stringent and prudent in their view, forcing unaccounted for constructs, of irrelevant points and fixture, and being high on their horse, thinking for them to be rigorous. Such is a failure in any given sense, for one cannot speak of the same level, equals to treating of what to be the equal men, to be between horse and its owner, even if such is to be said as not the intention or not. Let it be clear that this failure, is the gravest sense of all, for it being the dismissive of other without justification, and should precedence appear, it will be rejected outright with no court to appeal and no assessment to make, except if the defendant of this case to relinquish of adequacy to appeal, and thus the only \textit{mechanism for it removal} - stop doing things on your horseback. Thus, for once if you are to open the thread of one, to many, then for it so that you argue of what inside, of the secondary motions, any given amount of person can return to the first, be it the unnecessary tangent that no one is to be accounted of, and of which given reasons, impedes the flow of conversation. 
+
+The last, third point, contains two moves, of which are realized only now, and does not mean there would not exist the fourth or what to come in the future on such tangent point. First, is the fact that \textbf{categorization} must be exact. When someone speak, let it be clear of all string attached, for one asking for answer does not have \textbf{any} meaning or implication of accepting it, nor they are obligated to. Let it be clear that when you are presented of an opportunity to do something, you do exactly such without burden or wicked setting, of which are to be discussed, of stance to be scrutinized and inquired against, for it to be so that no amount of wreckage from afar is slipped into, later turned against the one allowed such opportunity to manifest in its domain, without knowing, and without the agreement thereof on any of such matter. Be it trivial, be it complex, such is \textbf{not allowed in any given sense}, for it to be no argument. Second, \textbf{removing the human} in any particular decision, discourse, debate, and of such, for works, for inquiry, for research and of which intellectual pursuit is there, is the most horrendous act any given human being can do to any other, for it to never is accounted for, of the community RHINELAB is formed of itself, that it violated the first principle on its own ground. 
+
+When you speak, when you inquire, when you argue, such is to say \textit{do not expect your word and yourself} to be separated, because such is unjust, the connection apparent thus cannot be removed, and the action of distancing yourself from such is the most cowardly possible motion one can take, to remove themselves from the argument, to argue without backing of the real person, and thus anyone can \textit{reject} conversation on that matter, with the particular person that have rejected their own humanhood in the discourse. Let it be clear, for the community RHINELAB is formed of. Your emotion is part of the discourse, and of which you are not allowed to force people to forgo their memories and perception of which you have built, and to say for them to treat you without you, of the unknown person unworthy of discussion. Removing such, no amount of humanity will converse, and the laboratory and its people refuse to acknowledge your bickering to the end. People are here. Not frameworks. Not formal logical structures or be it the logical structure comes from nowhere. Not external models imported \textbf{wholesale} of which of \textit{none of the concern} of the internal model, without justification. People who speak and stand behind what they say. Let it be such, and we take a stance on this. 
+
+\subsection{No hide}
+
+In science, in society, in specific contingent, there exists the fact that for what to be said of the precedence, that conversations are there not allowed, for where topics are never discussed, contradictions are hidden because someone else is to be said of fury and contempt, of topics to be considered taboo, of qualification in gatekeeping. For there are \textbf{youngsters} berating the old of insufficiency irrelevant in context, nor it be relevant ever if saying of \textit{disrespect}. For the topic to cannot be questioned of authority, of the question never was raised, for the topic considered unfit of none reason. And for the old to force what to be said from the youngster as naive, of the senior to hold their ground on arrogance of time and knowledge given of uneven ground. 
+
+\begin{quote}
+    \textit{For when you face a human, of all your knowledge and wisdom, to face them as a human themselves, of soul and heart and not counts and types.}
+
+    For which certain kinds of human and intellectual environments cannot, ever of its ontology, be mass-optimized, without losing their essence.
+\end{quote}
+
+Let us be clear, of which we are to \textbf{no hide}. Under which all subjects and pillars are to be preserved, of only those constraints be it so of will, to set up the stage, all are allowed. Of the embodiment of the laboratory, of RHINELAB, be it so that no questions are unquestioned, of the cost to be not of personal, but of subject substances, for science, and for knowledge. There are no positions of which cannot be discussed, aside from those pays no mind, and of their own playground there exists no standing nor any particular inquiry should be shut down without reasons, without non-personal reason, and of which a calm response are to be heard of. We \textbf{refuse} to accept controversies into dealing with what to be discussed of, intellectually, scientifically so, in this environment, of this laboratory, and such is to be refuted, to be debated against, to shut, if ever, of the present at hand, such subject of argument, not by emotion, not by prejudices, not my intense anger of social external contract for which you \textit{enter this laboratory} with one \textbf{signed anew}. Such is the will of what to not hide. 
+
+In a much more layman term of said proposition, think of it as to be that there exists only \textbf{no taboo}, within the frame of scientific, intellectual and knowledge, analytical discourse, or matter of such any activities in consideration, within this playground of the laboratory. In a much similar sense, societal impact are also to be judged against, of which contexts matter as much as the topic itself, to determine the property of the discourse, of the critique, and the evaluation for the falsification and invalidation thereof, not to shame, nor to stop of what to come from the voices heard. However, \textbf{it does not guarantee an answer}, again, on the ground where the other pillars are preserved. But the question \textbf{must exist} and be respected, both of the one was questioned, of the person whom such point was raised. If such is not respected, then of which rules are what we set, before we return to being animals, similar applies. 
+
+Of the answer, we are to also be said as short. We disallow answers of which are forced, of it to invalidate or violate what are there above, of which answers are used for coercion, of which answer are used for rhetoric, of which answer are used for hidden vendetta, and of which answers are to be conformed, to be of contempt, and to be of intention straying from matter it is allowed of. Of the emotion topics, emotion takes precedences of the initial answer, but are also to allow resolution and opinion on such. Of the logical answer, such to be of paramount to be logic, and of which emotion serves secondary in its scene. For there also be \textbf{both}, one must seek to weight the situation, and mark of the answer itself, and what to answer, to its manifestation from what to be said into record. 
+
+Certainly, such topic, does have its own limit. For where there topic is about \textbf{someone}, of \textit{something} by the virtue of such, be it of any position worthy of said perspective. For those inside of the community we are to be said of the laboratory, of certain person, for their consent. For if their words and actions, of their problems for their own, to affect of the wider community, then such, within respect, shall be taken into account, not of hiding from discourse, be it okay of analysis, but to put it on as the \textit{factor} of silence, treated neutral, not falling to both ends, yet to retain what was there to be of \textit{potential}. We shall not discuss but only note, we shall not discuss but to \textbf{declare} existence, and by whatever construct be constitutive of the system manifesting at will this principle of manifesto, be it so, shall let the action to \textbf{request such discussion} to be of essence. There are delicate topics, of course, and such would there be, of consideration, to not force someone to talk, be it so when life and of life we shall not pervade our sense of privacy. But so are the acceptance of refusal to do so, but be it recorded, be it audited, and for the above principle where your emotion and what there of \textit{yourself} and the \textit{one who asks} are present anywhere of any action, such principle will guide you, to consider whether such question is of contempt, or of concern. The choice is there, however, the question, must exist. It depends on how much you want to say, and how what you want to display, be it to support you wholeheartedly, or whether you will see it casting down your shadow of what you once was. 
+
+\begin{quote}
+    \textit{We are to not be allowed to pretend something does not exist, yet it is for neither is it to be automatically entitled of total access into the person's interior life.}
+\end{quote}
+
+One fallacy in interpreting this principle, is to use this fanfare, to evaluate as your opinion and perspective being right. In a given sense, such topic, or anything in the matter of focus, needs not to be \textbf{right}. Such is not of its nature, nor it is allowed to take anew, a whole, without efforts and without clarification. Any truth can be fought against, while \textbf{not stopping it} from being used deliberately, of intellectual inquiry, and of certain form of operational truth. That is to say, all \textbf{truth} are to be \textbf{provisional truth}, and such incurs the cost overlay. If one's provisional truth faces no opposition \textbf{at present}, then it is accepted to perform its will on the subject matter, dealing with what in hand. It does not have the authority to \textbf{cancel the other provisional truth}, but only the choice and the determination that matters. If, however, such is to be argued against or to be said so much as to with friction, then do as it may to have restriction, because a provisional truth with argument, means that at such present time, a shackle must be placed upon, not up to \textit{total paralysis}, but to keep the ill-supposed horse in check. 
+
+Let us also disclaim, of which we are to say of science, of knowledge, of inquiry. Such does not contradict of the preceding, because for once stepping into the land of contempts, are to forgo and hide into the obscurity of what to follow - of the actions, of the deliberacy to harm, of the playground being shifted, and \textit{such is not allowed}. Let it be so, of the playground to stand, and of which the stake, is to not say, rather than to say, of which after that, those pillars are preserved. In retrospect, the pillars are also validating their choice, by trusting anyone inside it with that. The rules are not there to shut you up, be it so uncivilized of sort. It is there, to keep the shutting act, of what to be said as the core behaviours that under the subjective beliefs are to be the contracted notion, unacceptable to be moved, none allowed at bay. Corporate or not, and of which finalization, or not. That is why, 
+
+\begin{quote}
+    There are no unrestricted speech, there are no comfort in absolute, there are no obvious freedom, and there are no civility in full. 
+\end{quote}
+
+And thus compatible with idealism of such for there exists no ideal. And thus, it is also the central pallet of sort. The only exception to this rule, is the document itself, for there are no ground will there be infinite recursion, and within such infinite fall none system can work. And yet, it will fail not the system, but its people, and for a country with no people there is no country, a lab without its mind serves nothing. 
+
+\subsubsection{Personal vendetta}
+
+A fallacy to be of potential, is that people to use what of personal to attack. While there exists no guarantee to note of this, we are to only prevent this by dealing with one single way. To note it down, and to investigate it. For personal attacks we are to treat every single intuition, of counter-intuition, of the disheartened note as relevant. There shall be no question about such. 
+
+If it is to be of someone, trying to pry open someone's personal life, from what apparatus those pillars are to be said of, then let it be clear. Such contempt, of the temporal pressure, will always be noted. Each cascading question will not be received as separated, but of the time when it arrives. Choose carefully of what to be of your action, because the action and you, are the same, and so are diluted by others, the one in action, can call for help. But, this is fair and square, \textbf{only if the pillar stands, and the house is there}. If not, let hell let loose, though I doubt if one can stoop so low to be the dog that bit them, for perspective of either. 
+
+\subsubsection{Disclosure, and privacy}
+
+In the same breath, we shall talk about privacy as the \textbf{right} of what there is. You are not \textbf{disallowed} to not disclose, and for what there is, that of your personal life, only you are there to allow us, of the community and RHINELAB as many in much, to be inquired or not. But, beware of the cost, for disclose means you leave the fact exists. There might be shutdown to your information, and of which you are to leave it there of no more question, and such is respect in its absolute form. Yet, under discourse, of which are serious and in which its effects ruptures through and through of the community, or it might be of relevant contest, such will be raised into the discourse, as existence, only, until disclosed. And even silence is a signal to pick up, be as it may in which we still are to respect, by the above principle as derivations, disallow forced dissolution. 
+
+Thereby, choose what to disclose carefully. Of which where your social life in the laboratory affects of the perception of what you are. And be confident, in which by all the preceding pillars are there, such would help you in such aid, if you are to be there, and preserve what protects you. 
+
+\begin{quote}
+    Nevertheless, such are to be of yourself, and personal vendetta the same. Under RHINELAB's philosophy, excessive social management itself can become bureaucratic upkeep. And of such, invalidates logistical minimalism, of the follow-up principle, listed here later on.  
+\end{quote}
+
+\subsubsection{Cost, and debt}
+
+In a sense, this one is the addition of the above form. Your emotion is part of the discourse, whether or not you realize it be. But if you are to present it outright, of the intense emotion there is of which to scrutinize and criticise the person behind it, is to understand what it means when your emotion takes precedence, personal invade the rational, and such can be used to directed against you, especially of which one wants \textbf{civil debate}, yet in doing so, to speak against it deliberately and forgo the other from the same equalizing action, be it arrogance, stupidity, and profound humiliation of the one whom the glass cannon fired at sunrise, or to be the first. 
+
+\subsection{Practical minimalism}
+
+In consideration and partially a derivation of such, we inquire the notion of \textbf{minimalism}, though much different than what to be said of the counterargument. In their minimalism, it is to aim for the simplest. For us, however, we are to say of Lord William of Ockham, and his alignment of which precursors are to be formed from this, that to \textbf{choose the sufficient}\footnote{In retrospect. Sufficient here is to do specific work. It means, within this frame of reason, to be adequate for the present and near future state, not adequate for every conceivable future state for which if we are to predict them, then we be omnipotent of ourselves. The difference matters because, of us as institutions routinely over-build for futures that don't arrive, and the overhead of the unused structure becomes a drag on what actually needs to happen.}:
+
+\begin{quote}
+    Of which to be said of the matter, of the structure of the system, choose what to be \textbf{sufficient} of the present and near future state. Be any plan or predictions with \textbf{the prediction of the path to go there}, in full, at stages, not a jump from one to another, and to be ideally continuous. The system \textbf{is not allowed} to be moved, changed to a form, or functions of itself, that does not serve any, does not provide of what, and does not have any meaningful consequence nor necessity thereof, of the system itself.
+\end{quote}
+
+Plainly speaking, if we truly believe, and truly have a reason so, under normal circumstances and of what to be of pressure, then the structure of the lab, or any functionalities in working of entities within this place, shall not extend itself to obscurity, of unquestioned functions and cost, and of irrelevant addition only to be argued against to be "it might be useful in the future". We choose the cost of putting such in storage, not as refusal per the earlier principle, for the minimality within reason, as stated. There, to build only of what you actually need right now, with a clear path to what comes next, and nothing else in the room. 
+
+%\subsubsection{Bureaucracy unkeep}
+
+%In the same principle of the accordance thereof, bureaucratic 
+
+\subsection{Logistical minimization}
+
+As consequence of the practical minimalism, the goal of the lab is paramount to:
+
+\begin{quote}
+    Reduce the amount of logistical weight on operations, to reduce the amount of technical burdens, and logistical coordination of all activities, of all operations, of all procedure, decisions, cognitive functions thereof, possible within reason, and within the other pillars, such are to say coherence within logistical limit. We are to \textbf{absorb} the logistics unto the subconscious, where logistical systems are not a backdrop under which all operation follows, and the people are working of ready-to-hand mode (seamless integration). 
+\end{quote}
+
+All of which, are within reason for
+\begin{quote}
+    The observation being: bureaucratic \textbf{upkeep} is the death of the central work. Thereby, we are to work and optimize logistics, of both \textbf{capacity}, of both \textbf{ability}, but of also its \textbf{efficiency}, \textbf{reliability}, and \textbf{coordinating sufficiency} at large. 
+
+    We have to separate between, what there are to be \textbf{infrastructures that reduce cognitive burden}, and those being \textbf{bureaucracy that generates cognitive burden}. Researcher are here to research and think, not to navigate the endless sea void of formal procedure. 
+\end{quote}
+
+This includes standardization, report templates, and so on in accordance to the principle, so is to have templates in \LaTeX-form, for all documents and purposes per an example. And, per specification, it incurs the \textit{entry cost} of which this system are not designed for straight implementation, but for a period of \textit{familiarization} aside of special case and basis. Within such, we are to include it in any form of entry system, as it is paramount, and is the \textbf{right} and \textbf{obligation} of people to both learn and familiarize themselves with the system, work with them, and also for the system to work with the \textit{people utilizing it}, and helping to comprehend itself to the researcher, and members in full. One might argue that it violates practical minimalism, however logistically speaking, we again \textit{do not collapse this problem}, between efficiency for simplicity, and capacity itself in such simple contradictory term. One can still argue of the reserve logistical power, for operations that need such scheme or so on to be put into storage, or of prototype formulation and testing, yet is not allowed to prohibit or interfere with the wider operating framework, of which are of at present, to be sufficient. If such is said to be not insufficient, and thus having to be reevaluated of the system, it is already there, of which a requirement is satisfied so that it is now insufficient, and thus rather aligns with practical minimalism instead. Of course, we cannot deal with all problems. But such are to be said of, so that to prevent the mildest of misunderstanding, and the most obvious of misintention. 
+
+\subsection{Artificial Intelligence}
+
+Our principle is simple, at this point and stage. On the self-utilization of AI system, we are to posit the \textbf{independence} and \textbf{utilitarian} form of such approach, as for:
+\begin{quote}
+    AIs, and the wider \textbf{adaptive, dynamics functional systems}, are explicitly \textbf{tools}, and as for any tools in the shed, it can be imperfect, misleading, and such. Thereby, we \textbf{refuse} to use AI system in any form of report, documents, codes, framework, analysis, and so on, \textit{without explicit human touch}, of expert and human knowledge, and of which \textit{human takes precedence}, even for scrutiny and further. The default mode, if there are, of any given AI-produced artefact, is to be \textbf{suspicious}, and \textbf{analytical}, not acceptance. At large, we \textbf{disallow} utilization of Generative AI, or LLM, except for trivial cases, of trivial topics and trivial codes, for example, \textbf{under specification and diagnosis} beforehand. 
+\end{quote}
+
+The last point requires the taxonomy of specification for what to be counted as trivial, and so on, as the benchmark for whatever there is to be said from utilization in day-to-day prototyping and analysis. Nevertheless, because of the consideration that AI codes are often incomprehensible, and its usage per effort of human researcher, coming from backgrounds, are severely naive, we \textbf{refuse} any final form of code, to be of AI. Let that be the assertion, only change, and the only one \textbf{changeable} with evidences for now, of this document. Within such, all \textbf{fallacy} of AI are to be investigated. 
+
+\section{Conclusion}
+
+Within those pillars, I named the specific conditions for the lab of existences. Of the time being, only the final one, where temporal distance are apparent, of which every day, such statement can lose weight, or gain some, are to be said as interchangeable. Aside from such, no amount of, and no hedging for, can change the other pillars, for them are to be what RHINELAB is, and to change them, is to \textbf{not the essence} anymore. Of the survival condition, all pillars \textbf{must be preserved}, and thus we \textbf{block} temporary survival strategies, and decisions, to be always temporary, and are always allowed to be refuted as charge, to change it back to square one. That is, we \textbf{do not allow for temporary solutions to be permanent}, and for survive, is to survive only while remaining recognizably itself, not \textit{at all cost}. That cost is never billed to be paid. 
+
+There are the principles, and thus shall be what RHINELAB is. We \textbf{do not claim} for there to be ultimate answer for all. But there \textbf{must}, for all its purposes, be \textbf{tension in existence}. And thus, RHINELAB can be wrong, and it can be right. None matter than that it exists of what the tension be, and it exists to endlessly resolve that. 
+
+We again, and in a sense emphasize on one fact - they are civilization-level values. It is not there of membership, nor asset, nor productivity, nor external recognition, nor fame, nor reputation, be it a part of, yet the main bulk, is the \textbf{humans}, the inquiry, the structure, the philosophy, discourse, and power, are the core, and thus can be lost ontologically, when the place created, to be barren, of the \textit{name remains}, \textit{funding there}, \textit{buildings intact}, \textit{structure stable}, but the ontologies are gone, and of which there are no further what to be said of RHINELAB. Such is the ending where this to be dissolution. As long as the laboratory is alive, so are the principles. 
+
+
+%\section{Citations}
+%Items that are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion} together with Einstein's journal paper \cite{einstein} and Dirac's book \cite{dirac}---which are physics-related items. Next, citing two of Knuth's books: \textit{Fundamental Algorithms} \cite{knuth-fa} and \textit{The Art of Computer Programming} \cite{knuthwebsite}.
+
+%\medskip
+
+%\printbibliography %Prints bibliography
+
+
+\end{document}
+
+% ----------

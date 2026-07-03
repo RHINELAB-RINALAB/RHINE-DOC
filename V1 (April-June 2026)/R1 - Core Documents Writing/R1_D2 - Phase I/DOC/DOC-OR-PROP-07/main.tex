@@ -1,0 +1,243 @@
+% ----------
+% Tech report template
+% 
+% ----------
+
+% --------- PACKAGE --------- %
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amsbsy}
+\usepackage{bm} % normal text bold font inside math environments
+\usepackage{stmaryrd} % Saint Mary of stuff computer science typographic symbol
+\usepackage{geometry}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[russian,english]{babel}
+\usepackage[runin]{abstract}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{enumitem}
+%\usepackage{piton} % Without this enable, it might not work for the listing package. Switch to LuaLateX if you want to use this option, however. 
+\usepackage{fancyhdr}
+%\usepackage{helvet}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+%\usepackage[scaled=0.90]{helvet} % Font 1 for package
+%\usepackage[scaled=0.85]{beramono} % Font 2 for package. If you want this configuration, change this with the following configuration, or rather just comment the other one out
+\usepackage{mlmodern}
+\usepackage{xcolor}
+
+\definecolor{GCColor}{HTML}{B35A00}     % Burnt orange
+\definecolor{SCColor}{HTML}{8C4A00}     % Dark copper
+\definecolor{IDXColor}{HTML}{6E2C00}    % Dark rust
+
+\definecolor{SCOptColor}{HTML}{A66A2C}  % Muted copper
+\definecolor{STOptColor}{HTML}{8A6A3A}  % Dark amber-brown
+\definecolor{IDXOptColor}{HTML}{6F6F6F} % Neutral dark grey
+
+\usepackage{tcolorbox}
+\usepackage{fancyvrb}
+
+% Bibliography
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+
+% --------- PACKAGE --------- %
+\input{preamble.tex}
+\addbibresource{bibb.bib} %Imports bibliography file
+
+\newtheorem{org}{Organization}[section]
+
+% ----------
+% Variables
+% ----------
+
+\title{\textbf{Organization Proposal} \\ Tagging systems, project systems, personnel, and research group system} % Full title of your tech report
+\runningtitle{} % Short title
+\author{Fujimiya Amane (Bui Gia Khanh) \\ {\small as RHINELAB Leader, Founder and Principal Director}} % Full list of authors
+\runningauthor{Amane et al.} % Short list of authors
+\affiliation{} % Affiliation e.g. University or Company
+\department{RHINELAB-RINALAB} % Department or Office
+\memoid{DOC-OR-PROP-07} % ID of the tech report
+\theyear{2026} % year of the tech report
+\mydate{\today} %the date
+
+
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+%\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+%  breakable=true,
+%  listing engine=minted,
+%  listing only,
+%  minted language=#2,
+%  minted style=default,
+%  minted options={%
+%    linenos,
+%    gobble=0,
+%    breaklines=true,
+%    breakafter=,,
+%    fontsize=\small,
+%    numbersep=8pt,
+%    #1},
+%  boxsep=0pt,
+%  left skip=0pt,
+%  right skip=0pt,
+%  left=25pt,
+%  right=0pt,
+%  top=3pt,
+%  bottom=3pt,
+%  arc=5pt,
+%  leftrule=0pt,
+%  rightrule=0pt,
+%  bottomrule=2pt,
+%  toprule=2pt,
+%  colback=bg,
+%  colframe=orange!70,
+%  enhanced,
+%  overlay={%
+%    \begin{tcbclipinterior}
+%    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+%    \end{tcbclipinterior}},
+%  #3}
+
+% Python preset environment. 
+\newcommand{\pyobject}[1]{\fbox{\color{red}{\texttt{#1}}}}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+% Inline python highlighting (Might not look great, but eh)
+\lstset{language=Python,keywordstyle={\bfseries \color{blue}}}
+
+
+% ----------
+% actual document
+% ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    \noindent
+    This document is created to report about an idea, and a deliberate attempt in doing something that actually makes sense, I guess on the go figured. However, it is about the new system on arrival of organization for RHINELAB, and so much more about projects and people surrounding it, division keys, and specialized sub-group in totality. 
+
+    \keywords{Organization, template designation, system structure, tagging and management, protocols}
+\end{abstract}
+
+\vspace{2.5cm}
+
+
+
+\thispagestyle{firstpage}
+
+\pagebreak
+
+% ----------
+% End of first page
+% ----------
+
+\newgeometry{} % Redefine geometries (normal margins)
+
+\section{Specification}
+\label{sec:spec}
+
+Provide specification details, metaprogramming. 
+
+\subsection{Document code, priority}
+
+{\footnotesize
+Provide document codes, additional document code, purpose, organization, authorship and anyone contributing to the report, identification of purpose (proposal, or research, indexing 01). Priority code, additional conditions. Does it override anything, or add to anything?
+}
+
+Document codes DOC-OR-PROP-07, Serial 07, code DOC, additional code OR and PROP (proposal). Used for clarifying and proposing a new organizational structure, document and project structures, and waiting for approval and modification post-evaluation. Priority R1, not immediate, provisional only. No overriding
+
+\subsection{Body of issue}
+
+{\footnotesize
+Who issue, team or departmental attachment. 
+}
+
+Core Management Division, Laboratory Leader. 
+
+\subsection{Date and Version}
+
+Finished provisionally on arrival, v1 (6/7-8/2026 to 6/10/2026), variations on completion days and addition post officiality. 
+
+\section{Introduction}
+
+OKB, or \foreignlanguage{russian}{Опытное Конструкторское Бюро}, or often known as \textbf{Experimental Design Bureau}, is an organization system and centralized bureau dedicated for specialized, though often \textit{highly secretive} research groups on selected projects, and themes. As far as it is considered, this report stemmed from the observation of this unit and the way systems are organized in OKB, and as well as often many of the indicated Soviet, affiliated-Soviet states. 
+
+One of its core pincer notions, side-effect from the condition and so called `survival' of those institutions and military departments under secrecy, is the principle of \textit{blind communication} and \textit{compartmentalization naming} from the very onset of semantic design on reports and divisions. While we are not operationalized nor within reason of measure, to \textit{re-emulate} this type of specific event, such does permit us from using one of its side effect - the \textbf{longevity} and preservation of designation itself. Such is also the main central theme of the system, and such would also be included in this report of restructuring. 
+
+\section{Laboratory organization}
+
+As stated, one of the best feature that might or might not be designed so, is \textit{compartmentalization} and non-fixture identities. As such, what is it? The principle or rather the organization directive that I would be able to dissect from the main central body of Soviet system, and OKB system, is that: 
+\begin{quote}
+    Human scientists, builder, intellectual are to not be restricted of \textit{intellectual actions}, and also of \textit{intellectual frameworks and regions}, but let them be restrictive on \textit{intellectual commitment} where times and efforts are limited. Allow the capacity to stay afloat, while seemingly doing so to commit a mind to do what it thinks is necessitated by conditions and its own resolution, than to speak on prejudice of what it shall be, and what it should be. 
+\end{quote}
+That is the philosophical insight of OKB system that can be extracted. This applies to both \textit{segmented, specialized research compartment}, and individual research segment of the system itself, which means this freedom is allowed for individuals to choose pre-commit on either individual research within the lab, or lab-segmented research specialization group within it. 
+
+Then, the system can be configured rather easily to this following hierarchy: 
+\begin{org}[Laboratory tier]
+    RHINELAB can be designed and configured of its constitutional parts, as the following: 
+    \begin{enumerate}[topsep=1pt,itemsep=1pt]
+        \item \textbf{Principal Director/Investigator} (\textsf{RHINELAB@PD/I}): This currently is attached to also the status of \textbf{Founder}, which owns the laboratory as it is, and also material resources that it has. This person is the finalization on debates (within disruptive limit if able), directives, funding, research, construction, logistics and the overreaching arm of all activities in the laboratory. The role as of current is \textbf{immutable}. Current holder is \textit{Bui Gia Khanh} (Fujimiya Amane). 
+        \item \textbf{Central Administration} (\textsf{RHINELAB@CAD}): The official name for \textbf{Core Management Team} as often seen in older documents. Deploying and maintaining, managing on logistics, operations, resources and so on of the laboratories, but \textbf{not intellectual contents} are allowed under jurisdiction for mutation and thereof, aside from maintenance of such, reorganization, and so on. Research on \textbf{management science} is the main focus if applied. 
+        \item \textbf{Concentrated Domain/Department} (\textsf{RHINELAB@CD/D}): Themed bracketed of their \textbf{concentration of intelligence}, for example, AI, Physics and Mathematics and further topics. Those are themed concentration of intellectual mass suitable and is under directive of the lab itself. This is \textit{non-homogeneous}, that is the domain can attest of three roles: \textbf{domain logisticians} for managing departmental requests and resources (aside from direct acquisition, in which case the role is logistical buildup and support); \textbf{domain investigator}, with the ability to propose and create their own \textbf{research track} and/or \textbf{research-experimental units}, under circumstances and satisfying conditions, while also be able to be assigned to different research experimental units from the top; and lastly \textbf{domain advisor}, bigger focus on guarding and maintaining the intellectual knowledge basis of the laboratory, managing and collaborating on expertise sharing, or advising in such context. 
+        \item \textsf{RHINELAB@ANIG/SIG/ONIG}: As the baseline of them all, with two differents brackets - one is \textbf{Special (Scientific) Research Group}, abbreviated \textbf{SNIG} coming from \foreignlanguage{russian}{Специализированная научно-исследовательская группа} (Spetsializirovannaya Issledovatel'skaya Gruppa), for \textbf{specialized research group} with specific goal, agenda, programme and such that befit and after consideration of the system. Second, is \textbf{General (Scientific) Research Group}, abbreviated \textbf{ONIG} from \foreignlanguage{russian}{Общая научно-исследовательская группа} (Obshchaya Nauchno-Issledovatel'skaya Gruppa), for non-specialized, wide, broad and domain or concentration-based research group. Each domain specialization will be mandated to have at least one ONIG. Lastly, for the research group with the most general purpose, under consideration, finding their own purposes, or rather without research programme, under passive configuration, and under foundation build-up, they will be considered an \textbf{Abstract (Scientific) Research Group}, abbreviated ANIG, coming from \foreignlanguage{russian}{Абстрактная научно-исследовательская группа}, and thus is the \textbf{foremost template} of such. 
+    \end{enumerate}
+    For \textbf{Research Group} - \textsf{RHINELAB@ANIG/SNIG/ONIG}, under consideration of importance, Administration and final decision for resolution from \textsf{RHINELAB@PD/I} will elevate it into \textbf{Core Scientific Research Group}, abbreviated \textbf{BNIG}, as from \foreignlanguage{russian}{Базовая научно-исследовательская группа} (Bazovaya Nauchno-Issledovatel'skaya Gruppa). Basing on other criterion:
+    \begin{itemize}
+        \item If a unit or research group is more on pedagogy, foundations buildup, analysis and acquisition, crystallization or gathering of knowledge or related concentration of intelligence, and research on such \textbf{method of philosophy of science}, then it can be reclassified if enough, as \textbf{Fundamental (Scientific) Research Group}, abbreviated \textbf{FNIG}, from \foreignlanguage{russian}{Фундаментальная научно-исследовательская группа} (Fundamental'naya Nauchno-Issledovatel'skaya Gruppa). Ideally, we recommend each CoI to have at least one FNIG. 
+        \item A \textbf{Universal (Scientific) Research Group} (abbreviated UNIG) would be the guiding light of the entire laboratory itself on its method, resolution, philosophy, critiques, and operations. In fact, this document is written from the basis and analysis of such group, and its principle analysis. The term is taken from \foreignlanguage{russian}{Универсальная научно-исследовательская группа} (Universal'naya Nauchno-Issledovatel'skaya Gruppa).
+    \end{itemize}
+    Finally, the laboratory has its own \textbf{research scholar}, whom can be said to be the individual mass node of the entire system, of which all the above system relies on them for any tasks or concentration thereof, and functions. Abbreviated as HC, is is derived from \foreignlanguage{russian}{Научный сотрудник} (Nauchnyy Sotrudnik). 
+\end{org}
+
+For ONIG, their purposes are to mainly Keeping the laboratory actively connected to the wide-spectrum reality of the field. For FNIG, it is \textbf{epistemological hygiene} - such are, critical audit, pedagogy, and stabilizing the foundational math/philosophy. This creates a triad of SNIG-ONIG-FNIG for each purpose - the thrust (SNIG), the general eyes (ONIG) and the depth digger (FNIG) working in tandem. Preserving such is the purpose for this system as a whole. 
+
+\section{Logistics}
+
+On the logistics side, we would like to think about the \textbf{system addition} on itself. Previously, we have the syntax, 
+\begin{quote}
+    [General Code] + [Specific Code] + [Sub-tags] + [Indexing 1] + [Indexing 2] + \dots
+\end{quote}
+for the documents, and its subsequent analytical classifications of the purpose for each subject. We would like to revise them in light of this particular change. The next new syntax for this version of RHINELAB would be in the form: 
+\begin{quote}
+\textbf{([GRP-XXX][RX][SX])\textcolor{GCColor}{[GC]}
+\textcolor{SCColor}{[SC1]}
+\textcolor{SCOptColor}{[SC2]}
+(\textcolor{SCOptColor}{[SC3]})
+\textcolor{STOptColor}{[ST1]}
+(\textcolor{STOptColor}{[ST2][ST3]\dots})
+-
+\textcolor{IDXColor}{[IDX\_1]}
+-
+\textcolor{IDXOptColor}{[IDX\_2]}
+-\dots-
+\textcolor{IDXOptColor}{[IDX\_n]}}
+\end{quote}
+Here, it is much cleaner than suggested. The mandatory arguments are \textbf{[GC],[SC],[IDX\_1]} as minimum, with each either with specific code (except [GC]), then it is assigned \textsf{Null}, and everything following schemes already laid out in the last version of DOC-OR-02. Lastly, [GRP-XXX] names the \textbf{organization of issues}, [RX] as the \textit{priority code}, and \textit{SX} is the \textit{security codes}. Such are often also again, optional, and if none applies, you do not need to write it in and it will be processed as minimum ceiling. At Phase I, all documents are to be absent of such categorization except [GRP]. 
+
+\section{Topic/knowledge classifications}
+
+We also realize that such to be said, would concern of topics in general within the laboratory purposes and group purposes. Sometimes, there are topics so universal that you would say it only to be \textit{something everyone must know}, like mathematics and so on. Of such, notification and knowledge classification would requires at least two things: \textbf{fundamental foundational knowledge} (FFK), and \textit{optional specialization knowledge} (OSK). For example, OSK will be those that you do not require until it becomes fundamental under context, or requirement of certain laboratory group. Details about this would be clarified and setup in later documents, however so, such is a topic in need of certainty dissection. 
+
+\section{Summary}
+
+As such, the structure and topic acquisition are to be completed in provision, from this proposal. Many are there to be said of this system alongside many specific details, however, the sketch is rather coherent on itself, and requiring further concession to work is rather an ordeal that would be picked up in later development and guidebook. 
+
+%\section{Citations}
+%Items that are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion} together with Einstein's journal paper \cite{einstein} and Dirac's book \cite{dirac}---which are physics-related items. Next, citing two of Knuth's books: \textit{Fundamental Algorithms} \cite{knuth-fa} and \textit{The Art of Computer Programming} \cite{knuthwebsite}.
+
+%\medskip
+
+%\printbibliography %Prints bibliography
+
+
+\end{document}
+
+% ----------

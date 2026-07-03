@@ -1,0 +1,4 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QZettelkasten or card file consists of small items of information stored on Zetteln (German: 'slips'; singular: Zettel), paper slips or cards, that may be linked to each other through subject headings or other metadata such as numbers and tags.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThe most famous person of such archetype is Niklas Luhmann, with quite a prolific career of his life.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QAdditionally, Zettelkasten-similar knowledge base compartmentalization is also in the roster for the organization template.\\E$"}
+{"rule":"ARTICLE_ADJECTIVE_OF","sentence":"^\\QLet it be clear that this failure, is the gravest sense of all, for it being the dismissive of other without justification, and should precedence appear, it will be rejected outright.\\E$"}

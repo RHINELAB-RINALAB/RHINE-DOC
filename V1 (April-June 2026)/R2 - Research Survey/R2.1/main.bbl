@@ -1,0 +1,278 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global/global}
+    \entry{pubmed7137928}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=c6faa6ed21d514cb9653fe05479f8637}{%
+           family={Awwad},
+           familyi={A\bibinitperiod},
+           given={H.\bibnamedelimi K.},
+           giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{c6faa6ed21d514cb9653fe05479f8637}
+      \strng{fullhash}{c6faa6ed21d514cb9653fe05479f8637}
+      \strng{fullhashraw}{c6faa6ed21d514cb9653fe05479f8637}
+      \strng{bibnamehash}{c6faa6ed21d514cb9653fe05479f8637}
+      \strng{authorbibnamehash}{c6faa6ed21d514cb9653fe05479f8637}
+      \strng{authornamehash}{c6faa6ed21d514cb9653fe05479f8637}
+      \strng{authorfullhash}{c6faa6ed21d514cb9653fe05479f8637}
+      \strng{authorfullhashraw}{c6faa6ed21d514cb9653fe05479f8637}
+      \field{labelalpha}{Aww82}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Singapore Medical Journal}
+      \field{number}{4}
+      \field{title}{Nuclear medicine--an overview}
+      \field{volume}{23}
+      \field{year}{1982}
+      \field{pages}{233\bibrangedash 239}
+      \range{pages}{7}
+      \verb{urlraw}
+      \verb https://pubmed.ncbi.nlm.nih.gov/7137928/
+      \endverb
+      \verb{url}
+      \verb https://pubmed.ncbi.nlm.nih.gov/7137928/
+      \endverb
+    \endentry
+    \entry{chandrappa2020environmental}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=651db80831ab34b513ca2a0e21dbd222}{%
+           family={Chandrappa},
+           familyi={C\bibinitperiod},
+           given={Ramesha},
+           giveni={R\bibinitperiod}}}%
+        {{hash=30330bfb10131539f6f273d683cb804e}{%
+           family={Das},
+           familyi={D\bibinitperiod},
+           given={Diganta\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature Switzerland AG}%
+      }
+      \strng{namehash}{a8c421b98da29fb7667b1a48c5b04867}
+      \strng{fullhash}{a8c421b98da29fb7667b1a48c5b04867}
+      \strng{fullhashraw}{a8c421b98da29fb7667b1a48c5b04867}
+      \strng{bibnamehash}{a8c421b98da29fb7667b1a48c5b04867}
+      \strng{authorbibnamehash}{a8c421b98da29fb7667b1a48c5b04867}
+      \strng{authornamehash}{a8c421b98da29fb7667b1a48c5b04867}
+      \strng{authorfullhash}{a8c421b98da29fb7667b1a48c5b04867}
+      \strng{authorfullhashraw}{a8c421b98da29fb7667b1a48c5b04867}
+      \field{labelalpha}{CD20}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Environmental Health - Theory and Practice: Volume 1: Basic Sciences and Their Relations to the Environment}
+      \field{isbn}{978-3-030-64480-2}
+      \field{title}{Chapter 5}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1007/978-3-030-64480-2_5
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/chapter/10.1007/978-3-030-64480-2_5
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/chapter/10.1007/978-3-030-64480-2_5
+      \endverb
+    \endentry
+    \entry{cmii2018overview}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=591194f9daf5bc5b0e80d1cf789ec276}{%
+           family={Mehndiratta},
+           familyi={M\bibinitperiod},
+           given={Amit},
+           giveni={A\bibinitperiod}}}%
+        {{hash=56fa1c790cb57b5faa22b13b6c91fa46}{%
+           family={Anandaraj},
+           familyi={A\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{edc2127d15654bf657a17801bb7e5fa4}
+      \strng{fullhash}{edc2127d15654bf657a17801bb7e5fa4}
+      \strng{fullhashraw}{edc2127d15654bf657a17801bb7e5fa4}
+      \strng{bibnamehash}{edc2127d15654bf657a17801bb7e5fa4}
+      \strng{authorbibnamehash}{edc2127d15654bf657a17801bb7e5fa4}
+      \strng{authornamehash}{edc2127d15654bf657a17801bb7e5fa4}
+      \strng{authorfullhash}{edc2127d15654bf657a17801bb7e5fa4}
+      \strng{authorfullhashraw}{edc2127d15654bf657a17801bb7e5fa4}
+      \field{labelalpha}{MA18}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cardiovascular Medical Imaging International}
+      \field{number}{4}
+      \field{title}{Overview of nuclear medicine}
+      \field{volume}{16}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 12}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1097/01.CMI.0000547916.16040.1a
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.lww.com/cmii/fulltext/2018/16040/overview_of_nuclear_medicine.1.aspx
+      \endverb
+      \verb{url}
+      \verb https://journals.lww.com/cmii/fulltext/2018/16040/overview_of_nuclear_medicine.1.aspx
+      \endverb
+    \endentry
+    \entry{mehndiratta2014nuclear}{incollection}{}{}
+      \name{author}{4}{}{%
+        {{hash=591194f9daf5bc5b0e80d1cf789ec276}{%
+           family={Mehndiratta},
+           familyi={M\bibinitperiod},
+           given={Amit},
+           giveni={A\bibinitperiod}}}%
+        {{hash=56fa1c790cb57b5faa22b13b6c91fa46}{%
+           family={Anandaraj},
+           familyi={A\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d4828c5f2a532a4b5ff9c73f44462b80}{%
+           family={Zechmann},
+           familyi={Z\bibinitperiod},
+           given={Christian\bibnamedelima Martin},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=90dd64ab66d2ca86b00035e306bcf866}{%
+           family={Giesel},
+           familyi={G\bibinitperiod},
+           given={Frederik\bibnamedelima L.},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, London}%
+      }
+      \strng{namehash}{ab70994e48909e470dfb222f11267be9}
+      \strng{fullhash}{a3a09cf105cab41e8d154322a6d53e73}
+      \strng{fullhashraw}{a3a09cf105cab41e8d154322a6d53e73}
+      \strng{bibnamehash}{ab70994e48909e470dfb222f11267be9}
+      \strng{authorbibnamehash}{ab70994e48909e470dfb222f11267be9}
+      \strng{authornamehash}{ab70994e48909e470dfb222f11267be9}
+      \strng{authorfullhash}{a3a09cf105cab41e8d154322a6d53e73}
+      \strng{authorfullhashraw}{a3a09cf105cab41e8d154322a6d53e73}
+      \field{labelalpha}{Meh+14}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Medical Imaging in Clinical Trials}
+      \field{title}{Nuclear Medicine: An Overview of Imaging Techniques, Clinical Applications and Trials}
+      \field{year}{2014}
+      \field{pages}{273\bibrangedash 303}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1007/978-1-4471-4150-1_14
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/286153149_Nuclear_Medicine_An_Overview_of_Imaging_Techniques_Clinical_Applications_and_Trials
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/286153149_Nuclear_Medicine_An_Overview_of_Imaging_Techniques_Clinical_Applications_and_Trials
+      \endverb
+    \endentry
+    \entry{young2021overview}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=04e3d59b0abfeb8a5239b40eb61506c8}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={Jennifer\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=b25b91f4dd92de3dc70dfbc7e3cb423b}{%
+           family={Jauregui-Osoro},
+           familyi={J\bibinithyphendelim O\bibinitperiod},
+           given={Maite},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3ec75aacde11374b52f6a3c7a92c827e}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={Wai-Lup},
+           giveni={W\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=917e6a8ab3e5614d5b00ac062958f513}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={Margaret\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=0b7e51ca553a2ad61850bb989edfdedb}{%
+           family={Cook},
+           familyi={C\bibinitperiod},
+           given={Gary},
+           giveni={G\bibinitperiod}}}%
+        {{hash=3f92db08e48f6dfebb431dd4e1d54c5b}{%
+           family={Barrington},
+           familyi={B\bibinitperiod},
+           given={Sally\bibnamedelima F.},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=2f770293ee60d1a03af6038c4cb9b6ee}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Michelle\bibnamedelima T.},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=1620570400338f374536c88fb64864ca}{%
+           family={Blower},
+           familyi={B\bibinitperiod},
+           given={Philip\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=030c724965a61cc257c4e9c5a28b9475}{%
+           family={Aboagye},
+           familyi={A\bibinitperiod},
+           given={Eric\bibnamedelima O.},
+           giveni={E\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{0da9b96b2dafa47fa7a98b434f6d6b67}
+      \strng{fullhash}{678094cccba00e9930947c83ef60cac4}
+      \strng{fullhashraw}{678094cccba00e9930947c83ef60cac4}
+      \strng{bibnamehash}{0da9b96b2dafa47fa7a98b434f6d6b67}
+      \strng{authorbibnamehash}{0da9b96b2dafa47fa7a98b434f6d6b67}
+      \strng{authornamehash}{0da9b96b2dafa47fa7a98b434f6d6b67}
+      \strng{authorfullhash}{678094cccba00e9930947c83ef60cac4}
+      \strng{authorfullhashraw}{678094cccba00e9930947c83ef60cac4}
+      \field{labelalpha}{You+21}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Medicine Communications}
+      \field{number}{12}
+      \field{title}{An overview of nuclear medicine research in the UK and the landscape for clinical adoption}
+      \field{volume}{42}
+      \field{year}{2021}
+      \field{pages}{1313\bibrangedash 1322}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1097/MNM.0000000000001461
+      \endverb
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC8584216/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC8584216/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

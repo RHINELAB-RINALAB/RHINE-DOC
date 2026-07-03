@@ -1,0 +1,1 @@
+{"rule":"MISSING_COMMA_AFTER_INTRODUCTORY_PHRASE","sentence":"^\\QSince now we decided to house large files, \\E(?:Dummy|Ina|Jimmy-|Dummy-|Maniquí-|Maniquíes-|Dummy\\+|Dummy's\\+)[0-9]+\\Q has been patched, so if you are to push onto this repository, please do the same.\\E$"}

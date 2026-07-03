@@ -1,0 +1,264 @@
+% ----------
+% Tech report template
+% 
+% ----------
+
+% --------- PACKAGE --------- %
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amsbsy}
+\usepackage{bm} % normal text bold font inside math environments
+\usepackage{stmaryrd} % Saint Mary of stuff computer science typographic symbol
+\usepackage{geometry}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[runin]{abstract}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{booktabs}
+%\usepackage{piton} % Without this enable, it might not work for the listing package. Switch to LuaLateX if you want to use this option, however. 
+\usepackage{fancyhdr}
+%\usepackage{helvet}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+%\usepackage[scaled=0.90]{helvet} % Font 1 for package
+%\usepackage[scaled=0.85]{beramono} % Font 2 for package. If you want this configuration, change this with the following configuration, or rather just comment the other one out
+\usepackage{mlmodern}
+\usepackage{xcolor}
+
+% Bibliography
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+
+% --------- PACKAGE --------- %
+\input{preamble.tex}
+\addbibresource{bibb.bib} %Imports bibliography file
+
+
+% ----------
+% Variables
+% ----------
+
+\title{\textbf{Dialogue} \\ On consideration of RT-RP-01} % Full title of your tech report
+\runningtitle{} % Short title
+\author{Bui Gia Khanh (Fujimiya Amane)} % Full list of authors
+\runningauthor{Amane et al.} % Short list of authors
+\affiliation{} % Affiliation e.g. University or Company
+\department{RHINE-EPEFORM} % Department or Office
+\memoid{DIA-WT-01} % ID of the tech report
+\theyear{2026} % year of the tech report
+\mydate{May, 2026} %the date
+\usepackage{tcolorbox}
+\usepackage{fancyvrb}
+
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+%\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+%  breakable=true,
+%  listing engine=minted,
+%  listing only,
+%  minted language=#2,
+%  minted style=default,
+%  minted options={%
+%    linenos,
+%    gobble=0,
+%    breaklines=true,
+%    breakafter=,,
+%    fontsize=\small,
+%    numbersep=8pt,
+%    #1},
+%  boxsep=0pt,
+%  left skip=0pt,
+%  right skip=0pt,
+%  left=25pt,
+%  right=0pt,
+%  top=3pt,
+%  bottom=3pt,
+%  arc=5pt,
+%  leftrule=0pt,
+%  rightrule=0pt,
+%  bottomrule=2pt,
+%  toprule=2pt,
+%  colback=bg,
+%  colframe=orange!70,
+%  enhanced,
+%  overlay={%
+%    \begin{tcbclipinterior}
+%    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+%    \end{tcbclipinterior}},
+%  #3}
+
+% Python preset environment. 
+\newcommand{\pyobject}[1]{\fbox{\color{red}{\texttt{#1}}}}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+% Inline python highlighting (Might not look great, but eh)
+\lstset{language=Python,keywordstyle={\bfseries \color{blue}}}
+
+
+% ----------
+% actual document
+% ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    \noindent
+    This is the topic review, and analysis, for the document RT-RP-01 by Hoang Le Tuan, RHINELAB Foundational and Pedagogy (EPEFORM) division. It includes specification and whatever there are to specify and evaluate the report on research topic itself. 
+
+    \keywords{Dialogue, analysis, review}
+\end{abstract}
+
+\vspace{2.5cm}
+
+
+
+\thispagestyle{firstpage}
+
+\pagebreak
+
+% ----------
+% End of first page
+% ----------
+
+\newgeometry{} % Redefine geometries (normal margins)
+
+\section{Specification}
+\label{sec:spec}
+
+Specification details are listed simply, since this is a routine document. 
+
+\subsection{Document code, priority}
+
+Document code DIA-01, dialogue, serial 1, specification code \textbf{None} or \textbf{WT} (this DIA-WT-01). Authored by Bui Gia Khanh (Fujimiya Amane) under directive and role of Director for RHINELAB Foundational and Pedagogy Group, in response to RT-RP-01 Research Report on Topic, serial 1. No priority as it is a routine document. 
+
+
+\subsection{Body of issue}
+
+MTAIL Laboratory, RHINE Foundational and Pedagogy Group (EPEFORM). 
+
+
+\subsection{Date and Version}
+
+First version, v1, as 5/18/2026. 
+
+\section{Introduction}
+
+This document reviews quite a bit about everything there are to say about the report, dubbed
+\begin{quote}
+    Current Status and Challenges in Science Education - From Policy Context to Classroom Practices and Research Methods.
+\end{quote}
+Which, in itself, is RT-RP-01, and is about education, pedagogy, and so on, of which current structures are used by institutions and systems employing both students and lecturers. There are what to discuss and what to debate, and thus, would be interesting of a proposition and critique. 
+
+\section{Details}
+
+This topic was commissioned by \textbf{Bui Gia Khanh} as an preliminary survey on the topic of policy context inside classroom, the way scientific knowledges are accumulated and delivered, and the critique of current system of education in both higher education and specialized education. So far, plenty of contexts have been briefly analyzed, and the results delivered are rather insightful. Per detailed exposure:
+
+\begin{enumerate}
+    \item The relative importance of science and STEM in the Era of Science. This is briefly said in the introduction, and with certain acknowledgement of the concurrent problem by some sources. 
+    \item The main content detailed first of the problem about macro-level crisis in science education. The issue with such is mainly, if not mostly, included of the disinterest observed rhetorically in media and politicians' opinion. In reality, this is mentioned as to say that the amount of STEM enrollment has not gone down, however unemployment are widespread among students. This is a good point. 
+    \item The subsequent part talks about bottlenecks in theory and curriculum. One of such is about presentation and the convolution of constructs given in textbooks and materials, or computational graphs. However, it is more about the explanation and mathematical maturity of the topic. Which is rather substantial, and partly correct. 
+    \item The barrier of physics education is analyzed in two breaths, specifically, within the \textbf{systemic} and the \textbf{human} aspect. For the first, practical activities are criticized, for unclear and insufficient resources, time stress not taken into account which causes more barrier and entry cost. The human aspect is better, as it analyzes the fear of students in making mistakes, cognitive biases apparent, and psychological inertia in making sufficiently coherent and often \textbf{perfect research}.
+\end{enumerate}
+
+Overall, what can be seen of the document is a shot-forming analysis on the matter of the issue with current higher education, and especially experimental research. Core educational research method, in the last section of the systemic report, highlighted fairly correct on Slater's warning of anthropomorphism in science education, specifically in consideration of flavours of learning development, and the mitigation from pure evaluative and quantitative apprehension of a student himself in particular. 
+
+\section{Problems}
+
+While the report itself is rather elucidative, and would have to be inquired as rather interesting, there exists many desires to be included of a report in similar topic, and many substantial problems in making of the report in itself. 
+
+\subsection{Importance of STEM}
+
+This part is generally missing. Where the importance of STEM first appeared? What is the history and the realization of such? One particular thing that needs to be also analyze in the same notion, is whether the importance is perceived to be central, or to be thought as a \textit{central tool}? Such are different for when scientists are pioneers and celebrities of high regard, but unfortunately however, in current society, there is the rhetoric of which scientists, and researchers at large are only tools in which society employ and of importance only of their functions, thereby limiting the scope and tradition of which \textbf{scholar} now is barely hanging on, and are mostly extinct as a path. How are we and the report trying to obtain such perspective on this matter?
+
+Moreover, what are statistics in companion of such? What also, in contingent, are critical thinking here? It is widely known of the general public to regard science as merely worthless of their time, and not specifically to cultivate a certain kind of understanding and problem-solving setup thereof. What are there to address such issue?
+
+\begin{quote}
+     This is not a minor omission - it is the foundation on which everything else rests. And so far it is rather contingent thereof. 
+\end{quote}
+
+\subsection{Crisis in science education}
+
+The report mentioned a crisis, but \textbf{where} the crisis are from? What is the shape and form of such crisis? Why is it a crisis in the first place, and the old and concurrent history coming forth to that? Such problems are not addressed inside the discourse taken by the report.
+
+More specifically, one can ask, what is the \textbf{general problem} that compounds upward into the form of the crisis in general? What is the problem, and parts of the serious positive effects still remain within the educational framework? The current framing directly targets the macro-crisis, yet does not say any about coherent and stable sections of what there are to fill of those direct primitives before mentioning the crisis itself. 
+
+The crisis is also narrow. The impending crisis in description is most often illustrated in the view of the politicians, workforce aggregation and coupled politicians' rhetoric for societal and political view, and thus geopolitical instability in short term. However, long-term institutional crisis are not often this, and are much more foundational, sometimes are caused by 
+\begin{enumerate}
+    \item The end-tail of a scientific \textbf{Kuhnian cycle}, where \textbf{conservatism} of older constructs, both in educational policy, institutional inertia, pushback of traditional ways and methodologies; in opposition to the new stance and position, either reckless or particularly insightful, but destructive per perception. 
+    \item \textbf{Kuhnian cycle} failure step - where the theory accumulates more and more difficulties and failures, systematically so. 
+    \item \textbf{Disconfiguration} of scientific knowledge to \textbf{overcomplication} and \textbf{mathiness} - specifically in consideration of \textbf{scientific miscommunications} and thereof, because of overcomplication and the non-resolving tensions. 
+    \item Conception and opposition of two needs of scientific inquiry, for example, the similar sense for industrial applications and the philosophical point toward \textbf{doing and producing physical works}, and the \textbf{dialectic intellectual pursuits} of pure research and knowledge acquisition, often seen in the early stage of material science and metallurgy in the 19th century. 
+    \item Internal scientific crisis, when the theoretical body stagnates, or, exhausted of mentions. More specifically would be also, not the failure of the theory but rather the current \textbf{theoretical mismatch to practical physics}, that produces \textbf{extremal empiricism}, or heuristic approach. 
+    \item The failure in accounting for \textbf{padding}, rather cleverly and logically informed or not, and \textbf{foundation} and of the theoretical \textit{coherent framework} itself. 
+    \item \textbf{Collapse and taboolization} of scientific discourses or specific tabulated issues on foundational, practical or any given in-depth problems, either by majority or prominent voice of the field. This creates the invisible strangle that combines with that of above, amplified this crisis sense in it.
+\end{enumerate}
+
+Such are some inclusions to be analysed further. Particularly speaking, the issue is rather multi-facet and should we analyse more, of the records and such, there can be many structural reasons and pathologies, of which we cannot see, and can be organized to diagnose the current framework of education and sciences in general. Another particularity is the \textbf{bidirectionality} of both education of science, and research or others activities of science or knowledge itself, which has also become a prominent problem not spoken of in recent years. That is, the one-way pipeline of institutions educate and students do science is rather false, that reality gives epistemic health of research iself feeds back to what can even be coherently thought, and what can be coherently thought would be contingent to asking \textbf{question} The report, or its subsequent form, \textbf{should} address such issue. Another crisis, is the \textbf{question crisis}, where our questions are misaligned, superficially compounded of technical jargons and overly useless formalism, conventions and belief of a system that no longer sufficient to hold, where new discourses are forced to \textbf{import older framing intermittently} so without much resistance. Such should be of concern in the next report of the same topic, because there exists many variations beyond what was said here of all. Another thing that is of human nature, which perhaps the human nature portion should suggest or at least gesture a bit of, is where people use \textbf{famous people} as shielding, for which `legendary scientists' are mythologized in either good or bad way, of the exposure uncontrolled and idealization too far, such creates the mythical status of scientific inquiries itself, without acknowledging of any fallacy one can take of even someone who are thought of to be the Nobel Laureates, or of which opened a field. Those are not tangible in knowledge context, for their failing also a logical graceful step that elucidate \textit{what went wrong of how logical the path be}, but social contexts or exposures, either technical or not often forgot such. More than enough, it is the \textbf{hagiography problem in science culture}. 
+
+\subsection{Bottleneck}
+
+The section is simple, but there exists many things in breakage and of which lacking in full. It is better to write them all down rather than just of what to be said of right now. Particularly speaking, 
+
+\begin{enumerate}
+    \item Student fears scientific theories are not only just because of the \textbf{mathematics}, but because also \textbf{what mathematics means}. This is a foundational issue, as the drift against anthropological misalignment of world intuition and the results are often illustrated as the justification for standardizing mathematics, however such effort has been warped from simply specification, to outright distancing, for example in case of string theory. 
+    \item Student fear of science learning also comes from more than just such, for example. Take a look at how the problems are presented, where question crisis applies or not. In any given scientific theory, such always invites uncertainty and framing, because for once, student learns to know of the theory's limitation. 
+    \item Rote learning is also a problem with the fear of learning, especially with the association that many people took. More pointed, scientific learning are currently crushed in many places by the purpose of gaining grades and the \textbf{pre-abstraction} of thoughts in places where it is not applicable. Indeed, in many countries one can choose to take physics class or not, however the disfranchising anecdotes between normal informative physics, and technical physics even from K10 to K12, are not clearly designed nor given any thoughts in many settings. 
+    \item Homeworks are often useless, not as to focus on problem-solving but most of the time to train or given of reasons, providing students with repetition of something, which, by-and-large is not learning, nor discovering of anything substantial. More that such, it creates pressure to learn, knowing that it is mandatory to receive homeworks after every educating step. Interestingly, attaching it to every educational step creates a Pavlovian compression of curiosity into compliance, and such is perhaps also one angle in which we are of interest to search for. 
+    \item Contextualizing scientific knowledge within real-life situations is an essential part, yes, and of essential strategy, yes, but is also vulnerable to misuse and non-utilization of sort. Contextualizations also are often one-side in many cases, for example as to be perceived as \textit{extracting maths out of science} while in reality the converse is true as applying math on something in full, or restricted framing. Moreover, the parts that are most essential of contextualization is also the fallacy where one falls into the realm of \textbf{analogies} of which does not hold, when you look at another angle, thus bring about \textit{analogy runaway situation} where one needs $N$ analogies just to explain something, and of which incompatible if we look at another slice of such. Furthermore, because formalisation and contextualization are two separated things in current situation, connecting them naturally incurs a cost on payment, for example, studying on formalisation too much and the contextualization are much more confusing than expected, and when in too much real-life situation contextualization, formalisation feels too heavy, and there exists no pulling necessity explained so that the $n$-formalization, for example, is guaranteed. More than enough, hand-waiving as "we need 1, 2, 3, and then we move on to $n$ so we do this" is written without motivation, and the scientific dialogue has lost, in common perception, the `plot' of which where those generalization and formalization comes from and of their motivations. 
+\end{enumerate}
+
+There are much to be done, and the sections are too short for its own sake. Though it is good enough as raising the bottleneck section, much are desired of this observation alone. 
+
+\subsection{Barriers in practice}
+
+This one is more about the \textbf{theoretical-practical mismatch} at foundational level. Though not stated clearly, it is rather trivial to say that the two aspects are clearly lacking. We go by briefly. 
+
+\begin{itemize}
+    \item \textbf{The systemic aspect}: This portion is good, however, only focusing on \textbf{material sufficiency} is the death of many of this type of observations as for reducing to only material construction. In fact, as implied, the \textit{way of teaching}, \textit{environment building}, \textit{atmospheric austerity of students}, and the general notion of \textit{mental logistics} at play from students, and teachers of both teacher-to-student and adult-to-teenagers-or-children are lacking, alongside education philosophy or so on, that are never addressed. There can be \textit{even more problems} that have not been exposed, though much more serious it is, would have to be, or not in variations and occurrence, of the situative of the proportion of learning and free activies more mundane as it is, than complex issues. Shoving a bunch of techs into classroom only increases management and mental logistics, and instead backfired than not. 
+    \item The human side also is good, however it is more than just student being influenced of the teacher and the pressure, but also of for example, \textbf{institutional signaling}. Especially in Vietnam, elitism of schools with concentrated resources creates this exact barrier in itself, and while its goal is to foster the elite, the `elite' here are also stupid in the regard of which it is chosen by someone else, to be that someone's prodigy, rather than having resources available so the prodigy can spawn out anywhere, of the signaling to be accepted. Instead of making the door larger and easier to be opened, it makes the door grandier, and harder to push through inside the system of elitism and social connection, or any given form of informal channels. Couple that with even the rhetoric inside a normal environment, the lacking of human communication between the \textit{physicists} and the \textit{physics apprentice}, and so on for chemistry or any, is itself a thing to be said awhole. More so than such is also the \textit{categorization} of which dismiss interdisciplinary learning, for there are too many things staying between the line of both or more fields. More, the teacher quality and human value of the teacher, an the unaccounted variations of lecturer's response or methodologies are also problems, though it is coupled with the reverse direction of the need for more teacher's own sense and variations of learning so that teaching system at micro-level, allows for evolutions and so on. Lastly, the philosophy of the student itself, and the tendency thereof are not fully understood nor given to be stated of, regarded as important. More specifically, take for example, \textbf{time pressure} of exams and so on, are often regarded to be the reason to \textit{disregard all knowledge building}. The currency of each subject and in full are also a problem, as they are treated substantially skewed of everyone involved. And, really last here, the \textbf{posture} being imported of both the above hierarchy, the above elitism and structural discrimination, but also the \textbf{way of thoughts} of knowledge and science, being flatten out in learning or education, such is to say everything are \textbf{too uniform} by inertia, and disregard the other form or alternatives.  
+\end{itemize}
+
+More so the first point is the demolition of technosolutionism in education policy, but such is also to be examined. For our context, the position where, more tablets, more lab equipment, more digital tools - is a reliable systemic intervention is rather \textbf{wrong} as the whole picture is substantially larger, and is already failing of a fragile system in itself. In a sense, we can speak of it barebone to be,
+
+\begin{quote}
+    The report has essentially performed a selection bias toward the governable. It describes the systemic aspect in terms of what systems can measure and adjust, and quietly omits everything that falls outside that frame. The result looks like a complete systemic analysis but is actually a fiscal and logistical memo wearing the clothes of one.
+\end{quote}
+
+Those are the \textbf{trivial and perhaps intuitive response}, however when employed, it can be \textbf{worse} if the root cost is never addressed. Everything that was listed in addition, are no line item in a budget, because it requires you to think specifically before spending the money to go away of the aforementioned rhetoric of philosophical disregard. 
+
+\subsection{The last picking of nitpick}
+
+The writing is \textbf{too short}. Everything in each section can be expanded with great details and source for references are too loose. Overall, not so good on each part, and why the systemic aspect and human aspects are there, for example, is not explained. 
+
+It seems to me you found a lot, but you are missing the point - even the simple answer, the simple question and thoughts, \textbf{must be written down}, for it is the thinking that defines your work as yours, and of which important of an intellectual report, not just a summary of sort. Remember, it is a research topic report on this matter, nothing more, nothing less. So far, so good. 
+
+Furthermore, let it be also clear, that the last part of the document is \textit{with great potential to expand}. Quantitative analysis is part of the proxy that are detrimental for evaluation on a large system. However, to posit that you need to change, means either the implication that there exists another system or another alternative systems where you can pick some, and get some, a proliferated on-purpose evaluation framework where you accept of others frameworks. Or, the one is that education is overextended, and should be redefined again, to contain coherence of the masses. If you do not defend either, we won't know, even if you take a third position. Those are what relevant, and that is the \textit{potential} of what you have diagnosed. 
+
+The report has arrived at the threshold of this question without knowing it, and therefore failed to defend any position on it. That is the \textbf{failure}, which is recoverable, but here I have to acknowledge it. That is a missed opportunity of significant scale - because whichever position you take, the argument from there is rich and consequential.
+
+You just have to write. That is all I asked for, and should it be of next report, I expect of the same. 
+
+\section{Conclusion}
+
+There are many things missing, many good stuffs to be done, many bad framing. However, it is one step of evolution, one step of learning to write from the start. I do not expect you or anyone at this stage to think like me, or to analyze to this degree, because of which to see as trivial, it is rather not, but a compounding network skewed in another, towed in which somewhere else. 
+
+Improve in the next report. Let it be clear that you understand the assignment and diagnosing the thread of the hidden fabric lining sewed above. You just need to \textit{dig down and dig around}, simultaneously, to not be restricted inside the pond of which there are all materialistic, and of which each section, contains only one answer. It can be \textbf{many}. No one knows. Be \textbf{absolutely honest} on that, and expand as far as you see fit of both document, and the topic, and your capacity at hand. 
+
+%\section{Citations}
+%Items that are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion} together with Einstein's journal paper \cite{einstein} and Dirac's book \cite{dirac}---which are physics-related items. Next, citing two of Knuth's books: \textit{Fundamental Algorithms} \cite{knuth-fa} and \textit{The Art of Computer Programming} \cite{knuthwebsite}.
+
+%\medskip
+
+%\printbibliography %Prints bibliography
+
+
+\end{document}
+
+% ----------

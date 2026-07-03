@@ -1,0 +1,14 @@
+# While flow
+while [condition]:
+    [statements]
+# For flow
+for variable in condition
+    statements
+# If flow
+if [condition]
+    [statement]
+elif [condition]
+    [statement]
+...
+else
+    [statement]

@@ -1,0 +1,253 @@
+% ----------
+% Tech report template
+% 
+% ----------
+\documentclass[10pt,a4paper]{article}
+\usepackage{geometry}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[runin]{abstract}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{mlmodern}
+%\usepackage{piton} % Without this enable, it might not work for the listing package. Switch to LuaLateX if you want to use this option, however. 
+\usepackage{fancyhdr}
+%\usepackage{helvet}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{etoolbox}
+%\usepackage[scaled=0.90]{helvet} % Font 1
+%\usepackage[scaled=0.85]{beramono} % Font 2
+\usepackage{xcolor}
+\usepackage{hyperref}
+% Bibliography
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+\addbibresource{bibb.bib} %Imports bibliography file
+
+\input{preamble.tex}
+
+% ----------
+% Variables
+% ----------
+
+\title{\textbf{Proposal Template}, v1} % Full title of your tech report
+\runningtitle{Usage for most mainly seen proposal and writing on project draft} % Short title
+\author{Fujimiya Amane} % Full list of authors
+\runningauthor{Amane et al.} % Short list of authors
+\affiliation{} % Affiliation e.g. University or Company
+\department{Your Department} % Department or Office
+\memoid{General-Sub-Serial-Additional Code} % ID of the tech report
+\theyear{Year} % year of the tech report
+\mydate{Full month, year} %the date
+\usepackage{tcolorbox}
+\usepackage{fancyvrb}
+
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+%\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+%  breakable=true,
+%  listing engine=minted,
+%  listing only,
+%  minted language=#2,
+%  minted style=default,
+%  minted options={%
+%    linenos,
+%    gobble=0,
+%    breaklines=true,
+%    breakafter=,,
+%    fontsize=\small,
+%    numbersep=8pt,
+%    #1},
+%  boxsep=0pt,
+%  left skip=0pt,
+%  right skip=0pt,
+%  left=25pt,
+%  right=0pt,
+%  top=3pt,
+%  bottom=3pt,
+%  arc=5pt,
+%  leftrule=0pt,
+%  rightrule=0pt,
+%  bottomrule=2pt,
+%  toprule=2pt,
+%  colback=bg,
+%  colframe=orange!70,
+%  enhanced,
+%  overlay={%
+%    \begin{tcbclipinterior}
+%    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+%    \end{tcbclipinterior}},
+%  #3}
+
+% Python preset environment. 
+\newcommand{\pyobject}[1]{\fbox{\color{red}{\texttt{#1}}}}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+% Inline python highlighting (Might not look great, but eh)
+\lstset{language=Python,keywordstyle={\bfseries \color{blue}}}
+
+
+% ----------
+% actual document
+% ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    \noindent
+    This is a template for all RHINELAB-RINALAB proposal writing, on either research, project, working, event hosting, etc. Please use this template and specify information regarding what is required.
+    
+    This is \textbf{version 1} of the template. Subjected to change. 
+
+    \keywords{Keyword1, Keyword2, Keyword3}
+\end{abstract}
+
+\vspace{2.5cm}
+
+
+
+\thispagestyle{firstpage}
+
+\pagebreak
+
+% ----------
+% End of first page
+% ----------
+
+\newgeometry{} % Redefine geometries (normal margins)
+
+\section{Specification}
+\label{sec:spec}
+
+Provide specification details, metaprogramming. 
+
+\subsection{Document code, priority}
+
+Provide document codes, additional document code, purpose, organization, authorship and anyone contributing to the report, identification of purpose (proposal, or research, indexing 01). Priority code, additional conditions. Does it override anything, or add to anything?
+
+\subsection{Body of issue}
+
+Who issue, team or departmental attachment. 
+
+\subsection{Date and Version}
+
+Version specification across versions, and similarly date of construction. \textbf{Do not remove old dates}, for versioning record. 
+
+\section{Introduction}
+\label{sec:intro}
+
+The introduction section must include the following:
+
+\subsection{Proponent}
+
+Who proposed the project? Which team? What is the member scope? Is this collaborators-allowed or member-only? Situation description of the person?
+
+\subsection{Subject classification}
+
+Where and what type of subject is the proposal in. Are there any problem regarding such, and are there any form of cross-subject problem or warning beforehand. 
+
+\subsection{Motivation}
+
+What is the road that led to this project. Write it in simple form, you do not to have it fleshed out - it is a proposal after all. However, specify briefly,
+
+\begin{enumerate}
+    \item Personal observation. 
+    \item Preliminary observation after personal one about the related context. 
+    \item Resolution ad temporary. 
+\end{enumerate}
+
+That is the minimum information required, and you can add more if needed. 
+
+\subsection{Requirement}
+
+Answer most of the questions if able. 
+
+\begin{enumerate}
+    \item What is the required knowledge, stage of knowledge within respective subject classification, specialized knowledge, expected knowledge? 
+    \item If the knowledge is specified to be also \textbf{under development while doing the proposal itself}, what is the knowledge in question, how are you planning to fill it in, fill it where, what format, artifact (when doing or learning anything, you have to provide back certain amount of \textbf{proof-of-work} in the form of report, crystallization, notes, etc.)? Duration and percentage of this in the project? 
+    \item What is the platform that the proposal is planning to use? For example, if the code is on GitHub, or if the project code is on GitLab, or the proposal is for internal, and we use \textsf{SyncTrazor} and peer-to-peer sharing for coordination? 
+    \item What would be used to communicate between the two? 
+    \item What is the end-goal requirement? Paper, or project finalization, modules and code reusable by the laboratory? Briefly on this point. 
+    \item Time commitment - what is the time commitment of members on this? 
+    \item Roles - what kind of roles are required and established in the proposal working group? For example, a mixed 5-people group still have to have domain-expert, coding handler, architectural and theoretical analysis guy, and so on. Do you have them, or else? What is the percentage of each you want? If the work is more theoretical, then the percentage of hardware people is zero or marginal, for example.  
+\end{enumerate}
+
+There will be more questions, and should you provide more information, it is \textbf{preferred} of doing so, because it will help others in determining their fit and contribution thereof, especially when people can try getting their participation in mid-project or mid-research. 
+
+\section*{Analytical view}
+\label{sec:analytic}
+For better understanding of the proposal, provide rigorous reading and analysis on: 
+
+\begin{enumerate}
+    \item Literature and \textbf{field review}: What is the field (briefly) and intersection thereof if exists, current state of the field, current state of the problem, definition of the problem, literature analysis of the problem. 
+    \item Research problem analysis (original of yourself) aside from literature review. \textbf{Justification} of those analyses and identification that gave rise to this project. 
+    \item Goal - research or work goal in achieving the proposal finalization, in specificity. 
+    \item \textbf{Research/Work methodology} and design - how the work is designed in operation? What is the methodology used to reach the goal? Analysis of the road to there, is it difficult in terms like time, knowledge uncertainty, conflicted interest and uncertain benchmark? What is required to develop and what can be done within existing system? Optional - is the work interpretation and modification, or development of existing framework or something original in its form?
+    \item Implication and \textbf{contribution to knowledge} - what does it imply about the purpose of the project? Speak plainly, do not hedge it like you are doing it for shareholder. What is the contribution - either \textbf{lab-based contribution} to the infrastructure and base of the lab, research of the lab and so on, or - \textbf{field-wide}, in general contribution to the state of the field in specific classification and in general?
+\end{enumerate}
+
+Of this, please provide, if there are \textit{any}, \textbf{preliminary analysis and work}. Better yet even draft of current finding. Link them to the proposal if able. Use the link in simple form as \href{https://rhinelab-main-4457ca.gitlab.io/contents/actions/research/laboratory/theoretical_AI.html}{link like this}. 
+
+\section*{Timeline and resource}
+\label{sec:conc}
+
+Finalization requires timeline. Specify it briefly. Provide \textbf{uncertainty in timeline}. Remember this. When you have fixed time, it must be earned, because you are setting up the \textbf{end date}. 
+
+This mean at approximately accurately that time, the timeline must be there and you must reach there. The capacity will determine if you can be there or not. 
+
+\begin{quote}
+    In all, you must state explicitly \textbf{how wrong you might be} and in which direction during the work. If it is routine work or project, then good. If not, do this. 
+\end{quote}
+
+All of the above analysis are there to provide people the sense of counter-uncertainty in description of project. If you fail from those, this part of the timeline will read like someone dreaming too high without scaffolding. 
+
+For the resource part, do you require afterward financial non-trivial (i.e. it costs something) support and funding? This is to organize the project in the funding handler, so that we can do a fundraiser or funding proposal explicitly. Instruction will be given if the proposal requests funding. Any other kind of hardware resources, software, architecture and infrastructure support - for example, the team want the core management team to research on certain platform and so on, or creating sheets or tables to coordinate, or specific lab presence on certain platform, GitHub, Mastodon etc. since the proposing team operates there. Should all of that be in question, include it here \textbf{explicitly}. 
+
+\section*{Acknowledgements (optional)}
+
+Thanks again to \textbf{Person 1} and \textbf{Affiliation A} for their financial support. Thanks \textbf{Person 2}, \textbf{Person 3}, etc. for their participation in drafting this document. Further information. 
+
+% ----------
+% Bibliography
+% ----------
+
+% \bibliography{../biblio.bib}
+% \bibliographystyle{abbrv}
+
+\appendix
+
+\section{An appendix}
+
+Appendix to more information. Analysis, cost process, etc. 
+
+\section{Another appendix}
+
+\subsection*{Subsectioning in appendix}
+
+Some more text, and a list:
+
+\blindenumerate
+
+
+
+\section{Citations}
+Items that are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion} together with Einstein's journal paper \cite{einstein} and Dirac's book \cite{dirac}---which are physics-related items. Next, citing two of Knuth's books: \textit{Fundamental Algorithms} \cite{knuth-fa} and \textit{The Art of Computer Programming} \cite{knuthwebsite}.
+
+
+Remember to change this to your respective bibliography. Usually, the file that holds the bibliography in the path is \texttt{bibb.bib}, so beware of that. The below part where there is \texttt{printbibliography} does it work - it prints the bibliography. Cite them using the \texttt{cite} key seen in the above citation. 
+
+\medskip
+
+\printbibliography %Prints bibliography
+
+
+\end{document}
+
+% ----------

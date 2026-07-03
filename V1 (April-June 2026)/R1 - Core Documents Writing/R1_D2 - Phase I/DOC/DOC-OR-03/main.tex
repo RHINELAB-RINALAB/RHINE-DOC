@@ -1,0 +1,229 @@
+% ----------
+% Tech report template
+% 
+% ----------
+
+% --------- PACKAGE --------- %
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amsbsy}
+\usepackage{bm} % normal text bold font inside math environments
+\usepackage{stmaryrd} % Saint Mary of stuff computer science typographic symbol
+\usepackage{geometry}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[runin]{abstract}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{booktabs}
+%\usepackage{piton} % Without this enable, it might not work for the listing package. Switch to LuaLateX if you want to use this option, however. 
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+%\usepackage{helvet}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{etoolbox}
+%\usepackage[scaled=0.90]{helvet} % Font 1 for package
+%\usepackage[scaled=0.85]{beramono} % Font 2 for package. If you want this configuration, change this with the following configuration, or rather just comment the other one out
+\usepackage{mlmodern}
+\usepackage{xcolor}
+
+% Bibliography
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+
+% --------- PACKAGE --------- %
+\input{preamble.tex}
+\addbibresource{bibb.bib} %Imports bibliography file
+
+
+% ----------
+% Variables
+% ----------
+
+\title{\textbf{Logistics Operable} \\ On knowledge base and working assets, v0.1} % Full title of your tech report
+\runningtitle{Logistics planning} % Short title
+\author{Fujimiya Amane} % Full list of authors
+\runningauthor{Amane et al.} % Short list of authors
+\affiliation{} % Affiliation e.g. University or Company
+\department{RHINELAB-RINALAB, Core Management Division} % Department or Office
+\memoid{DOC-OR-03} % ID of the tech report
+\theyear{2026} % year of the tech report
+\mydate{May, 2026} %the date
+\usepackage{tcolorbox}
+\usepackage{fancyvrb}
+
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+%\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+%  breakable=true,
+%  listing engine=minted,
+%  listing only,
+%  minted language=#2,
+%  minted style=default,
+%  minted options={%
+%    linenos,
+%    gobble=0,
+%    breaklines=true,
+%    breakafter=,,
+%    fontsize=\small,
+%    numbersep=8pt,
+%    #1},
+%  boxsep=0pt,
+%  left skip=0pt,
+%  right skip=0pt,
+%  left=25pt,
+%  right=0pt,
+%  top=3pt,
+%  bottom=3pt,
+%  arc=5pt,
+%  leftrule=0pt,
+%  rightrule=0pt,
+%  bottomrule=2pt,
+%  toprule=2pt,
+%  colback=bg,
+%  colframe=orange!70,
+%  enhanced,
+%  overlay={%
+%    \begin{tcbclipinterior}
+%    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+%    \end{tcbclipinterior}},
+%  #3}
+
+% Python preset environment. 
+\newcommand{\pyobject}[1]{\fbox{\color{red}{\texttt{#1}}}}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+% Inline python highlighting (Might not look great, but eh)
+\lstset{language=Python,keywordstyle={\bfseries \color{blue}}}
+
+
+% ----------
+% actual document
+% ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    \noindent
+    Outlining the structure and intended current plan for logistics, knowledge base deployment and all sort of relevant details about infrastructures in working and filling of Phase I and onward. Infrastructure track is also included.
+
+    \keywords{Management, logistics, planning, encyclopaedia}
+\end{abstract}
+
+\vspace{2.5cm}
+
+
+
+\thispagestyle{firstpage}
+
+\pagebreak
+
+% ----------
+% End of first page
+% ----------
+
+\newgeometry{} % Redefine geometries (normal margins)
+
+\section{Specification}
+\label{sec:spec}
+
+Specification for this document. Mostly standard. 
+\subsection{Document code, priority}
+
+%Provide document codes, additional document code, purpose, organization, authorship and anyone contributing to the report, identification of purpose (proposal, or research, indexing 01). Priority code, additional conditions. Does it override anything, or add to anything?
+
+Document code DOC-OR-03, additional code none, Core Management Department writing for analysis of respective logistics planning, feasibility analysis and future prospect within funding request. Authored by Fujimiya Amane. The document is an \textbf{organizational document}. Priority R1. Overriding None. 
+
+\subsection{Body of issue}
+
+Core Management Division, Fujimiya Amane 
+\subsection{Date and Version}
+
+Finished, version 1, 3rd May 2026 in effect. 
+
+\section{Introduction}
+
+During the construction phase of the lab, the precursor form of ideas on papers, RHINELAB-RINALAB implicitly settled on the convention, for it to be 
+\begin{quote}
+    A community-based, open-work, semi-open-access, transparent research laboratory that focus on benefiting both the researcher, and the research institution.  
+\end{quote}
+Following such, basically requires the laboratory to provide sufficient \textit{recordable artifacts and traces}, including large bodies of the laboratory, knowledge base, reports, and so on, be available for the wider public and overall open access, aside from internal information, like security-based measures. As given of such, the plan to have certain form of \textbf{coordinating structures} are recommended, so much so including \textbf{authorship} contents or how do you even write something, work something out, run something and publish it alongside other laboratory's resource. So far, we have to manage those implicit threads altogether, lest of it infringe on many interpretations thereof unfaithful of what is the original form. 
+
+\section{Principle}
+
+The principle of working, at least coming down along to logistics, resources, knowledge materials and so on, is that
+\begin{enumerate}
+    \item All topics should be recorded and compiled. 
+    \item All discourse, serious discussions, debates, organization should be record, audited, formatted and overall logged down. 
+    \item All working materials, sources, works are to be written down, or produced into any given form of artifacts, be it code, website (with source), documents, papers (expository, report, review, analysis, novel research, etc.), and anything. Even modules, Python publishing, datasets are given, within the scope of output\footnote{The question of \textit{how much} is not answered here, because it is context-based.}.
+    \item Almost all works would be publicly available, and so are contents and discourses, with permission from the respective people of contribution thereof. 
+    \item Works can be contested, versioned, changed, debated, inquired, criticized, and many more. 
+\end{enumerate}
+
+In order to effectively uphold such standard, we require a design timeline toward which we will be able to operate from within. For this, we require the logistics capable of handling under needs of \textbf{laboratory resources} (intellectual) acquisition and management, which comes at what Phase I is actually using. And what we even have to adapt, since we are pretty much bare-hand right now. 
+
+\section{Logistics operable}
+
+What we have seen is that logistics is a serious contingent, not as backdrop to be neglected while proposing and working with a laboratory thereof. Logistics, especially when writing, where to write, what kind of format can be used to write down contents and so on, are important to the continual existence of knowledges and so on for the laboratory itself, and the researcher in companion to the laboratory, and also the future community that the lab would be responsible of. So far, this would outline the scope and landscape of what to come\footnote{We note that Phase I is the current phase at the time of writing}.
+
+\subsection{Phase I - Operational}
+
+Phase I is rather standard. What would be used in this phase would be hinged upon the restriction of \textbf{cost} and potential \textbf{planning on resource}, as we operate on free, no-cost systems. 
+
+\begin{enumerate}
+    \item \textbf{File storage}: Most of the time local. We are trying or at least attempting to do a certain different way, by releasing, or at least managing file system via \textbf{Syncthing}, which is a service of \textit{peer-to-peer file transfer}, and \textbf{Torrent} or IPFS for large file, multi-fragment system. Such would be inquired, however another option, much simpler, is to use \textbf{Google Drive} for handling files, within limits (no file larger than 200MB per file), with subscription of 100GB to 2TB. 
+    \item \textbf{Document and research publishing}: There are two options. First, \textbf{Open Science Foundation (OSF)} system, allows for infinite projects with specific \textit{doi-code} for each. The restriction is purely storage proliferation - 50GB for open access and public, 5GB for private one. In retrospect, such is rather preferable, and we can always support OSF for their services, which saved a ton. Another underrated option thereof, so to speak, is \textbf{Zenodo}, supported and created by European Science Commission by itself. This includes potentially limitless, if utilize and contribute correctly, unlimited storage and options thereof, for dataset, models, code, and so on. The only downside is that \textbf{there is no way to remove it once published}.
+    \item \textbf{Hosting and publishing contents}: For now, the system revolves around a few options that are feasible. By condition of the team setting, we advocated for the usage of three official main ways of publishing contents - either web-based contents, or rather \textbf{dynamic contents}, or core documents, given inside a \textbf{documented system contents} (a cluster of document also counts), and lastly \textbf{operational repository contents}, which includes for example, documentations along with system info, written in sphinx for a repository, or \textit{just the repository itself}. Insofar, we are considering \textbf{web-based platforms} like Quarto, and separately Quartz 4 for many parts of the knowledge base. This is hosted on, using mainly \textbf{GitLab Pages} for now, with separated \textit{website template} being used for streamlining such deployment. For the documented system, a mix of GitHub/GitLab repositories with Overleaf repositories for anyone that work on it online of LaTeX compilation. Per usual notion, we do not accept working mechanism that uses Microsoft Word, though special cases can be made for people unable to do so, but learning from our LaTeX knowledge base course. For the repository, either GitHub/GitLab - which seems to be a very concrete choice so far, and we should be using it, and for some sensitive structures and repositories, Gitea. 
+    \item \textbf{Organization}: First, continuing on the preceding system. We are currently operating on a choice of fragmentation. Basically, the GitLab/GitHub hosting system, as stated, includes maximally \textbf{three} (3) default template - main page of individual groups, knowledge base template (for construction and a main component), and \textit{specialization}, which includes for example, separated Python course for AI team if the needs to justify separation from the two other system arise. Second, the organization format for now would be utilizing many of \textbf{Google Sheet} and as per normal, \textbf{spreadsheet form} as stated, with supporting equipments or formats can be done using, for example, Google Form for response and survey. Not much can be done with that, so unfortunately, yes. That is for organization, alongside separated documents and PDF organization notes, such as this one itself.
+    \item \textbf{Person notes and formats}: Obsidian.md for actual processing and streamlining. We then encourage the use of \textbf{markdown} in the laboratory for the purpose of unification. 
+\end{enumerate}
+
+Per Gitea versus GitHub-GitLab, and so on, we refer to the crude interpretation of the philosophy of Heidegger, specifically we will \textit{only use Gitea} when the logistics is operationally good enough, and does not make a burden on the usual task, more than the tolerable level of bureaucracy.
+
+The mention of \textit{Zenodo} and OSF creates implicitly two tiers: large datasets/models go to Zenodo, documents go to OSF, vice versa for any form of documents or reports. This is something that \textbf{must be in standard}, and should require no further saying. All \textit{expository papers} should be also published there if able. 
+
+%\section{Citations}
+%Items that are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion} together with Einstein's journal paper \cite{einstein} and Dirac's book \cite{dirac}---which are physics-related items. Next, citing two of Knuth's books: \textit{Fundamental Algorithms} \cite{knuth-fa} and \textit{The Art of Computer Programming} \cite{knuthwebsite}.
+
+%\medskip
+
+\subsection{Phase II - Extension}
+
+If Phase I succeed for what it is worth, the beginning of phase II would consolidate the current infrastructures in full, alongside the active contents concentration large enough to be moved. This phase will only come after several conditions are satisfied, which include:
+\begin{enumerate}
+    \item Enough funding and reserve. 
+    \item Enough knowledge base and logistics realization (working with something good enough to be accustomed to it). 
+    \item Enough expertises i.e. manpower. 
+    \item Enough research onto the foundational logistical systems and the current disadvantages. 
+    \item Enough research into the new paradigm, that will be listed just below. 
+\end{enumerate}
+
+Changes to the underlying structure, barring what is presumed or rather configured now as speculation, is as followed. 
+\begin{enumerate}
+    \item \textbf{File storage}: Additionally, \textit{cold storage}, like S3 Glacier Deep Archive for large and in-depth, low-retrieval rate archive is possible, alongside cheap and decentralized options itself, as listed. 
+    \item \textbf{Hosting and publishing contents}: Because the majority of coordinating infrastructure relies on \textbf{server, on-line systems} and shared accessible resources, storages, and so on, one option at that point of development. That is why we will have to consider \textbf{laboratory-specific infrastructure}, including \textit{shared hosting infrastructure} with low-cost, VPS (virtual private server) for \textit{independent accessibility}.
+    \item \textbf{Organization}: Most remains the same, however because of the above point, almost all \textit{services and organization logistics} will be hosted or be used in the same way of the infrastructure now independent of third-party free services. 
+    \item \textbf{Infrastructure (Document and research publishing)}: Insofar, we have been implicitly using structures solely on GitLab round. However, as stated, Most of the fragmented Quartz 4 repositories are \textit{fragmentation specific source} for teams and laboratory sessions. A new \textbf{centralized large scale} system must be under evaluation and construction. This includes, or rather a choice on the \textbf{XWiki stack}, including supporting infrastructure like Docker and so on. 
+\end{enumerate}
+
+Such would be the change from \textit{fully-free} to higher tier, of \textit{low-cost infrastructure}. Another thing to realize in the organization part, is the need for a system that can accommodate \textit{spreadsheet-like system}, yet intrinsically different and of more variations, controls and so on that single spreadsheet-alternative systems. Further than such framework is ill-posed as Phase I is still ongoing, thus we do not imply a phase III, even though such exists. 
+
+\section{Conclusion}
+
+Overall, what we have right now is the local future intermediate plan. What can be say about such is rather arbitrary, and it would likely to be retained as future plan. Nevertheless, the purpose is sound, and should we try doing such, this will be the skeleton of what are there to be seen. 
+
+\subsection{Temporary end}
+
+This is the end of v0.1. More can come in later finishing drafts. 
+
+%\printbibliography %Prints bibliography
+
+
+\end{document}
+
+% ----------

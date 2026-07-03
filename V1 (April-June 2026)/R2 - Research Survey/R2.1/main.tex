@@ -1,0 +1,210 @@
+% ----------
+% Tech report template
+% 
+% ----------
+\documentclass[9pt,a4paper]{article}
+\usepackage{geometry}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[runin]{abstract}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{booktabs}
+%\usepackage{piton} % Without this enable, it might not work for the listing package. Switch to LuaLateX if you want to use this option, however. 
+\usepackage{fancyhdr}
+%\usepackage{helvet}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{etoolbox}
+\usepackage{mlmodern}
+\usepackage{enumitem}
+\usepackage[scaled=0.90]{helvet} % Font 1
+\usepackage[scaled=0.85]{beramono} % Font 2
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Bibliography
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+\addbibresource{bibb.bib} %Imports bibliography file
+
+\input{preamble.tex}
+
+% ----------
+% Variables
+% ----------
+
+\title{\textbf{Medical-Nuclear Science \\ A Survey and Analysis}} % Full title of your tech report
+\runningtitle{Survey analysis on nuclear-medical analysis.} % Short title
+\author{Fujimiya Amane (Bui Gia Khanh) \\ {\small as RHINELAB Leader, Founder and Principal Director}} % Full list of authors
+\runningauthor{Amane et al.} % Short list of authors
+\affiliation{} % Affiliation e.g. University or Company
+\department{RHINELAB-RINALAB} % Department or Office
+\memoid{DOC-RE-01} % ID of the tech report
+\theyear{2024} % year of the tech report
+\mydate{March-June, 2026} %the date
+\usepackage{tcolorbox}
+\usepackage{fancyvrb}
+
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+%\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+%  breakable=true,
+%  listing engine=minted,
+%  listing only,
+%  minted language=#2,
+%  minted style=default,
+%  minted options={%
+%    linenos,
+%    gobble=0,
+%    breaklines=true,
+%    breakafter=,,
+%    fontsize=\small,
+%    numbersep=8pt,
+%    #1},
+%  boxsep=0pt,
+%  left skip=0pt,
+%  right skip=0pt,
+%  left=25pt,
+%  right=0pt,
+%  top=3pt,
+%  bottom=3pt,
+%  arc=5pt,
+%  leftrule=0pt,
+%  rightrule=0pt,
+%  bottomrule=2pt,
+%  toprule=2pt,
+%  colback=bg,
+%  colframe=orange!70,
+%  enhanced,
+%  overlay={%
+%    \begin{tcbclipinterior}
+%    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+%    \end{tcbclipinterior}},
+%  #3}
+
+% Python preset environment. 
+\newcommand{\pyobject}[1]{\fbox{\color{red}{\texttt{#1}}}}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+% Inline python highlighting (Might not look great, but eh)
+\lstset{language=Python,keywordstyle={\bfseries \color{blue}}}
+
+
+% ----------
+% actual document
+% ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    \noindent
+    Short analysis about medical science and the thread of interconnected medical-nuclear sciences. Added with question sequences. 
+    
+    \keywords{Report, medical science, nuclear physics.}
+\end{abstract}
+
+\vspace{2.5cm}
+
+\thispagestyle{firstpage}
+
+\pagebreak
+
+\section{Specification}
+
+The following is the usual specification, nothing that is of the matter that much in consideration. 
+
+\subsection{Document code, priority (disabled)}
+
+This document is listed as DOC-RE-01, document serial 01 (because of generalization, and it is \textbf{one of the many first document}) code DOC, additional tag RE (research). Used for exploring about medical science and nuclear application of this topic, where it lies, and the general domain used in Hackatom competition in April 2026. 
+
+\subsection{Body of Issue}
+
+RHINELAB@MTAIL Core Theoretical Research Laboratory, Bui Gia Khanh (Principal Researcher).
+
+\subsection{Version}
+
+v1. Expected to be finished on first version, later version would be another document in full aside from minor deviation. 
+
+\section{Introduction}
+
+Medical science is one of the most lucrative field that would be ever conceived by modern science, and welfare at large. It, obviously, researches on how to save lives, improve quality of life, and so much more in consideration of treating diseases and modification thereof, monitoring, and similar tasks in consideration of biological function and species. Nuclear science, by then, is one of the rather new addition to the landscape of medical science in its long anthropological history - spanning much and more during the 19th and 20th century at least. Yet, despite such, its usual intuitive response pulls apart to a spoken observation - nuclear physics gives \textbf{radiation poisoning} as one particular form of case that needs medical science to cure, and to prevent, yet despite such still is used in medical science? The purpose of that is what we are to entangle partially for now, if we are to develop nuclear medical science in full, and of the foundation up top for actual research there is, since as we have seen, even the question of \textit{where nuclear enters medical science}, and where one draws the line between two, is hard to diagnose, more specifically so is also the notion of the intuitive counter-inference. Which, we can see, is that for example, nuclear probing like X-ray spectroscopy of human body, is beneficial in treating disease, but with a risk all of itself triggering the disease in there (such as cancer). Such would be what we are to research. 
+
+In all, what we would want to do here is simple. First, is to deliver a quick overview of what is medical science. Second, is the overview of \textbf{what exactly is the nuclear physics} in context here. Third, where nuclear physics enters medical science - note that \textit{medical science is the contingent subject}, not nuclear physics. One of the particular failure in realizing such makes an inverted case for where nuclear physics dominates the medical science it was supposed to back up. Finally, fourth, is in consideration of the new development - \textbf{AI-assisted nuclear medical science} as one particular form of such, and was presented in Vietnam's team Hackatom competition presentation in April 2026, of which we digress to continue. 
+
+\section{Overview}
+
+First, let us overview each part of the puzzle, and even further on of the third puzzle piece - \textbf{artificial intelligence} (not the NLP one, obviously). 
+
+\subsection{Medical science}
+
+At least from what we know of, \textbf{medical science} can be characterized as large as the study of \textbf{medicine}, though the term has diverged largely from another, in such case that something like chemotherapy can now be considered a medicinal treatment of such, yet, well, it is not typically intuitive as a pill thereof. By and large, it is the science and practice of caring for patients, managing the diagnosis, prognosis, prevention, treatment and paliation of their injury or disease, which also lead to improving one's health in a \textit{quality of life} way of sort (Wikipedia is strangely there). 
+
+However, if we go by account by \cite{chandrappa2020environmental}, medical science is a specialty of science that is concerned with the diagnosis, treatment and prevention of diseases or any form of critical health pathologies to a given human species. This inquires understanding of the environment and human body as prerequisite of such, however not limited to only human, but rather any given interesting animal body in inclusion of sort. 
+\begin{quote}
+    With agriculture activities, the humans were exposed to pathogens, pin worms, tapeworms, hook worms in excrement that were used as fertilizer. The agriculture also decreased the dependence on the wild plants that combated diseases.
+\end{quote}
+
+In the same breadth, medical science has three main branches and many parts else - \textit{basic medical science} (well, that is not helpful at all), medical specialties, and interdisciplinary fields. For the interdisciplinary medicines, there are for example, addition medicine, aerospace medicine, such depends on either \textit{context of application}, and the utilization, for example, \textbf{laser medicine}, which is similar to nuclear physics application of medicine. More specifically, it is most likely to be listed inside \textbf{forensic medicine and toxicology}, as nuclear devices are often considered as spectroscopic devices, but also pathological toxic radioactive compounds\footnote{See more in \href{https://www.researchgate.net/publication/378243561_Modern_view_of_medical_science_and_education_of_the_future}{\textbf{modern view of medical science (paper)}} and \href{https://www.interesjournals.org/articles/a-brief-description-about-medical-science.pdf}{\textbf{a brief description about medical science (perspective paper)}}.}
+
+\subsection{Nuclear science}
+
+In simple terms, as this field is not under severe consideration thereof, as the foundational question and inquiry, of:
+\begin{enumerate}[itemsep=1pt,topsep=1pt]
+    \item What is the composition of matter of the nucleus, interaction between them, and what is it made of? 
+    \item What is the interaction with the other physical particles and energy form (photon), and how are they affected. 
+    \item Properties of atomic and subatomic particles? 
+    \item How do we model them? How do we encapsulate and captures \textbf{population dynamics} for nuclear models, and collective behaviours? 
+    \item How do we use this in practice, in complex system, in complex archetype of fundamental atomic disposition and interactive settings? How do we analyze and utilize nuclear physics at will and exploit its \textit{phenomena}. 
+\end{enumerate}
+
+The interplay, by then, is the remarkable entanglement toward the \textbf{application of such} onto any given form of system. One of which, would be medical science in our case of this topic. As such, nuclear physics is the science mainly investigating \textbf{subatomic particles and nucleonic interactions} thereof and manipulation of them for different purposes, capturing their properties and model.
+
+\subsection{Artificial intelligence}
+
+Artificial intelligence, at the very least the cross-link here that we have, is more so that AI is an \textit{overloaded term} and a rather \textbf{useless terminology}. What we want here, exactly and is of its own form, to be \textbf{dynamic modelling} system that can capture what the data say, the \textit{inferred structure} that can be observed from the data, and utilization of such data and `learned inferred knowledge and structure' toward something of value, like evaluation on such, or identification, classification, and given task that involves using the data for some specific purposes and input-output resultant. 
+
+A quick word on the term \textit{inference here}. Basically, it relies upon the realization of that, a model, AI, or sort of dynamic model as we stated, basically is fed of input data, which we can denote as $\{x_{i}\}$. Then, such information would be helpful in a way that can be said as to provide structural insights onto the system, which, we assume our observation as being included of a relational pair $(x,y)$ that capture a \textit{reactive correlation reality} of the system $S$ where you observe those variables, and values of $x,y$. In hindsight, it depends totally on the properties you infer, the ordering, the relation you impose and interpret that gives rise to the causal chain and ultimately, whether we can say it is $x\mapsto y$ or $y\mapsto x$, considering and assuming that such relational form of \textbf{function} is stable enough, which is often not the case in reality, though serve as a good approximation. Then, through this slice of $S$, the task of a dynamic model is then not just to fit, that would be just function approximation at large, but also to \textbf{retrieve} a flawed proxy $S'\in S$ that captures a part of what $S$ truly is. Which, ultimately, we want to get $S'\to S$ as far as possible, while taking into account noises, hidden variables, morphed situation and scenarios that would be different and present various condition of one another that the setup would feel like two very unrelated cases, contexts, and variational hypothesis. This is the event in which we call as \textit{inference} of a specific dataset, and that is the role of the dynamical system that is best fitted of what we encapsulate all into the term AI, for now, and it is also one of the most important tool that we would be able to use in the task of DM-assisted nuclear medicine. 
+
+A side tangent to what was said as \textit{variational hypothesis}. This is essentially the theorem of \textbf{no-free-lunch} for observables in data setting and computational learners. Informally, we can see it as the following. Suppose there exists a DM $\mathrm{DM}(\cdot,\cdot)[f]$ based on functional form architecture $[f]$, that gives connections, relations, structure and confoundation in the functional form, eve for generalized function. Then, under a given assumed \textbf{observation deck} $\mathcal{D}$, interpretation of this deck of observations is imposed upon $[f]$-architecture, and thus created the assumed final proxy system $S'_{[f]}$, under such choice. Then, this implies the creation of $S_{[f]}$, the true picture of $S$ under this subjective functional lens, and we can say $S_{[f]}\subset S$. In general, we can also say, $S_{[\cdot]}\subset S$ for any given architectural interpretation model, and a conjecture is that there exists $\{S_{[\cdot]}\}$ such that $\cup_{\forall i}S_{[i]}\cong S$ or a stronger version using $=$. Then, \textit{no-free-lunch} here implies the same notion: for where you have the proxy of the data itself, the data's own proxy situation, and the actual concept under such proxical perspective, you \textbf{cannot access} the oracle in an objective manner. Shifting the interpretation of the dataset $\mathcal{D}$ means you commit to an uncharted often, and diverging conceptual architectural path toward $S$ that cannot be trivially guaranteed as consistent through-and-through with other interpretation that you have tried. Lastly, consider a system where such is said to be \textit{fixed}. By condition of the observable perspective, there exists a boundary where the observed effect would be inexplicably intractable of the discrete and deterministic dataset form, and thus interpretation architecture $[\cdot]$ must advise itself on one particular strategy (which is being conducted almost always and everywhere) - \textit{stall the picture altogether} and analyze and capture, extrapolate from there. Given such, this creates another proxy problem that I should not name it more since it is trivially what, and thus, give rise to the \textbf{variational hypothesis} - any given system under dataset consideration, must give itself as being a fixed system analysis, and \textbf{ergodic hypothesis} in this form says that for many iterative fixed system analysis, the dynamical picture can be recovered, is a conjecture that needed much proving ground, which we will not spend our time here conjecturing this discourse. 
+
+Why is this important? Well, the discretization and clarification is enough of justification, for if you let "AI" mean "function approximator," then in a clinical context like nuclear medicine of sort, people will treat a model's output as if it were the system, rather than as a partial reconstruction of it, which is a very failure of any \textit{overfitting model}, ironically, that we keep trying to appear of. 
+\section{Cross-play domain}
+
+Here, is to discuss from what we established above quite so, to some 
+
+\subsection{The first cross-play - nuclear medical science}
+
+The crossplay between nuclear physics and medical science happens in the gap of \textbf{diagnostic specialties}, for both nuclear medicine and nuclear physics-based therapy, such as high-energy destructive therapy of sort. Indeed, one can see the main feature, or rather the main \textit{application of nuclear physics in medical science} here, \textbf{nuclear medicine}, as be stated of the following: 
+
+\begin{quote}
+    Nuclear medicine is a specialised area of clinical imaging and therapy that uses radioactive pharmaceuticals (radiopharmaceuticals) to diagnose, evaluate and treat diseases. It includes two diagnostic imaging modalities - gamma-scintigraphy (including single-photon emission computed tomography (SPECT)) and PET - and a treatment modality - targeted radionuclide therapy or molecular radiotherapy (MRT). Over 650 000 National Health Service (NHS) diagnostic imaging procedures utilised a diagnostic radiopharmaceutical (radiotracer) in the year 2019-2020 \cite{young2021overview}. 
+\end{quote}
+
+As such, we can consider nuclear physics application here as to be of \textbf{total forensic}\cite{pubmed7137928,mehndiratta2014nuclear} in nature, with clinical imaging techniques being its sole focus. It is not advisable to use in medical treatment because high-energy radiation are typically in the range of \textit{spectroscopy instead}, and there is no need for isotope decay or so inside human body to treat any specific diseases, without having risk or unsustainable treatment. In a sense, nuclear medicine can be best understood as the \textit{mapping tool}\cite{cmii2018overview} of the entire human body to a specific set of properties that you can extract from nuclear-specific radioactive decay and reaction, in another name as \textbf{radiopharmaceutical} for those decaying radioactive isotope approved for general usage. Which is very important to the next brief cross-play analysis thereof. 
+
+\subsection{The second cross-play}
+The second cross-play that we can turn our attention here thereof, is the one in the Hackatom. Essentially, though I do not list them out here, and such would be relived into the presentation itself, we exploit the gap that \textit{nuclear medicinal information topology} is poorly excavated, and processing, identification has been slow. There might even be so much more details and information one can get from those kind of analyses and inference, observations, yet is barred and often not interpreted or diagnosed, which requires however, large and flexible computing and approximation, extraction dynamic models. Which is where DM or as the old term AI is used in here. In general, that is the gist, and it also means we will inject \textbf{structural information} and \textbf{physical structural information} into the model system, and not just simply fitting data and noise. 
+
+\section{Conclusion}
+
+That is for all, or so I hope. The attached file to this would be the Hackatom presentation slide, and it should be notified to come with this document, on our system at will. Please review it for the idea of the second cross-play there. 
+% ----------
+% End of first page
+% ----------
+
+\newgeometry{} % Redefine geometries (normal margins)
+
+
+
+\printbibliography %Prints bibliography
+
+
+\end{document}
+
+% ----------

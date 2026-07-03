@@ -1,0 +1,130 @@
+\documentclass[10pt]{article}
+
+\usepackage{arxiv}
+\usepackage{etoolbox,enumitem}
+
+\AtBeginDocument{
+
+  \setlength{\parskip}{0pt}%
+  \setlength{\parindent}{15pt}%
+
+  % Math spacing
+  \setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt}%
+  \setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt}%
+
+  % Floats
+  \setlength{\textfloatsep}{8pt plus 2pt minus 2pt}%
+  \setlength{\floatsep}{8pt plus 2pt minus 2pt}%
+  \setlength{\intextsep}{8pt plus 2pt minus 2pt}%
+  \setlength{\abovecaptionskip}{4pt}%
+  \setlength{\belowcaptionskip}{0pt}%
+}
+
+% Lists (itemize/enumerate)
+\setlist{itemsep=2pt, topsep=2pt, parsep=0pt, partopsep=0pt}
+
+\makeatletter
+\def\fps@figure{!t}
+\def\fps@table{!t}
+\makeatother
+
+\emergencystretch=3em
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{silence}
+\WarningFilter{latex}{Command \showhyphens}
+\usepackage{microtype}      % microtypography
+\microtypesetup{activate=true}    % ensure microtype is on (final mode)
+% \flushbottom                      % fill pages evenly
+\usepackage{lipsum}		% Can be removed after putting your text content
+\usepackage{float} % For [H] float specifier
+\usepackage{graphicx}
+\usepackage{doi}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{titling}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{cleveref}
+
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+\renewcommand{\topfraction}{0.98}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.90}
+
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{0pt}
+\setlength{\abovedisplayskip}{8pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{8pt plus 2pt minus 2pt}
+
+\usepackage[section]{placeins}
+\usepackage{caption}
+
+\setlength{\parindent}{15pt}
+\setlength{\parskip}{0pt}
+
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\setlength{\abovecaptionskip}{1pt}
+
+\setlength{\textfloatsep}{1pt}
+\setlength{\floatsep}{1pt}
+
+
+\title{A template that can be used and looks like arxiv}
+\author{
+  %Ziv Chen$^{\text{a,c}}$\thanks{Corresponding author: \texttt{ziv.chen@campus.technion.ac.il}} \quad
+  %Gal G. Shaviner$^{\text{b}}$ \quad 
+  %Hemanth Chandravamsi$^{\text{b}}$ \quad
+  %Shimon Pisnoy$^{\text{b}}$ \quad \\
+  %Steven H. Frankel$^{\text{b,c}}$ \quad
+  %Uzi Pereg$^{\text{a,c}}$
+  %\vspace{5pt} \\
+  %\small{$^{\text{a}}$The Andrew and Erna Viterbi Faculty of Electrical \& Computer Engineering,} \\ [-0.25em]
+  %\small{Technion - Israel Institute of Technology, Haifa, Israel.} \\
+  %\small{$^{\text{b}}$Faculty of Mechanical Engineering, Technion - Israel Institute of Technology, Haifa, Israel.} \\
+  %\small{$^{\text{c}}$Helen Diller Quantum Center, Technion - Israel Institute of Technology, Haifa, Israel.} \\
+  RHINELAB
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Something Something
+\end{abstract}
+
+\keywords{Anzat, template}
+
+
+% References
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\clearpage
+
+\appendix
+
+\section{Nothing here}
+
+\end{document}

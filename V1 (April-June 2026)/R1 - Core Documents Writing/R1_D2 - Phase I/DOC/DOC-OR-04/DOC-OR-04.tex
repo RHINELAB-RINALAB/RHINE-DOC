@@ -1,0 +1,209 @@
+% ----------
+% Tech report template
+% 
+% ----------
+
+% --------- PACKAGE --------- %
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amsbsy}
+\usepackage{bm} % normal text bold font inside math environments
+\usepackage{stmaryrd} % Saint Mary of stuff computer science typographic symbol
+\usepackage{geometry}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[runin]{abstract}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{booktabs}
+%\usepackage{piton} % Without this enable, it might not work for the listing package. Switch to LuaLateX if you want to use this option, however. 
+\usepackage{fancyhdr}
+%\usepackage{helvet}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{etoolbox}
+%\usepackage[scaled=0.90]{helvet} % Font 1 for package
+%\usepackage[scaled=0.85]{beramono} % Font 2 for package. If you want this configuration, change this with the following configuration, or rather just comment the other one out
+\usepackage{mlmodern}
+\usepackage{xcolor}
+
+% Bibliography
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+
+% --------- PACKAGE --------- %
+\input{preamble.tex}
+\addbibresource{bibb.bib} %Imports bibliography file
+
+
+% ----------
+% Variables
+% ----------
+
+\title{\textbf{Organization Statement} \\ About the usage of AI in operations, v1} % Full title of your tech report
+\runningtitle{AI usage policy} % Short title
+\author{Fujimiya Amane (Bui Gia Khanh)} % Full list of authors
+\runningauthor{Amane et al.} % Short list of authors
+\affiliation{} % Affiliation e.g. University or Company
+\department{RHINELAB - Core Management Division} % Department or Office
+\memoid{DOC-OR-04} % ID of the tech report
+\theyear{2026} % year of the tech report
+\mydate{May, 2026} %the date
+\usepackage{tcolorbox}
+\usepackage{fancyvrb}
+
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+%\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+%  breakable=true,
+%  listing engine=minted,
+%  listing only,
+%  minted language=#2,
+%  minted style=default,
+%  minted options={%
+%    linenos,
+%    gobble=0,
+%    breaklines=true,
+%    breakafter=,,
+%    fontsize=\small,
+%    numbersep=8pt,
+%    #1},
+%  boxsep=0pt,
+%  left skip=0pt,
+%  right skip=0pt,
+%  left=25pt,
+%  right=0pt,
+%  top=3pt,
+%  bottom=3pt,
+%  arc=5pt,
+%  leftrule=0pt,
+%  rightrule=0pt,
+%  bottomrule=2pt,
+%  toprule=2pt,
+%  colback=bg,
+%  colframe=orange!70,
+%  enhanced,
+%  overlay={%
+%    \begin{tcbclipinterior}
+%    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+%    \end{tcbclipinterior}},
+%  #3}
+
+% Python preset environment. 
+\newcommand{\pyobject}[1]{\fbox{\color{red}{\texttt{#1}}}}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+% Inline python highlighting (Might not look great, but eh)
+\lstset{language=Python,keywordstyle={\bfseries \color{blue}}}
+
+
+% ----------
+% actual document
+% ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    \noindent
+    This document serves only a rather short purpose - to simply set an account chiefly on how to tackle, or how to manage AI usage in the laboratory at large, and how to manage contents and quality checking in the age where AI tools are extending. 
+
+    \keywords{Policy, statement, artificial intelligence usage}
+\end{abstract}
+
+\vspace{2.5cm}
+
+
+
+\thispagestyle{firstpage}
+
+\pagebreak
+
+% ----------
+% End of first page
+% ----------
+
+\newgeometry{} % Redefine geometries (normal margins)
+
+\section{Specification}
+\label{sec:spec}
+
+This is a short document (1-2 pages main content), outlining such statements only. 
+
+\subsection{Document code, priority}
+
+%Provide document codes, additional document code, purpose, organization, authorship and anyone contributing to the report, identification of purpose (proposal, or research, indexing 01). Priority code, additional conditions. Does it override anything, or add to anything?
+
+Document code DOC-OR-04 (additional code None), statement of purpose and standard for AI usage and so on in laboratory, pathology and so on. Authored by Fujimiya Amane (Bui Gia Khanh) in accordance of Core Management Division. Priority R1, Overriding None. 
+
+\subsection{Body of issue}
+
+Core Management Division
+
+\subsection{Date and Version}
+
+%Version specification across versions, and similarly date of construction. \textbf{Do not remove old dates}, for versioning record. 
+
+Initial version v0.5, finished 4/5/2026. 
+
+\section{Introduction}
+
+In recent years, there has been a prominent eventual phenomenon for the utilization of AI in many stages of research. As such, we are obliged to state the reason, our view on the topic of how AI aids the research, project and so on of the laboratory system. 
+
+\section{Definite propositions}
+
+We have the following identification and statements of purposes, on how we treat AI in such regard. 
+
+\subsection{Stance on AI}
+
+We believe that, as of the following indictment on AI systems, 
+
+\begin{enumerate}
+    \item Most works are of human researcher, not AI and should not be for now. 
+    \item Thus, all \textbf{AI-aided functions} are of \textit{supporting role} for human-centric studies itself, not the central goal. 
+    \item AI-generated contents are \textit{not taken as to be intrinsically feasible} without human intervention, thus any large amount of works using AI would not be permitted or rather discouraged in certain cases. 
+    \item Literature using AI are low-quality, and we do not accept such. 
+    \item Design templates from AI, including \LaTeX -templates, are ill-designed and thus is not accepted. 
+    \item By their supporting role listed at point 2, we emphasize mainly \textit{code evaluation}, analysis, source finding, quick survey online, and functions like retrieval. 
+    \item No AI supporting roles or so on should be done or conducted for \textbf{automated processes} or \textbf{operational code}. 
+    \item Complex categories, like physical derivation, and mathematical utilization cross-field, is only allowed to be used of AI as an enumerative approach, i.e. a somewhat \textit{better proof machine}, and does not substitute any human interpretation and processes. 
+    \item AI are still not capable of true reasoning arbitrary so in separation of simple string matching statistical patterns. 
+\end{enumerate}
+
+\subsection{Enforcement}
+
+To enforce such standard, we would have the following alongside certain instruction or specific patterns to follow. This applies for also AI Group itself during the process of working on such AI system, and some of this are focused on LLM/Chatbot in response. 
+\begin{enumerate}
+    \item In use case of \textit{search proxy} for contents, always ask for: concrete source retrieval and search for verifiable contents; grounding on actual searches and entries; reputable sources and large degree of search; uncertainty measurement, as in if there exists debate, controversies and so on about a given search result, do not collapse the position into one place and quote verbatim if possible; finally, scrutinize the recommendation list generated by the prompt result itself. 
+    \item Always carry context in asking any given question. 
+    \item Always forces the LLM to \textbf{search for grounding} on any given non-trivial topics. Even trivial topics arbitrarily so are forced on this response. 
+    \item Always recommended to use \textit{third-person positioning} to ask any given question and of such. Do not situate yourself personally, and emotional response of any process related to the topic at hand or documents relevant in working. This is to prevent your view from being skewed toward \textit{emotional sycophancy}, which agrees anything of emotional response from user. 
+    \item In complex, difficult or multipurpose, philosophical discourse or questions, string of response, always \textbf{refuse of collapse} into a single camp. Force the LLM in question, if of usage, to deliver actual concrete positions, direct response and no \textit{hedging, softening, deflection} and patterns of such. Do not speak of controversial topics to AI LLM, as it will default most of the time to softening and protective deflection to unquestioned motives. In complex topics, also, beware of \textbf{performative sycophancy}, where it pattern-matches specific instance of complex words to something that sound right and sophisticated, by scrutinize any result a given LLM gives. 
+    \item \textbf{Do not} use AI to write your code base in any given form, \textit{without justification} or instead \textit{proof of understanding and breakdown} of such code from your own view. 
+    \item \textbf{Do not} use AI for any complicated, non-trivial without standard pipeline. 
+    \item \textbf{Do not} change the template LaTeX of the laboratory by using AI. It does not know anything about what is the specific requirement, therefore should be stopped short of using it. 
+    \item \textbf{Do not} rely on LLM on any technical topic, to prevent \textit{hallucination}. 
+    \item In research and working, \textbf{do not} use public-usable - i.e. educational and public-facing works that are written for the wider public into usage of AI, as this enacts both hallucination, overt response in opposition and hedging. 
+    \item In operation of \textbf{actual AI working}, do not \textit{collapse to a bound or limiting result} without knowing the \textit{scaffolding}, conditions. This includes (1) what is \textit{assumed}, (2) what is \textit{defined of virtue} and simplification, (3) what is justified to be right, any given \textit{conventional choice} and not natural, (4) any process that \textit{change the raw information} or of the processing pipeline, especially what kind of effect it has on the system a whole. Especially, when working with a model, \textbf{devalue the importance} of specific benchmarking, and prioritize the \textbf{structural process, sophistry, correctness and definite interpretability}, alongside \textit{context-based evaluation format} and many \textit{non-black box benchmarks}. In worse case, \textit{scrutinize what the benchmark means} rather than just use it. Assumption on the benchmarking, working system, \textit{encoding space} of the model (for example, a model on \texttt{float128} is always going to be in $\mathbb{R}$, and such must be considered of disparity and what class of result assumption be, which here is Euclidean measure). 
+\end{enumerate}
+
+The list can extend, but this is the main connotation of the problem, and should it not be clear, later version will be provided to change and include more restricting case on that. In general, we \textbf{value objective view} of both humanocentric systems of research from actual human researcher, but also to \textit{invalidate AI-overutilization and dependency}, especially when they exhibit statistically speaking biased or guardrail specific behaviours, and usual current problems of AI system beyond typical dumbed down use cases in daily life. 
+
+\section{Conclusion}
+
+The document only outlines the statement and enforcement thereof. No more conclusion can be derived aside from it is \textit{incomplete} and requires subsequent changes and additions. 
+
+%\section{Citations}
+%Items that are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion} together with Einstein's journal paper \cite{einstein} and Dirac's book \cite{dirac}---which are physics-related items. Next, citing two of Knuth's books: \textit{Fundamental Algorithms} \cite{knuth-fa} and \textit{The Art of Computer Programming} \cite{knuthwebsite}.
+
+%\medskip
+
+%\printbibliography %Prints bibliography
+
+
+\end{document}
+
+% ----------

@@ -1,0 +1,351 @@
+% ----------
+% Tech report template
+% 
+% ----------
+\documentclass[9pt,a4paper]{article}
+\usepackage{geometry}
+\usepackage{mlmodern}
+\usepackage{amsmath,amsfonts,amssymb}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[runin]{abstract}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{booktabs}
+%\usepackage{piton} % Without this enable, it might not work for the listing package. Switch to LuaLateX if you want to use this option, however. 
+\usepackage{fancyhdr}
+%\usepackage{helvet}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{etoolbox}
+%\usepackage[scaled=0.90]{helvet} % Font 1
+%\usepackage[scaled=0.85]{beramono} % Font 2
+\usepackage{xcolor}
+\usepackage{enumitem}
+% Bibliography
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+\addbibresource{bibb.bib} %Imports bibliography file
+
+\input{preamble.tex}
+
+% ----------
+% Variables
+% ----------
+
+\title{RHINELAB-RINALAB - Preliminary Organization} % Full title of your tech report
+\runningtitle{Organization Document} % Short title
+\author{Bui Gia Khanh} % Full list of authors
+\runningauthor{Amane et al.} % Short list of authors
+\affiliation{} % Affiliation e.g. University or Company
+\department{Core Management Team} % Department or Office
+\memoid{DOC-OR-01} % ID of the tech report
+\theyear{2026} % year of the tech report
+\mydate{March, 2026} %the date
+\usepackage{tcolorbox}
+\usepackage{fancyvrb}
+
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+%\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+%  breakable=true,
+%  listing engine=minted,
+%  listing only,
+%  minted language=#2,
+%  minted style=default,
+%  minted options={%
+%    linenos,
+%    gobble=0,
+%    breaklines=true,
+%    breakafter=,,
+%    fontsize=\small,
+%    numbersep=8pt,
+%    #1},
+%  boxsep=0pt,
+%  left skip=0pt,
+%  right skip=0pt,
+%  left=25pt,
+%  right=0pt,
+%  top=3pt,
+%  bottom=3pt,
+%  arc=5pt,
+%  leftrule=0pt,
+%  rightrule=0pt,
+%  bottomrule=2pt,
+%  toprule=2pt,
+%  colback=bg,
+%  colframe=orange!70,
+%  enhanced,
+%  overlay={%
+%    \begin{tcbclipinterior}
+%    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+%    \end{tcbclipinterior}},
+%  #3}
+
+% Python preset environment. 
+\newcommand{\pyobject}[1]{\fbox{\color{red}{\texttt{#1}}}}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+% Inline python highlighting (Might not look great, but eh)
+\lstset{language=Python,keywordstyle={\bfseries \color{blue}}}
+
+
+% ----------
+% actual document
+% ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    \noindent
+    Preliminary planning for the research group, \textbf{RINALAB-RHINELAB} (RHINELAB Theoretical and Artificial Research Laboratory). Including contents of \textit{logistics}, planned personnel and status of conditions, infrastructure plans, research \textit{directive}, requirement templates, activities and purposes. 
+
+    \keywords{Group proposal, foundational note, directive.}
+\end{abstract}
+
+\vspace{2.5cm}
+
+
+
+\thispagestyle{firstpage}
+
+\pagebreak
+
+% ----------
+% End of first page
+% ----------
+
+\newgeometry{} % Redefine geometries (normal margins)
+
+\section{Introduction}
+
+This document serves a list of purposes, born out of the need for preliminary organization of the laboratory after which we have quite \textit{enough} of human resource logistics (researcher and undergraduate researcher, alongside logistical support), and thus will be used for determination of scaffolding and later directive system indicted upon the group partition. Because of the nature of being a research laboratory, both within range of application and theoretical work, organization of groups, `task force' and different framework for organizing and coordinating multi-group conjunction helpers are imperative to the development of the lab. So is also logistical organization of resources, from open source to funded one of which will be deferred to later stage of development of the group. 
+
+However, most of all would be the inclusion and specification of the \textit{purpose}, \textit{directive} and overall research agenda, programme of the laboratory itself. The simple reason for such is to give the laboratory a clear head-up and constraints, scaffolding and deliberate bookkeeping under active status of development and R\&D processes. The \textbf{frame}, as discussed earlier is not enough and thus will have to be extended, however, but such is for a later date as far as favourable conditions are specified, and preliminary constraints are listed before dwelling too much into the superfluous details. Hence, the contents under such umbrella will include organization of the new system, requirement templates for documenting, resource allocation (if there is any), activities specification and requirements, and general purposes, with roles for planned personnel. 
+
+\subsection{Specification}
+
+Following are specification of typing for the document, of which (optionally) should be added in any following proceeding one. 
+\subsubsection{Document code, priority}
+Document mode DOC-OR/R-01, Document, Organization Specification, Research, indexing 01. Priority code \texttt{R0}, immediate effect. Overriding \texttt{None}. 
+\subsubsection{Body of issue}
+Core Management Team, Logistics Division. 
+\subsubsection{Date and Version}
+Version 1.0, first issue, 16th March, 2026. 
+\tableofcontents
+
+\section{Laboratory specification}
+
+\textbf{RHINELAB-RINALAB} is a conjunctive \textit{theoretical and experimental laboratory} focus on a selected list of research interests, such is 
+\begin{enumerate}[topsep=0pt,itemsep=0pt]
+    \item \textbf{Artificial intelligence}: theoretical artificial intelligence research and also practical, experimental and implementation of artificial intelligence \textbf{proxy imperfected modules}\footnote{This is from the philosophical and technical specification that current system are not inherently AI, as far as we are considered of titling overclaiming. Specifically, such systems in consideration is considered proxy, imperfect(ed) artificial intelligence system, not artificial intelligence per se, and thus can be categorized to being \textbf{artificial operational construct} instead. Formalization of such terms would be listed for later works}, for example, NLP-LLM modules. One of the more ambitious project is the \textbf{physical artificial intelligence implementation}, starting with building physical neural network. 
+    \item \textbf{Physics}, both theoretical and experimental-application physics, specifically on the list of \textit{physical modelling}, \textit{material science} and complex model analysis\footnote{This will target, for example, in an earlier paper of the laboratory, clarification, critique and analysis onto different heuristic and fragmented material science modelling, from scales to specification of precursor materials (field, flows, inter-molecule, particles compositions, etc) and so on, such is to elucidate the theoretical body framework of its plurality.}, \textit{mathematical physics}, \textit{theoretical-experimental gap and leakage}, and \textit{astrophysical modelling audit}\footnote{It is under impression that astrophysics is one particular field where noise, imprecision, imperfection of data coverage and range of obtaining, modelling and so on are very much messy, might miss the oracle (i.e. actual construct) and so on - thus becomes a rather rich field of auditing.}. 
+    \item \textbf{Mathematical research}, focus on specifically of the main coordination of \textbf{pure mathematics}, \textbf{mathematical modelling}, mathematical language theory, mathematical machine learning theory, and constraints analysis\footnote{Constraint analysis means auditing, specifying, analysing specific theoretical theorem-conjecture frameworks in consideration of pure mathematics or context of external utilization of other fields, to see their \textit{claimed sufficiency}, dependency, theoretical scaffolding, heuristic and choices used for proof, extension claims, domain claiming, and feasibility of mapping - for example, reducing one mathematical theorem to another analogous case to prove such, which incurs costs during which is not often audited.}.
+\end{enumerate}
+Those are currently planned works in consideration of the laboratory. Within such, we can see that there exists two main research bodies, of which are currently specified:
+\begin{enumerate}[itemsep=1pt,topsep=0pt]
+    \item \textbf{Artificial intelligence Group}: Working on the artificial intelligence framework, deployment and so on specified. 
+    \item \textbf{Mathematical and Physical Research Group}: Working on both researches on physics and mathematic, with support laying down also for the artificial intelligence group. Currently, under manpower and scope constraints, they are wrapped into one\footnote{If later need arises, deliberately such would have to be separated of specialization, but not fully desensitized from collaborating and having responsibilities to other group in the laboratory.} 
+\end{enumerate}
+The decision to wrap them together is what we would be on the line of \textit{operational minimalism}, where we put on the organization as to be `if it is redundant, put it into the basket of organization proposal, but not yet implemented if the need does not arise from such'. Note that such planning can be changed in later date, when bodies of works are specified. For now, details of those projects directive and research compilation is required. Coming on the topic organization partition, all of the above specifications fall into the range of \textbf{research division}. In general, for our current state of organization, there exists no \textit{department}, but there will be the minimum division. Such includes for now,
+\begin{itemize}[itemsep=1pt,topsep=1pt]
+    \item \textbf{Research Division}: the total encapsulation of above organization on research subjects. 
+    \item \textbf{Organization and Logistics Division}: encapsulation of platform, coordination, collaborations, resource handling, etc. 
+    \item \textbf{Pedagogy (Knowledge Base) Division}: The research subject is not enough, as we require scaffolding and multiple knowledge base-based activities and building. This is the division for such. Most of the pedagogy section will be included of those research interests. 
+\end{itemize}
+Again, the organization is not standard nor should be taken as final. As such, revision will happen, but doing so require having a certain standard of necessity and thus would be subjected to another replacement overriding document in the future date. For certain purposes, the rather higher partition in the list contains another foundation group on the theoretical theory directive, which is the encompassing category of both the artificial intelligence group and the physics studies group right now. By category, we have the dependency or foundational order concept, which categorises the following by order of C(X) for X count as the ascending level (I being the highest). Currently, such is of the following:
+
+\begin{itemize}[topsep=0pt,itemsep=1pt]
+    \item Theory of modelling (CI).
+    \item Mathematical theory and encoding language research (CI).
+    \item Theory of computer science and automata realization (CII).
+    \item Practical computer instantiation consideration (CIII).
+    \item Physics theory and mathematical physics (CII).
+    \item Practical-theoretical physical gap (CIII).
+    \item Artificial intelligence theory (CII).
+    \item Artificial intelligence practical-theoretical implementation (CIII).
+    \item Hardware-interfaced-or-designed neural formalism network (CIII).
+\end{itemize}
+
+
+\clearpage
+
+\section{Institutional organization}
+
+After doing such, we would like to go into details of the groups, division itself and so on, by first starting with the research division, organizational logistics, and finally pedagogy section. 
+
+\subsection{Research division}
+
+As stated, no change. 
+
+\subsubsection{Artificial Intelligence Group}
+
+Artificial Intelligence Group (RHINE-AIG) is the center category, themed group about the majority topics of \textbf{artificial intelligence} and its preceding theories, or propositional precursors, such as automata theory, cybernetics, and so on. The main subject of interest is two-fold: one is the organization thereof of auditing research components, one is about the organization and research interest listed above, under more information as to be specified in this section, and implementation of experiment or practical system of interest (Loerei's idea and proposal). 
+
+First, we clarify the first task of the group itself. We believe in the following observation:
+\begin{itemize}[topsep=1pt,itemsep=1pt]
+    \item We believe that the current theoretical landscape is fragmented and insufficient, requiring clarification, analysis, condensation, standardization, unifications, or certainly a new encapsulating theory in a whole. 
+    \item We believe that historical artefacts and a large amount of actual artificial intelligence materials are absent from current body of works, and thus revealing a rich conceptual space that can be used for mathematical formulation with sufficient tooling of the current form. 
+    \item We believe that there exists the internal difference between \textit{theoretical notions} and \textit{practical phenomenology} often seen in systems of interest. 
+    \item We believe NLP processing, particularly LLM, is good and will be fundamental but \textit{not enough} and will have to be extended and advanced per being a module in the interim of research. 
+    \item We believe also in practicality, resolving or absolving the overreliance on mathematical encoding such is to say that the \textit{map is now the landscape}, not the reverse transition. 
+    \item We believe that artificial intelligence goes far beyond simulated systems on computer (binary) substrates, and can be subjected hardware design and constraints, and also further simulation or hosting under different computational scheme, computing architecture (non-Von Neumann), or non-binary systems at a whole. 
+    \item We believe that the current \textbf{neural network architecture} (NNA) is constrained and insufficient, and thus a new framework or the neural network, called \textbf{neural formalism framework}, should encapsulate such NNA, and seeds a newer more general frameworks of the neuron units. 
+\end{itemize}
+Such are many, non-exhaustive list of what we aimed the research group into, and thus implementation of the research group research directive. As such, there exists two directives ready-at-hand for the group to follow. One is about \textbf{theoretical artificial intelligence} body of theory, and one is about actual system implementation, experiment-based empiricism designs, and \textbf{hardware implementation} under such experimental umbrella. The following will be the guiding principles. 
+
+\textbf{Directive I}: The theoretical track is rather simple in analysis. We can observe that current theories are fragmented, insufficient to capture advancements of models and the expansion of capacity, maturity of other fields in their ability to giving us enough supporting tools of researches and so on, for example, computing substrates, observations of brain functions, biological knowledge and system engineering, or computer-science (theoretical) insights of which are invaluable in designing facilities. Current processes of AI are called rather the family of empirical \textit{statistical AI}, of which are often only a very small subsection of the artificial intelligence landscapes, which precedes current bodies with precursors, such as cybernetics, control theories, GOFAI (Good Old-fashioned AI) system theory, and so on. Even by then, many current systems are purely \textit{phenomenological} with weak theoretical foundation, and of which even the attempt of theorizing exposes many heuristics and problems in which do not have a clean way of justifying such to be theoretical. In all, it is messy and disorganized. How disorganized will have to be analysed in such similar way. Ideally, such system would have to undergo foundational review phases, where existing results are reorganised or reinterpreted rather than immediately replaced. However, current system does not exist such task yet, and that is where we will jump into place. The aim by then would be for us to build and collect ourselves a rigorous body of knowledge, conceptual ideas and frameworks, and synthesizing new one or analyse, condense, or create new theories out of necessity from such analysis. Additionally, the field of AI is also \textbf{philosophically unstable} (analytical or else), of such will also be an aim for said resolve. 
+
+\textbf{Directive II}: In conjunction with theoretical tracks, AI is a \textit{living system} in hindsight of dynamics, in such we cannot rely only on theory. While in the document theoretical junction is of higher order (CII) than implementations and experimental testing (CIII), such is still very important to reign the theory in, or rather to also targets actually physical systems, or simple a running one. There are two ways for doing this. Certain structures are currently operable on \textbf{simulated system} and would be costly or far-fetched to implement them on hardware, but for now very effective on current software. Such are NLP, MLP, architectures and so on. This includes using the current systems, solving problems of NLP, and building a new framework (actual codes and implementation of said simulations) of neural units. Simple speak, to use current software frameworks and architectures (for example neural network models) to study behaviour and explore design ideas. Second, is the \textbf{hardware implementation} of the construct itself. For example, asking of what happens if we realize the neuron unit to actual circuit element, isolated and encapsulated into a single unit component. If this is matured enough, the possibility to compare them to both is feasible. Finally, to \textbf{unify both perspective} of both hardware and software implementation - perhaps both plays role inside. 
+
+\subsubsection{Mathematical and Physics (theoretical) Group}
+
+This group is deliberate. For now, they are the conjunction between two fields, interconnected but not the same, physics and mathematics. As such, we would be wise to clarify what kind of research would be taken into account. 
+
+The major problem with current mathematical framework and landscape is the lack of proficiency thereof, both for current research members, and the general field itself. Many interesting or necessary mathematical tools are fragmented, independent and operate on varied baseline, of which inhibits actual implementation and leakage thereof. Certain form of \textit{cross-referencing}, collapsing a theorem to an analogous form of another one to solve such theorem, but deliberately forget that such weakens the theorem tremendously by one way or another. The dependency lines and so on are also fragmented or hidden, or inherited implicitly, with uncertain logical correctness. The list of observation is widespread of such:
+
+\begin{itemize}[itemsep=1pt,topsep=0pt]
+    \item We believe that the capacity and expositions of mathematics should be built and increased at will. 
+    \item We believe we should explore, analyse, expositing and mapping the landscape of mathematics, pure mathematics, and the pure mathematics - application mathematics transition regions between such. 
+    \item We believes tools and mathematical concepts are often not considered a whole, and certainly the hierarchy of usage, from one part of mathematics to another, and so on is loosely organized, part linear, part jumping, part isolated. 
+    \item We believe that the framework of mathematics, while can be logically correct, is insufficient of its transparency and/or between theories, definitions, circularity, paradoxes, propositions, conjectures, and so on. Proofs and constructs can be logically wrong, weak theorem, existential interpretation errors and such, without auditing of the important literacy. Thence, conceptual auditing of mathematical frameworks to prevent or deter insufficient scrutiny of assumptions and such is required. 
+    \item While looking into mathematics as a particular form of \textbf{language system of representation}, a modelling theory on itself, such said problem we believe born out of \textbf{type insufficiency} between different systems of mathematical constructs, with very much many unsolved problems, like abstraction level hierarchy, organization, language realization, incompatibility problem, mathematical encoding, the different between static encoding and actual objects, i.e. structural intractability, and the reconstruction of mathematics with explicit precursors, all remained unsolved. 
+\end{itemize}
+
+Under each expression, scrutiny will follow because mathematics is deliberately information compression, thereof. Such is also under investigation, but for such remains the main tasks of the theoretical team. About \textbf{physics research}, we notice the following:
+\begin{itemize}
+    \item We believe that physics, particularly theoretical physics, is lacking sufficient \textbf{modelling theoretic} approaches, of which to see frameworks of mathematics as it is, not reality, but models and tools. Such is absent in current systems, furthermore also created a variety of claiming, interpretation pluralism, and model mismatch patching, which is imperfect and would be deliberately unfounded. 
+    \item We believe the relation between mathematics, and physics should be studied, and thus \textbf{mathematical physics} will be one of the centrepiece of studies. 
+    \item On the other side, conditioned and restricted context, near-practical settings like \textbf{material science} and complex system should also be under analysis, such is to provide practical experiences and research, but also simulation thereof. 
+    \item We believe that current theory, philosophical understandings of physics are \textbf{inflation} of some of the above problems, but also that the unsaid restriction and conflation of theoretical indictment and subjective postulations. For example, unresolved tension still includes the theoretical mismatch between quantum mechanics and classical physics, of which ideally should have been very clear and resolved thereafter. Thereby, one particular study of such is \textbf{meta-scale physical theory} (for direct disfranchise from metaphysics). 
+\end{itemize}
+Pedagogically speaking, a knowledge base should also be built, but that will be listed in the pedagogical section briefly. Astrophysics is also an interesting piece of studies, because again it sits in the junction of practical works, noise mismatch that might correlate to any noise from afar of which interstellar observations cannot do anything and is entirely passive, and overfitting can absolutely happen. 
+\subsubsection{Specialized - Modelling Group}
+
+This group is currently singular people (Fujimiya Amane - Bui Gia Khanh). However, per specification, it is about the philosophy, of which simple as this:
+\begin{quote}
+    Foundation of science and theories lies in the hand of the proliferation and description of \textbf{models}, of which is used for various forms, and of which to contain and create the language to its descriptions.
+\end{quote}
+Such is to say that \textbf{modelling theory} is zeroth order object preceding everything conceptually speaking, up to a certain restricted for of expression. Said is the directive of this system. 
+
+\subsection{Organization and Logistics Division}
+
+Not much can be said about this part. Basically, laboratory requires resources, places to upload and hold documents, technical reports, reviews, expository papers, serial analysis, presentation, data, models, artefacts, and so on. Coordination between collaborators, resource, grants proposals, website handling, requests, professorate connections, and so on will rely on the organization and logistics division. Such is simple as that, and should include no more than that. 
+
+\subsection{Pedagogy Division}
+
+The pedagogy division will encapsulate the above subject works about knowledge base, general knowledges, education and study-oriented works, into a specialized division. The task would be cumulative and very much \textbf{significant} to the progress of both research and outward exposition to the wider public, if we are incentivized for such. This includes, 
+\begin{itemize}[itemsep=1pt,topsep=1pt]
+    \item Exposition of subjects, hierarchical and composed of the spines then outward structures, for STEM-related subjects, social science, such as philosophy and so on, focused or general per-theme (artificial intelligence philosophy, for example).
+    \item Lecture notes, expository in-depth analysis of particular segment of the body of works - for example, dwelling deep into rigid body physics under context of classical mechanics, and Newtonian-Lagrangian formalism. Pedagogically correct or explicit notes on particular hinge points that often omitted and so on, as such is preferable. 
+    \item Alongside such, simulations, instantiation, practical illustrations and connections, and so on are unlimited and is preferred. 
+    \item Wikipedia-like articles or body of knowledge, but more in depth - currently, Wikipedia host only catalogues of facts and such, not exactly in-depth analysis, philosophical treatises, critiques, analytical results, and various forms of technical specifications. Additionally, \textbf{Zettelkasten}\footnote{Zettelkasten or card file consists of small items of information stored on Zetteln (German: 'slips'; singular: Zettel), paper slips or cards, that may be linked to each other through subject headings or other metadata such as numbers and tags. The most famous person of such archetype is Niklas Luhmann, with quite a prolific career of his life.}-similar knowledge base compartmentalization is also in the roster for the organization template. 
+\end{itemize}
+More can obviously be filled into the tray, with more addition from later expansion of the pedagogy division. Format for delivery varies large, some can be under video ranges (of which tools then would be preferably \LaTeX-supported systems of illustrations), blog, website, web-course on open access, or simulation, codes, and so on. Further expansion would have to be reorganised, due of laboratory discussion and expansion. 
+
+\section{Recruitments}
+
+Open recruitment is permitted, however, the selling point would be \textbf{academic culture}, \textit{academic research and studies conduct}, and potentially \textit{intellectual support}, alongside research direction, hard-contents of knowledge base and laboratory scholastic framework (i.e. how we do research and learning, simply stated). Within such, the following procedure would be stated. 
+
+Participants are separated into main contributing sections: \textit{collaborator/interlocutor} and \textit{formal member} of the laboratory framework. For collaborators, if they are to have any works alongside formal members and laboratory itself, they are required to \textbf{retain public record} owned \textit{by themselves}, first author if required - request from laboratory, community elaboration, etc. This includes talks, transcript, projects, papers, preprints, reports, work artifact, datasets. No specific requirement is stated aside from such.
+
+The soft-requirement of the laboratory for formal member is as followed:
+\begin{enumerate}[itemsep=1pt,topsep=1pt]
+    \item No disregard for philosophy - such tradition of analysis is accepted. No discrimination. 
+    \item Tolerance for non-product results and analysis. We do not specifically deliver products or any form of commercial pressure unless defined, specialized purposes, or any benchmarking chase. 
+    \item Ability to be interdisciplinary but still holding specialties - i.e. be a 'nominal' specialists in your area and domain, and also able to grasp and understand given effort and support of other domains. 
+    \item Well-articulated in basic science or philosophy of science. If not, state explicitly so that we can have a training regime of such. Well articulated in their own field. 
+    \item Tolerance for debate, intervention, intellectual questioning of bodies of works. 
+    \item Tolerance for writing reports, analysis, reviews, producing writing and technical demos, works, small projects. 
+    \item Tolerance for adhering to both soft and strict standardization baseline.
+    \item Tolerance for long-time participation and time availability requirement. Mainly time-available for participation of laboratory commitments, researches, projects, events, and artefact productions. Additionally, \textit{fully-active} half-life of the member commitment. 
+    \item Communication baseline. 
+    \item The ability to ask questions without hedging and direct criticism in writing format. 
+\end{enumerate}
+
+Specific details would be reserved for different teams. However, preferable skills are listed, and this would be the \textbf{training regime} that would be provided of the laboratory if available and requested, as:
+\begin{enumerate}
+    \item Mathematical knowledge up to analysis II and topology (not fixed); philosophy of mathematics and the epistemological-ontological knowledge of mathematical formation. 
+    \item Mathematical modelling theory. 
+    \item Physics up to modern physics. Philosophy of physics and the familiarity of the theoretical-practical gap, classical-quantum gap, phenomenological approach to physics, and critiques of modern physics and classical physics. 
+    \item Computer sciences - theoretical computer sciences, algorithmic complexity and complexity analysis (those two are not the same). Coding in Python, C/C++, functional programming, and experience with handling complex or large systems. Ability to adapt to \textbf{any framework and language} within sufficient time and investment (similar to writing reports, etc). Web programming is preferred for some parts. 
+    \item Normative knowledge about science, philosophy of science, the methodology of sciences, and domain-specific knowledge of similar kind. 
+    \item Specialized knowledge and the ability to utilize and present them specifically. 
+    \item Knowing how to use \LaTeX, Typst, and typesetting program. Markdown and other formats are also preferred. 
+    \item Knowing and understand how peer-to-peer sharing works, how Git works, and being able to utilize \textsf{Obsidian.md} and note-taking frameworks that are sharable and usable for note-taking and knowledge capture. 
+\end{enumerate}
+
+Those would be preferred qualities. Specific recruitment apparatus would include a test period and gauge for the role. Each member in those part of the team would be placed in collaborator role. During such, if they want to move into formal member, a process of preliminary works and selection of fitting into the full working of the laboratory is performed. The full process would be listed specifically in later document addition.
+
+\subsection{Training regime}
+
+We fix current member list (11) of the laboratory for the building and internal build-up of this training regime, including the standard construction, documents and logistics for the soft-requirement, and the preferred baseline of knowledge in the adjacent list. The baseline would be configured to be built in 4 to 5 months, depend on rated activities. Further details would be specified. 
+
+
+\section{Logistics}
+
+Logistics includes several aspects, most of them would be around open-source, low-cost options with plans to extend further. As such, the logistics list is very declustered. Specific details follow. 
+
+\subsection{Publication format and website}
+
+\begin{itemize}
+    \item Journal, conferences. 
+    \item \textbf{Preprint}: OSF preprint services\footnote{Advancement plans would be including making our own OSF preprint.}, Zenodo (Open AIRE framework) preprint, \textsf{arxiv} preprint, and other preprint services. 
+    \item \textbf{Technical notes}: OSF and storage repository. 
+    \item \textbf{Website}: Laboratory's website (hosted on GitLab and Cloudflare). Wiki-sites, specialized knowledge repository would be on the same spaces. 
+\end{itemize}
+
+\subsection{Storage options and deployments}
+
+\begin{itemize}
+    \item OSF Projects - Files and technical reports, datasets and static models (storage quota 50GB for public, 5GB for private project). 
+    \item Cloudflare M2 - Large file storages. 
+    \item GitLab/GitHub (Pages) - Code, models, website deployment (Git LFS for Large File Storage management). 
+    \item Google Cloud Services - Misc documents. 
+    \item Tahoe-LAFS - decentralized cloud services. 
+    \item Peer-to-Peer (P2P), cluster or torrent-based options for scientific internal documents and coordination - Syncthing, torrent systems, IPFS, Git Remote sharing. 
+\end{itemize}
+
+
+
+\section{Funding and costs}
+
+Projected cost is modest. Current estimation has the initial requesting cost being around US \$40 to \$70 at highest initial cost (that is considering full-active growth, which is improbable), covering \textit{infrastructure cost} and \textit{computing process cost}, ratio 1:1. The growth of infrastructure cost is projected to be $\mathcal{O}(n)$ to $\mathcal{O}(n+\log{(n)})$ at worse, while computing cost will grow with $\mathcal{O}(\alpha n)$ for $\alpha$ gauging the intentional factor of scaling infrastructures. Auditing is required, however most of the operation modes are currently \textbf{free} and should not incur any cost runaway. Additionally, we are chartering ways to reduce cumulative costs. Cost computation will be included in another separated document, if able for projections. For pure cost, we project the major two partition of costs being \textbf{compute cost} and \textbf{infrastructure costs} for logistics, with additional amount of cost for miscellaneous reserve purposes no more than \$20 initially, and grow by $\Sigma C(t)/\lambda$ for $\lambda=17$ initially. Then, the model for total cost is
+\begin{equation}
+    \Sigma C(t) = \frac{17}{16} \left(\underbrace{C_{\mathrm{infra}}}_{\text{Infrastructure cost}} + \underbrace{\alpha(t) + n(t)}_{\text{compute-simulation cost}} + \underbrace{M_{f}}_{\text{fixed reserve}}\right)
+\end{equation}
+for
+\begin{align}
+    C_{\mathrm{infra}} &= n_{t-2} + \beta \log{n_{t-1}}, \quad \beta \approx [0.6,0.8], n_{0} = 20 \\
+    \alpha(t) &= n_{\mathrm{comp},0}e^{\gamma t} (1+A\sin{(\omega t + \phi)}), \quad n_{\mathrm{comp},0} = 30 \\
+    n(t) &= n_{\mathrm{comp},t-1} + \frac{\phi_{1}}{\phi_{2}}\log{t}|\alpha(t)|, \quad \phi_{1}/\phi_{2} = 3/10,
+\end{align}
+for $n$ in pure monetary unit, $n(t)$ being the fixed \textbf{baseline operating cost} addition, for $\alpha(t)$ the \textbf{damped oscillatory cost fluctuation}. $t$ is a scaling variable for \textbf{per review funding change}, not pure time in months or temporal months. As such, it is essentially a \textbf{step function} for continuous monthly operating cost, as most programme in logistics are monthly-basis payment. 
+
+% ----------
+% Bibliography
+% ----------
+
+% \bibliography{../biblio.bib}
+% \bibliographystyle{abbrv}
+
+%\appendix
+
+
+
+%\blindenumerate
+
+
+%\medskip
+
+%\printbibliography %Prints bibliography
+
+
+\end{document}
+
+% ----------

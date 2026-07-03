@@ -1,0 +1,435 @@
+% ----------
+% Tech report template
+% 
+% ----------
+
+% --------- PACKAGE --------- %
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amsbsy}
+\usepackage{bm} % normal text bold font inside math environments
+\usepackage{stmaryrd} % Saint Mary of stuff computer science typographic symbol
+\usepackage{geometry}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[runin]{abstract}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{booktabs}
+%\usepackage{piton} % Without this enable, it might not work for the listing package. Switch to LuaLateX if you want to use this option, however. 
+\usepackage{fancyhdr}
+%\usepackage{helvet}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+%\usepackage[scaled=0.90]{helvet} % Font 1 for package
+%\usepackage[scaled=0.85]{beramono} % Font 2 for package. If you want this configuration, change this with the following configuration, or rather just comment the other one out
+\usepackage{mlmodern}
+\usepackage{xcolor}
+
+% Bibliography
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+
+% --------- PACKAGE --------- %
+\input{preamble.tex}
+\addbibresource{bibb.bib} %Imports bibliography file
+
+
+% ----------
+% Variables
+% ----------
+
+\title{\textbf{A brief review} \\ On Etymology and History of Astrophysics} % Full title of your tech report
+\runningtitle{} % Short title
+\author{Yuki Makoto (Tran Minh Vu)} % Full list of authors
+\runningauthor{Minh Vu Tran} % Short list of authors
+\affiliation{} % Affiliation e.g. University or Company
+\department{RHINE-MAPR} % Department or Office
+\memoid{RES-RP-04} % ID of the tech report
+\theyear{2026} % year of the tech report
+\mydate{April, 2026} %the date
+\usepackage{tcolorbox}
+\usepackage{fancyvrb}
+
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+%\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+%  breakable=true,
+%  listing engine=minted,
+%  listing only,
+%  minted language=#2,
+%  minted style=default,
+%  minted options={%
+%    linenos,
+%    gobble=0,
+%    breaklines=true,
+%    breakafter=,,
+%    fontsize=\small,
+%    numbersep=8pt,
+%    #1},
+%  boxsep=0pt,
+%  left skip=0pt,
+%  right skip=0pt,
+%  left=25pt,
+%  right=0pt,
+%  top=3pt,
+%  bottom=3pt,
+%  arc=5pt,
+%  leftrule=0pt,
+%  rightrule=0pt,
+%  bottomrule=2pt,
+%  toprule=2pt,
+%  colback=bg,
+%  colframe=orange!70,
+%  enhanced,
+%  overlay={%
+%    \begin{tcbclipinterior}
+%    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+%    \end{tcbclipinterior}},
+%  #3}
+
+% Python preset environment. 
+\newcommand{\pyobject}[1]{\fbox{\color{red}{\texttt{#1}}}}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+% Inline python highlighting (Might not look great, but eh)
+\lstset{language=Python,keywordstyle={\bfseries \color{blue}}}
+
+
+% ----------
+% actual document
+% ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    \noindent
+    This document by RHINELAB-RINALAB provides an analytical and historical review of astrophysics. My goal is twofold: first, to explore my personal interests and determine which area of Physics best suits my future career; and second, to share these insights with our community, hoping to help others who are also seeking a deeper understanding of the world.
+
+Essentially, this paper fulfills several personal goals. I will examine the history and evolution of astrophysics, looking at how cosmic models have changed over time, why certain theories failed, and the intellectual breakthroughs that created new ways of thinking. Additionally, I dive into the mathematical foundations and techniques that have supported the field throughout history. Ultimately, this study aims to define the scope of the discipline, including its limitations and the formal models used to study the universe.
+
+I have also noticed that many university lectures are often too academic and abstract. Therefore, I want to make this document as accessible as possible for students who are exploring their interests but struggle with dense materials or a lack of clear references.
+
+I hope this work serves as a solid foundation for my own studies and, more importantly, helps fellow enthusiasts gain a clearer perspective on the subjects they are researching.
+
+    \keywords{Astrophysics, review}
+\end{abstract}
+
+\vspace{2.5cm}
+
+
+
+\thispagestyle{firstpage}
+
+\pagebreak
+
+% ----------
+% End of first page
+% ----------
+
+\newgeometry{} % Redefine geometries (normal margins)
+
+\section{Specification}
+\label{sec:spec}
+
+Astrophysics field report. 
+\subsection{Document code, priority}
+
+Document code RES-RP-04, Authored by Vu Tran Minh (Yuuto Makoto). 
+\subsection{Body of issue}
+
+RHINE-MAPR, Mathematical and Physical Research. 
+\subsection{Date and Version}
+
+Finished, v1 (0505/2026).
+\section{Introduction}
+
+This work focuses primarily on the fundamental principles of Astrophysics. The narrative begins with the earliest era of physics, exploring basic astronomical concepts and the intuitive reasoning used by ancient civilizations. It then traces the intellectual evolution of the field through the Renaissance, moving into the sub-modern and modern periods. The scope of this study includes the Theory of Relativity, the formation of planets, and the essential mechanics that govern the cosmos. Alongside these technical subjects, I have included my own philosophical analyses and personal reflections on each theme.
+
+This document is essentially a synthesis of the insights I have gained during my scientific exploration. At the same time, it is supported by a rigorous review of various academic textbooks and authoritative sources, which I have studied carefully while writing this paper. As this is my first major work, it naturally contains a degree of personal subjectivity, and there may be instances of inaccuracies or misconceptions. Therefore, I warmly invite you—the reader—and my colleagues at RHINELAB-RINALAB to engage in discussion and help me refine these ideas in future versions.
+
+I would like to express my deepest gratitude to my friends and family, and especially to the RHINELAB-RINALAB research group, for their invaluable support throughout the development of this project.
+
+Finally, this research will be stored in the group's private archives and is now released for open circulation. It is provided under a public domain/non-copyright status to ensure that all future readers have unrestricted access to this information.
+
+\section{A Historical and Mechanical Overview}
+
+\subsection{The very beginning}
+The attempt to understand the universe starts with our earliest ancestors. When ancient people looked up at the night sky, they did not just see random lights; they faced a vast, unknown space. To make sense of this silent world, humanity looked for patterns to bring order and predictability to their lives.
+
+For early civilizations like the Egyptians and Babylonians, the sky was deeply connected to myths and survival. The movements of the stars and planets told them when to plant crops and when to hold religious events. In their minds, natural events and divine powers were the exact same thing\footnote{The need to predict changing seasons, like the flooding of the Nile River, led to the first calendars. This was the start of early astronomy, driven by the basic need to survive.}. 
+
+Later, the ancient Greeks advanced astronomy by applying geometry to study the stars. Thinkers like Aristotle and Claudius Ptolemy built detailed models to explain how the universe worked based on everyday observations. Ptolemy created the geocentric model, which placed Earth perfectly still at the center of everything. 
+
+Despite being incorrect, this model dominated for over 1,500 years for several practical reasons. First, it was mathematically successful; by adding complex geometrical circles called "epicycles"\footnote{An epicycle is a geometric model used in the Ptolemaic system where a planet moves in a small circle, the center of which travels along a larger circular orbit around Earth. It was primarily invented to explain the apparent backward (retrograde) motion of the planets.}, astronomers could accurately predict planetary movements and eclipses. Second, before the invention of the telescope, there was simply no technology capable of proving the model wrong. Finally, the model aligned perfectly with the philosophical and religious beliefs of the time, providing a highly organized framework that placed humanity comfortably at the center of creation.
+
+\subsection{The Renaissance}
+Changing from this ancient view to modern astrophysics was a huge shock to human thought. For over a thousand years, Ptolemy's Earth-centered model remained largely unquestioned. While earlier ancient astronomers, such as Aristarchus of Samos, had previously suggested a Sun-centered universe\footnote{Aristarchus of Samos (c. 310–230 BC) proposed a heliocentric model, but his ideas were dismissed because they lacked mathematical proof and contradicted the everyday experience of a stationary Earth.}, their ideas were ignored. The true turning point occurred during the renaissance when Nicolaus Copernicus proposed the heliocentric system. Copernicus was credited with this revolution not simply because he argued that the Sun was at the center, but because he developed a complete, rigorous mathematical framework that could calculate planetary positions just as effectively as the Ptolemaic system.  
+
+However, the acceptance of this new model caused a crisis. The shock was not merely scientific, it was deeply psychological and religious. For centuries, the geocentric model had been tightly woven into Christian theology. Religious authorities adopted the view that Earth, being the stage for human existence and salvation, must sit at the absolute center of God's creation\footnote{This synthesis of Greek astronomy and Christian theology was heavily influenced by thinkers like Thomas Aquinas in the 13th century. By the time of the Renaissance, questioning the Earth's central position was essentially equated with questioning religious doctrine itself.}. By moving Earth into a orbit alongside the other planets, the heliocentric model stripped humanity of its special which specifically central status in the cosmos. Copernicus's groundbreaking book was eventually banned by the Catholic Church, and later scientists who defended the Sun-centered universe, most notably Galileo Galilei, faced fierce opposition, censorship, and even trial by the Roman Inquisition\footnote{The Inquisition's condemnation of Galileo in 1633 stands as the most famous historical clash between emerging modern science and established religious dogma.}.
+
+The shift away from the Earth-centered model was finally completed by Galileo Galilei. He achieved this through a powerful combination of telescopic observation and careful physical experiments. Galileo helped create the modern scientific method by studying motion in a systematic way. For example, he rolled spheres down sloped surfaces to understand basic ideas about inertia and acceleration. This experimental approach directly challenged the old Aristotelian method, which relied mostly on philosophical thinking rather than real-world testing\footnote{Galileo's study of motion on Earth provided the mechanical foundation that Newton later used for his theory of gravity.}.
+
+At the same time, his discoveries with the telescope broke down ancient views of the universe. By recording the phases of Venus and the moons orbiting Jupiter, he provided clear proof that Earth was not the only center of motion in space. Furthermore, his observation of mountains on the Moon and dark spots on the Sun destroyed the old belief that objects in space were made of a perfect and unchanging material. This major change in thinking proved that objects in space and objects on Earth follow the exact same physical laws. As a result, Galileo's work replaced the old physics of his time and caused a serious conflict with the Church, changing the history of science forever.
+
+\subsection{Foundations of Celestial Mechanics}
+The transition from Galileo's experiments to a complete model of the universe required a new mathematical language. This period, known as the birth of celestial mechanics, shifted the focus from simply observing where planets were to understanding the physical laws that governed their motion. This evolution is best understood through the work of Johannes Kepler and Isaac Newton.
+
+Before detailing these physical laws, it is important to clarify the structure of this section: Kepler's laws are discussed before Newton's to reflect both historical chronology and the logical evolution of physics.
+
+Historically, Johannes Kepler developed his laws in the early 17th century based purely on observational data. His work represents the \textit{kinematic} stage of astrophysics, describing \textit{how} celestial bodies move without knowing the forces causing those movements\footnote{Kepler's laws are strictly empirical. They were derived mathematically from the meticulous astronomical records kept by Tycho Brahe, rather than deduced from a fundamental physical theory.}. Decades later, Isaac Newton introduced the \textit{dynamic} stage. He provided the theoretical framework of universal gravitation, which successfully explained \textit{why} Kepler's empirical observations were correct.
+
+\subsubsection{Kepler's Laws}
+Johannes Kepler, using the extensive observational data of Tycho Brahe, discovered that planetary orbits did not follow the "perfect" circles imagined by the Greeks. Instead, he proposed three fundamental laws that described the geometry of the solar system:
+
+\begin{enumerate}
+    \item \textbf{The Law of Ellipses:} Every planet travels in an elliptical path with the Sun at one focus\footnote{The semi-major axis ($a$) represents the average distance between the planet and the Sun, while the eccentricity ($e$) describes how "stretched" the ellipse is compared to a perfect circle.}.
+    \item \textbf{The Law of Equal Areas:} A line connecting a planet to the Sun sweeps out equal areas during equal intervals of time. This law explains why planets accelerate as they approach the Sun (perihelion) and slow down as they move away (aphelion)\footnote{This is a direct result of the conservation of angular momentum, a principle stating that a rotating body's momentum remains constant unless acted upon by an external torque.}.
+    \item \textbf{The Law of Harmonies:} The square of a planet's orbital period ($P$) is proportional to the cube of its semi-major axis ($a$). For orbits around the Sun, this is simplified to $P^2 = a^3$.
+\end{enumerate}
+
+\subsubsection{Newton's Laws of Motion and Universal Gravitation}
+To explain \textit{why} Kepler's orbits exist, Sir Isaac Newton first had to establish the fundamental rules of mechanics. In his monumental work, \textit{Principia}\footnote{First published in 1687, the full title of this foundational text is \textit{Philosophiæ Naturalis Principia Mathematica} (Mathematical Principles of Natural Philosophy). It is widely regarded as one of the most important works in the history of science, as it successfully established the unified mathematical foundation for classical mechanics.}, he introduced three laws of motion:
+
+\begin{enumerate}
+    \item \textbf{Law of Inertia:} An object remains at rest or in uniform motion in a straight line unless acted upon by a net external force.
+    \item \textbf{Law of Acceleration:} The rate of change of momentum of a body is proportional to the applied force. This is famously expressed as $F = ma$, where $F$ is the net force, $m$ is the mass, and $a$ is the acceleration.
+    \item \textbf{Law of Action and Reaction:} When two bodies interact, they apply forces to each other that are equal in magnitude and opposite in direction.
+\end{enumerate}
+
+Building upon these laws of motion, Newton proposed the Universal Law of Gravitation. He stated that the attractive force ($F$) between any two masses ($m_1$ and $m_2$) is proportional to the product of their masses and inversely proportional to the square of the distance ($r$) between them:
+$$F = G \frac{m_1 m_2}{r^2}$$
+where $G$ is the gravitational constant\footnote{This "inverse-square law" means that if the distance between two objects doubles, the gravitational force between them becomes four times weaker.}. 
+
+The true brilliance of Newton's work was demonstrating that Kepler’s empirical laws were a direct mathematical consequence of Newtonian mechanics. To see this connection, we can look at a fundamental derivation of Kepler's Third Law using the assumption of a circular orbit for simplicity.
+
+Consider a planet of mass $m_2$ orbiting a much larger star of mass $m_1$ (where $m_1 \gg m_2$). According to Newton's Second Law ($F = ma$), the gravitational force must provide the exact centripetal acceleration ($a = \frac{v^2}{r}$) required to keep the planet moving in a circular path of radius $r$:
+$$G \frac{m_1 m_2}{r^2} = m_2 \frac{v^2}{r}$$
+
+The orbital velocity $v$ is simply the total distance traveled in one complete orbit (the circumference, $2\pi r$) divided by the orbital period ($P$):
+$$v = \frac{2\pi r}{P}$$
+
+Substituting this expression for velocity back into the force equation yields:
+$$G \frac{m_1}{r^2} = \frac{4\pi^2 r}{P^2}$$
+
+By rearranging this equation to solve for $P^2$, we arrive at the relationship Kepler observed:
+$$P^2 = \frac{4\pi^2}{G m_1} r^3$$
+
+For true elliptical orbits, a more rigorous two-body mathematical derivation shows that the orbital radius $r$ is replaced by the semi-major axis $a$, and the central mass $m_1$ is replaced by the sum of the two masses $(m_1 + m_2)$. This results in the exact, Newtonian form of Kepler's Third Law\footnote{This specific formulation is incredibly powerful; it allows astrophysicists to determine the masses of distant stars, planets, and even black holes simply by observing orbital periods and distances.}:
+$$P^2 = \frac{4\pi^2}{G(m_1 + m_2)} a^3$$
+
+By mathematically linking force and motion, Newton proved that the planetary orbits were not arbitrary, but a physical necessity. This synthesis created a highly deterministic "clockwork universe" where every celestial movement could be accurately calculated and predicted. This classical framework remained the absolute standard for astrophysics until the introduction of Albert Einstein's Theory of General Relativity in the 20th century.
+
+For over two centuries, Newton's gravitational theory provided a seemingly flawless description of the cosmos. The ultimate triumph of this framework occurred in 1846 with the discovery of Neptune. Astronomers had observed slight, unexplained deviations in the orbit of Uranus. Trusting the absolute certainty of Newton's equations, mathematicians calculated the exact position of a hypothetical, unseen planet whose gravity was pulling on Uranus. When telescopes were pointed at the predicted coordinates, Neptune was found precisely where the mathematics dictated\footnote{This discovery, independently calculated by Urbain Le Verrier and John Couch Adams, was a spectacular validation of classical mechanics. It proved that the universe operated on predictable, rational laws that could be deciphered through pure mathematics.}.
+
+However, the very precision that led to Neptune's discovery eventually exposed the fundamental limits of Newtonian physics. According to classical mechanics, a simple elliptical orbit should remain fixed in space. In reality, planetary orbits slowly rotate over time, a phenomenon known as orbital precession. While Newton's laws successfully accounted for most of Mercury's precession (caused by the gravitational pull of other planets), there remained a microscopic discrepancy of about 43 arcseconds per century that classical physics simply could not explain\footnote{ An arcsecond is a unit of angular measurement equal to 1/3600 of a degree. Though incredibly small, this discrepancy was not an observational error; it was a systematic failure of Newtonian mechanics in strong gravitational fields.}.
+
+Scientists initially suspected the existence of another hidden planet, temporarily named Vulcan, orbiting between Mercury and the Sun to explain this extra pull. Yet, no such planet was ever found. This stubborn anomaly proved that Newton's "clockwork universe" was fundamentally incomplete. The breakdown of classical mechanics near the Sun signaled that gravity was not merely an invisible force pulling objects across an absolute space. This tiny flaw in Mercury's orbit would ultimately force humanity to reimagine the very fabric of reality, setting the stage for Albert Einstein and the Theory of General Relativity.
+
+\section{Light and Spectroscopy}
+While classical mechanics allowed humanity to calculate the masses and orbits of celestial bodies, the physical nature of the stars remained a profound mystery. In the 19th century, the French philosopher Auguste Comte famously declared that humanity would never be able to determine the chemical composition of the stars due to their incomprehensible distances. However, the solution to this seemingly impossible problem arrived through the study of light itself. This breakthrough marked the true birth of modern astrophysics: the shift from merely mapping the heavens to understanding their physical and chemical properties.
+
+\subsection{Decoding the Spectrum}
+The revolution began when scientists realized that white light from the Sun is not a single entity, but a mixture of different colors. When light passes through a prism, it spreads out into a continuous band of colors known as a spectrum. 
+
+In 1814, the German physicist Joseph von Fraunhofer closely examined the solar spectrum and made a startling discovery: the continuous band of colors was interrupted by hundreds of fine, dark lines. These missing frequencies of light, now known as Fraunhofer lines, were initially a complete mystery\footnote{ Fraunhofer cataloged over 600 of these dark lines, paving the way for the quantitative analysis of starlight.}.
+
+The mystery was solved decades later by Gustav Kirchhoff and Robert Bunsen. Through laboratory experiments, they discovered that specific chemical elements, when heated, emit light at very specific colors (emission lines). Conversely, when a cool gas sits in front of a hot light source, it absorbs those exact same colors, leaving dark gaps (absorption lines) in the spectrum. They realized that the dark lines in the Sun's spectrum were the "chemical fingerprints" of the elements present in the solar atmosphere\footnote{By matching the patterns of lines from starlight to the patterns of known elements in the laboratory, astrophysicists could finally determine the exact chemical composition of distant stars, proving Comte's pessimistic prediction wrong.}.
+
+\subsection{The Doppler Effect and the Moving Universe}
+Beyond chemical composition, the spectrum of light provided another crucial tool: the ability to measure speed. Based on the principle formulated by Christian Doppler, the wavelength of light shifts depending on the motion of the source relative to the observer. 
+
+If a star is moving towards Earth, its light waves are compressed, and its spectral lines shift toward the blue end of the spectrum (blueshift). If the star is moving away, the light waves are stretched, and the lines shift toward the red end (redshift). By measuring these precise shifts, astrophysicists gained the ability to calculate the radial velocities of stars and galaxies\footnote{The application of the Doppler effect to light is one of the most powerful diagnostic tools in astrophysics. In the 20th century, the observation that almost all distant galaxies are redshifted led Edwin Hubble to the monumental conclusion that the universe itself is expanding.}.
+
+Ultimately, light became the ultimate cosmic messenger. Analyzing the electromagnetic spectrum allowed scientists to extract the temperature, density, chemical composition, and velocity of objects millions of light-years away. Moreover, the deep focus on the fundamental nature of light during the late 19th century inevitably exposed inconsistencies in classical physics, setting the perfect stage for Albert Einstein’s revolutionary theories of space and time.
+
+\subsection{The Mathematical Language of Light}
+To extract meaningful physical data from a star's spectrum, astrophysicists rely on several fundamental equations that connect the behavior of light to the properties of celestial objects.
+
+\textbf{1. The Energy of a Photon (Planck-Einstein Relation)} \\
+The realization that light interacts with matter in discrete packets of energy, called photons, was crucial for understanding absorption and emission lines. The energy ($E$) of a single photon is directly proportional to its frequency ($\nu$) and inversely proportional to its wavelength ($\lambda$):
+$$E = h\nu = \frac{hc}{\lambda}$$
+where $h$ is Planck's constant ($6.626 \times 10^{-34} \text{ J}\cdot\text{s}$) and $c$ is the speed of light. This equation explains why different chemical elements absorb specific wavelengths: an electron will only absorb a photon if its exact energy matches the gap between two atomic orbitals\footnote{This quantum mechanical principle is the fundamental reason why every element possesses a unique "barcode" of spectral lines.}.
+
+\textbf{2. Wien's Displacement Law (Temperature and Color)} \\
+If you observe a piece of metal being heated, it glows red, then yellow, then white-hot. Stars behave similarly, approximating perfect thermal emitters called "blackbodies." Wien's Displacement Law mathematically relates a star's surface temperature ($T$) to the wavelength at which it emits the maximum intensity of light ($\lambda_{\text{max}}$):
+$$\lambda_{\text{max}} T = 2.898 \times 10^{-3} \text{ m}\cdot\text{K}$$
+This simple inverse relationship means that hotter stars peak at shorter wavelengths (appearing blue or ultraviolet), while cooler stars peak at longer wavelengths (appearing red or infrared)\footnote{This law is an extraordinarily powerful tool; it allows astronomers to determine the exact surface temperature of a star located millions of light-years away simply by finding the peak of its continuous spectrum.}.
+
+\textbf{3. The Doppler Shift Equation (Radial Velocity)} \\
+As mentioned earlier, the relative motion of a star shifts the position of its spectral lines. For stars moving at a radial velocity ($v_r$) that is significantly slower than the speed of light ($c$), the classical Doppler shift formula is applied:
+$$\frac{\Delta \lambda}{\lambda_{\text{rest}}} = \frac{v_r}{c}$$
+where $\lambda_{\text{rest}}$ is the normal wavelength of the spectral line measured in a laboratory, and $\Delta \lambda = \lambda_{\text{observed}} - \lambda_{\text{rest}}$ is the shift in wavelength. A positive $v_r$ indicates the star is moving away from Earth (redshift, $\Delta \lambda > 0$), while a negative $v_r$ indicates it is moving toward us (blueshift, $\Delta \lambda < 0$)\footnote{For distant galaxies moving at significant fractions of the speed of light, the more complex relativistic Doppler equation must be used to account for Einstein's time dilation effects.}.
+
+\section{Relativity}
+
+\subsection{Special Relativity and the Nature of Time}
+The limits of classical mechanics led to a major change in how we understand the universe. For a long time, people believed that space and time were absolute and never changed. However, Albert Einstein showed that space and time are actually linked together and depend on the observer. In 1905, Einstein proposed the Special Theory of Relativity. This theory is based on one main rule: the speed of light ($c$) is always the same for everyone, no matter how fast they are moving. To keep the speed of light constant, our understanding of space and time had to change.
+
+Einstein proved that as an object moves faster, time for that object slows down (time dilation) and its length becomes shorter (length contraction) from the perspective of someone standing still. This means that "now" is not the same for everyone; it depends on your speed\footnote{Einstein, A.: \textit{On the Electrodynamics of Moving Bodies}, Annalen der Physik, 1905. This paper introduced the idea that space and time are part of the same thing, called spacetime.}.
+
+This theory fundamentally changed how we calculate energy. In classical mechanics, the kinetic energy of a moving object is simply $K = \frac{1}{2}mv^2$. However, Einstein showed that as an object's speed approaches the speed of light, its total energy ($E$) must be calculated using the relativistic factor $\gamma$ (Lorentz factor):
+$$E = \gamma mc^2 = \frac{mc^2}{\sqrt{1 - \frac{v^2}{c^2}}}$$
+where $m$ is the rest mass of the object and $v$ is its velocity.
+
+To see how this connects to our everyday world, we can use a mathematical tool called the Taylor series expansion. For objects moving at everyday speeds (where $v$ is much smaller than $c$, or $v \ll c$), this complex fraction expands into a simpler series:
+$$E \approx mc^2 + \frac{1}{2}mv^2 + \dots$$
+
+This expanded equation is a profound revelation. The second term ($\frac{1}{2}mv^2$) is the exact formula for classical kinetic energy that we already know. But the first term, $mc^2$, is completely new. It implies that even when an object is perfectly still ($v = 0$, meaning the kinetic energy is zero), it still possesses a massive amount of "rest energy":
+$$E = mc^2$$
+
+Through this mathematical derivation, Einstein proved that mass and energy are not separate entities, but two versions of the same thing. Because the speed of light ($c$) is an incredibly large number, squaring it means that even a microscopic speck of mass contains a terrifyingly vast amount of frozen energy.
+
+\subsection{General Relativity}
+In 1915, Einstein expanded his theory to include gravity. He did not see gravity as a "pulling force" like Newton did. Instead, General Relativity says that gravity is caused by the curving of spacetime. Massive objects, like stars and planets, bend the fabric of space and time around them. This curvature tells other objects how to move.
+
+The math behind this is described in the Einstein Field Equations:
+$$R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}$$
+In this equation, the left side represents the shape and curvature of spacetime, while the right side represents the mass and energy within it
+
+This theory successfully explained the strange orbit of Mercury that Newton's laws could not. It also predicted the existence of black holes, places where gravity is so strong that spacetime is curved into a bottomless pit, and not even light can escape. General Relativity changed physics by showing that the universe is flexible and shaped by the matter and energy inside it.
+
+Einstein’s equations were beautiful on paper, but physics demands observational proof. One of the most striking confirmations of General Relativity is the phenomenon of gravitational lensing. Because a massive object curves the spacetime around it, the path of light traveling through that region is also bent.  If a heavy galaxy sits between Earth and a distant quasar, the galaxy acts as a giant cosmic magnifying glass, bending the quasar's light to create multiple images or glowing rings (known as Einstein Rings). This proved that gravity does not just affect mass; it dictates the journey of light itself.
+
+Furthermore, General Relativity predicted that some of the most violent events in the cosmos (such as the collision of two black holes) would send ripples through the very fabric of spacetime. These gravitational waves stretch and squeeze space as they travel outward at the speed of light. For a century, they remained a theoretical ghost, until they were finally detected by the LIGO observatory in 2015\footnote{This monumental discovery opened an entirely new window into astrophysics, allowing us to "hear" the universe rather than just seeing it.}.
+
+\section{Stellar Structure and Evolution}
+
+\subsection{Hydrostatic Equilibrium}
+Every star, including our Sun, exists in a delicate state of balance known as hydrostatic equilibrium. On one side, the immense mass of the star creates a crushing gravitational force, constantly trying to collapse the star into a single point. On the other side, the extreme heat at the core creates an outward thermal pressure, fighting to expand the star.
+
+This life-or-death struggle is described mathematically by the equation of hydrostatic equilibrium:
+$$\frac{dP}{dr} = - \frac{G M_r \rho}{r^2}$$
+where $P$ is the pressure, $r$ is the distance from the center, $G$ is the gravitational constant, $M_r$ is the mass enclosed within radius $r$, and $\rho$ is the density. 
+
+
+The right side of the equation represents the relentless pull of gravity. The expression $\frac{G M_r \rho}{r^2}$ calculates exactly how strongly the mass beneath that layer ($M_r$) is pulling down on the gas density ($\rho$) at a specific distance ($r$).
+
+The left side $\frac{dP}{dr}$ is the pressure gradient. It represents the difference in thermal pressure between the bottom of that gas layer and the top of it. 
+
+The most crucial detail connecting them is the negative sign ($-$). It mathematically proves that in order to stop the gas from falling inward, the pressure must continuously decrease as we move outward from the center (as $r$ increases). In other words, the gas directly beneath any layer must push upward with a greater force than the gas above it pushes down.
+
+Because of this strict rule, the pressure compounds as we travel deeper into the star. Consequently, the core must endure the absolute maximum pressure, supporting the astronomical weight of all the outer layers combined. As long as the core can generate enough energy to maintain this extreme pressure, the inward pull of gravity is perfectly balanced, and the star lives.
+
+\subsection{The Nuclear Engine}
+ Deep inside the stellar core, the conditions are extreme: temperatures reach millions of degrees, and the density is incomprehensible. However, according to classical physics, even these extreme conditions are not actually enough to force hydrogen nuclei (which are single protons) together. Because protons are positively charged, they fiercely repel each other through the electromagnetic force (Coulomb barrier).
+
+For nuclear fusion to occur, the star relies on a fundamental quirk of quantum mechanics called \textit{quantum tunneling}. This principle dictates that a subatomic particle has a tiny, probabilistic chance of "tunneling" through a repulsive barrier without actually possessing the classical energy required to overcome it. Because there are a nearly infinite number of protons in the core moving at immense speeds, this rare quantum trick happens frequently enough to ignite the star.
+
+Once the barrier is breached, the star generates energy primarily through a sequence of reactions called the proton-proton (p-p) chain. In this multi-step process, four individual hydrogen protons are violently smashed and fused together to create a single helium-4 nucleus. 
+
+This is where Einstein's equivalence of mass and energy becomes the engine of the cosmos. If you were to measure the mass of the four initial hydrogen protons and compare them to the final helium nucleus, you would find a discrepancy. The resulting helium atom is about 0.7\% lighter than the four original protons combined. This "missing" mass ($\Delta m$) does not simply disappear; it is completely converted into pure energy, exactly as dictated by the equation $E = \Delta m c^2$. 
+
+This energy is released in the form of high-energy gamma ray photons and elusive particles called neutrinos. As the photons endlessly bounce around and slowly fight their way from the dense core to the surface that they generate the immense outward thermal pressure that counteracts gravity. Therefore, a star is essentially a massive, self sustaining nuclear reactor, perfectly regulated by its own crushing weight.
+
+\subsection{Stellar Death}
+However, the fuel is not infinite. Eventually, the hydrogen in the core runs out, the nuclear engine sputters, and the outward pressure drops. After millions or billions of years of stalemate, gravity finally wins. The core collapses inward, and the ultimate fate of the star depends entirely on one single factor: its mass.
+
+\subsubsection{White Dwarfs and the Chandrasekhar Limit}
+For low to medium mass stars like our Sun, the core collapses until the atoms are crushed tightly together. At this point, quantum mechanics steps in. According to the Pauli Exclusion Principle, electrons cannot occupy the same quantum state. They fiercely resist being squeezed too closely, creating a new type of outward force called \textit{electron degeneracy pressure}. 
+
+The star stabilizes as a White Dwarf—a dead, glowing ember about the size of the Earth but incredibly dense. However, the Indian physicist Subrahmanyan Chandrasekhar proved mathematically that this quantum pressure has a strict limit. If the core mass exceeds approximately 1.4 solar masses ($1.4 M_\odot$), gravity overwhelms the electrons\footnote{Chandrasekhar, S.: \textit{The Highly Collapsed Configurations of a Stellar Mass}, Monthly Notices of the Royal Astronomical Society, 1931. The Chandrasekhar limit is a fundamental threshold in astrophysics, dictating which stars will die quietly and which will explode.}.
+
+\subsubsection{Neutron Stars and Supernovae}
+If a star's core is heavier than the Chandrasekhar limit, the collapse is catastrophic. The electrons are literally crushed into protons, neutralizing their charge and turning the entire core into a giant ball of neutrons. The sudden halt of this collapse generates a shockwave that blows the star apart in a colossal explosion known as a supernova.
+
+What remains is a Neutron Star. It is supported by \textit{neutron degeneracy pressure} and is so dense that a single teaspoon of its material would weigh billions of tons on Earth. It is essentially a giant atomic nucleus suspended in space.
+
+\subsubsection{Black Holes}
+For the most massive stars in the universe, even the quantum resistance of neutrons is not enough to stop the crush of gravity. The core collapses completely, shrinking to a point of infinite density called a singularity. 
+
+Gravity becomes so intense that spacetime folds in on itself. A boundary forms around the singularity, known as the event horizon. The distance from the center to this boundary is called the Schwarzschild radius ($R_s$):
+$$R_s = \frac{2GM}{c^2}$$
+where $M$ is the mass of the black hole\footnote{ Any object, even light, that crosses the Schwarzschild radius is permanently lost to the observable universe.}. A black hole represents the absolute breakdown of physical laws as we know them. It is the ultimate testament to the terrifying power of gravity, marking the dark, silent end of stellar evolution.
+
+\section{Cosmology and the Fate of the Universe}
+After exploring the mechanical laws, the nature of light, and the violent life cycles of individual stars, our review must naturally zoom out to the ultimate scale. Cosmology is the study of the universe not as a collection of separate objects, but as a single, evolving, physical entity. If a black hole represents the death of a star, cosmology forces us to confront the birth and inevitable death of reality itself.
+
+\subsection{The Primordial Singularity and the Cosmic Echo}
+As discussed earlier, Edwin Hubble's observation of redshifted galaxies proved that the universe is actively expanding. If we take this expansion and rewind the clock mathematically, we reach a profound and unavoidable conclusion: approximately 13.8 billion years ago, all the mass, energy, and empty space in the universe were compressed into an infinitely small, infinitely hot, and infinitely dense point. 
+
+This primordial singularity, similar to the core of a black hole but encompassing everything that exists, violently expanded in an event known as the Big Bang. It is crucial to understand that the Big Bang was not an explosion \textit{in} space; it was an explosion \textit{of} space. 
+
+The most undeniable proof of this fiery birth is the Cosmic Microwave Background (CMB). As the early universe expanded and cooled, it eventually reached a temperature where protons and electrons could combine to form the first neutral hydrogen atoms. At that exact moment, light was finally free to travel through space without scattering. This "first light" has been traveling for billions of years, stretched by the expansion of the universe into the microwave spectrum. Today, we observe this faint radiation arriving uniformly from every direction in the sky, a literal thermal echo of creation\footnote{Penzias, A. A., \& Wilson, R. W.: \textit{A Measurement of Excess Antenna Temperature at 4080 Mc/s}, Astrophysical Journal, 1965. The accidental discovery of the CMB earned Penzias and Wilson the Nobel Prize and provided the definitive empirical proof for the Big Bang model.}.
+
+\subsection{Dark Energy and the Ultimate Fate}
+
+\subsubsection{Dark Energy and the Runaway Expansion}
+Knowing how the universe began naturally leads to the ultimate question of how it will end. For decades, astrophysicists believed that the collective gravitational pull of all the galaxies (bolstered by the invisible weight of Dark Matter, an elusive entity hypothesized by scientists to explain cosmic anomalies but never directly observed) would act as a massive cosmic brake, eventually slowing down the universe's expansion. The primary debate was simply whether gravity would eventually win and crush everything back into a singularity (The Big Crunch), or if the universe would just coast to a halt.
+
+However, in 1998, two independent teams of astronomers shattered this classical assumption. They observed Type Ia supernovae exploding white dwarfs that always shine with a specific, predictable brightness, allowing them to be used as cosmic "standard candles" to measure immense distances. By analyzing the redshift and the fading light of these distant explosions, they expected to measure the rate of cosmic deceleration. 
+
+Instead, the data revealed a terrifying truth: the distant supernovae were much dimmer and further away than predicted. The expansion of the universe was not slowing down; it was actively accelerating\footnote{Riess, A. G. et al.: \textit{Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant}, The Astronomical Journal, 1998.}.
+
+To explain this impossible acceleration, physicists were forced to introduce a new, unseen titan into the cosmic arena: \textit{Dark Energy}. Unlike ordinary matter or dark matter, dark energy does not clump together to form galaxies. It acts as a repulsive anti-gravity, and it is hypothesized to be a property inherent in the empty fabric of space itself. 
+
+This creates a chilling runaway effect that as the universe expands, more empty space is created. More space means more dark energy, which in turn pushes the universe to expand even faster, creating even more space. Today, we know that this mysterious force makes up roughly 68\% of everything in existence. It is the dominant force of nature on a cosmic scale, represented mathematically by the Cosmological Constant ($\Lambda$) that Einstein originally placed in his field equations.
+
+Because Dark Energy has definitively won the cosmic tug-of-war against gravity, the universe will not collapse. Instead, it is doomed to expand exponentially forever. The galaxies will be pushed further and further apart at speeds exceeding the speed of light, eventually leaving our local galaxy cluster entirely isolated. This relentless expansion sets the perfect, bleak stage for the ultimate demise of the cosmos.
+
+\subsubsection{The Heat Death}
+The concept of the Heat Death is firmly grounded in the Second Law of Thermodynamics, which introduces the concept of entropy ($S$)—the measure of disorder or unavailable energy in a closed system. The law states that the total entropy of an isolated system can never decrease over time:
+$$\Delta S \geq 0$$
+
+In the context of the entire universe, this simple equation is a death sentence. It dictates that energy naturally disperses from hot regions to cold regions until perfect equilibrium is reached. 
+
+As the universe exponentially expands, the existing gas and dust will be stretched too thin to form new stars. The last remaining stars will exhaust their nuclear fuel and fade into cold white dwarfs and neutron stars. Eventually, even black holes will evaporate through Hawking radiation.
+
+Trillions of years from now, the universe will reach a state of maximum entropy. The temperature will approach absolute zero, and all energy will be perfectly and evenly distributed across an infinitely vast, dark void. No work can be done, no light can be emitted, and no life can exist. The cosmos will not end in a dramatic catastrophe, but in a quiet, eternal stillness.
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\renewcommand{\refname}{References}
+\begin{thebibliography}{9}
+
+% Sắp xếp A, B, C theo tên tác giả
+\bibitem{carroll}
+Carroll, B. W., \& Ostlie, D. A.: \textit{An Introduction to Modern Astrophysics}, Cambridge University Press, Cambridge, 2017, 2nd Edition, pp. 25-50.
+
+\bibitem{koestler}
+Koestler, A.: \textit{The Sleepwalkers: A History of Man's Changing Vision of the Universe}, Penguin Books, London, 2017, Reprint Edition, pp. 220-300.
+
+\bibitem{newton}
+Newton, I.: \textit{The Principia: Mathematical Principles of Natural Philosophy} (Translated by I. B. Cohen and A. Whitman), University of California Press, Berkeley, 1999, pp. 411-415.
+
+\bibitem{taylor}
+Taylor, J. R.: \textit{Classical Mechanics}, University Science Books, California, 2005, 1st Edition, pp. 293-324.
+
+\bibitem{thuan}
+Trinh, X. T.: \textit{The Secret Melody: And Man Created the Universe}, Oxford University Press, New York, 1995, 1st Edition, pp. 10-35.
+
+\bibitem{Einstein}
+Einstein, A.: \textit{On the Electrodynamics of Moving Bodies}, Annalen der Physik, 1905
+
+\bibitem{Abbott}
+Abbott, B. P. et al. (LIGO Scientific Collaboration and Virgo Collaboration) \textit{Observation of Gravitational Waves from a Binary Black Hole Merger}, Physical Review Letters, 2016
+
+\bibitem{Chandrasekhar}
+Chandrasekhar, S.: \textit{The Highly Collapsed Configurations of a Stellar Mass, (1931, 1935)}
+
+\bibitem{Penzias}
+Penzias, A. A.,  Wilson, R. W.: A Measurement of Excess Antenna Temperature at 4080 Mc/s, Astrophysical Journal, 1965
+
+\bibitem{Riess}
+Riess, A. G. et al.: Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant, The Astronomical Journal, 1998
+
+\end{thebibliography}
+
+%\section{Citations}
+%Items that are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion} together with Einstein's journal paper \cite{einstein} and Dirac's book \cite{dirac}---which are physics-related items. Next, citing two of Knuth's books: \textit{Fundamental Algorithms} \cite{knuth-fa} and \textit{The Art of Computer Programming} \cite{knuthwebsite}.
+
+%\medskip
+
+%\printbibliography %Prints bibliography
+
+
+\end{document}
+
+% ----------
