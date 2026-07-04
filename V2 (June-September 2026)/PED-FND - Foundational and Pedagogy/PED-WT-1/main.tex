@@ -1,0 +1,171 @@
+% ----------
+% Tech report template
+% 
+% ----------
+
+% --------- PACKAGE --------- %
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amsbsy}
+\usepackage{bm} % normal text bold font inside math environments
+\usepackage{stmaryrd} % Saint Mary of stuff computer science typographic symbol
+\usepackage{geometry}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[runin]{abstract}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{booktabs}
+%\usepackage{piton} % Without this enable, it might not work for the listing package. Switch to LuaLateX if you want to use this option, however. 
+\usepackage{fancyhdr}
+%\usepackage{helvet}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+%\usepackage[scaled=0.90]{helvet} % Font 1 for package
+%\usepackage[scaled=0.85]{beramono} % Font 2 for package. If you want this configuration, change this with the following configuration, or rather just comment the other one out
+\usepackage{mlmodern}
+\usepackage{xcolor}
+
+% Bibliography
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+
+% --------- PACKAGE --------- %
+\input{preamble.tex}
+\addbibresource{bibb.bib} %Imports bibliography file
+
+
+% ----------
+% Variables
+% ----------
+
+\title{\textbf{Problem set} \\ On quantum formalism and concepts} % Full title of your tech report
+\runningtitle{} % Short title
+\author{Fujimiya Amane (Bui Gia Khanh) \\ {\small As Director of RHINE@MAPR}} % Full list of authors
+\runningauthor{Amane et al.} % Short list of authors
+\affiliation{} % Affiliation e.g. University or Company
+\department{RHINE@DOM-PHYS, RHINE@MAPR} % Department or Office
+\memoid{PED-WT-01} % ID of the tech report
+\theyear{2026} % year of the tech report
+\mydate{\today} %the date
+\usepackage{tcolorbox}
+\usepackage{fancyvrb}
+
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+%\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+%  breakable=true,
+%  listing engine=minted,
+%  listing only,
+%  minted language=#2,
+%  minted style=default,
+%  minted options={%
+%    linenos,
+%    gobble=0,
+%    breaklines=true,
+%    breakafter=,,
+%    fontsize=\small,
+%    numbersep=8pt,
+%    #1},
+%  boxsep=0pt,
+%  left skip=0pt,
+%  right skip=0pt,
+%  left=25pt,
+%  right=0pt,
+%  top=3pt,
+%  bottom=3pt,
+%  arc=5pt,
+%  leftrule=0pt,
+%  rightrule=0pt,
+%  bottomrule=2pt,
+%  toprule=2pt,
+%  colback=bg,
+%  colframe=orange!70,
+%  enhanced,
+%  overlay={%
+%    \begin{tcbclipinterior}
+%    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+%    \end{tcbclipinterior}},
+%  #3}
+
+% Python preset environment. 
+\newcommand{\pyobject}[1]{\fbox{\color{red}{\texttt{#1}}}}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+% Inline python highlighting (Might not look great, but eh)
+\lstset{language=Python,keywordstyle={\bfseries \color{blue}}}
+
+
+% ----------
+% actual document
+% ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    \noindent
+    \blindtext[1]
+
+    \keywords{Keyword1, Keyword2, Keyword3}
+\end{abstract}
+
+\vspace{2.5cm}
+
+
+
+\thispagestyle{firstpage}
+
+\pagebreak
+
+% ----------
+% End of first page
+% ----------
+
+\newgeometry{} % Redefine geometries (normal margins)
+
+\section{Specification}
+\label{sec:spec}
+
+The document is listed under pedagogical purpose, and is addressed to RHINE@MAPR team as followed. 
+
+\subsection{Document code, priority}
+
+Document code PED, additional code WT, serial 01, created under RHINE@DOM-PHYS i.e. Physics domain. It is created for the purpose of outlining the general and standard treatment thereof, of foundational questions, and analytical, practical reverse engineering also as open problem discourse on the topic of quantum formalism, quantum field theory and conceptual quantum theory. Addressed to mainly, Tran Cong Long, Ngo Quang Huy, under the same domain. 
+
+\subsection{Body of issue}
+
+Bui Gia Khanh (Fujimiya Amane), under RHINE@MAPR Mathematical and Physics Research Laboratory (ONIG-02). 
+
+\subsection{Date and Version}
+
+v0.1. at present, future change will arrive as late at 13th July. 
+
+\section{Introduction}
+
+Based on the requested need by people in the mathematical and research group, we introduce the problem set designed for iterative and incremental explorations there of. The plan is to get you the thorough set of problems, including open problem, that would not be resolved in day one or so, while possibility still exists, to equip and roust analytical thinking in the domain of \textit{quantum theory, quantum formalism, and conceptual interpretation or design of microscopic quantum-scale} system. Using this problem set means there exists no definite answer to any given questions aside from the standard one - and even then - such problems with standard answer can also be challenged. Such is also the case that the goal of this learning apparatus is not fundamentally just to do it a whole, but selectively so, and further on out, to discover, ask questions, write down conjecture and chart out hypothesis, reverse-engineering what is believed to be concrete and ironclad, and then to create its own second version - the next problem set that would constitute what is available there be. 
+
+The structure of this problem set, again, is \textbf{nonlinear} in its form. You can, per given specification, move swiftly from one to another while abandoning but noted down the previous one, so much so since the landscape of quantum theory itself is fragmented and often diluted of its fundamental contents. 
+
+\section{Problems}
+
+
+
+
+
+%\section{Citations}
+%Items that are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion} together with Einstein's journal paper \cite{einstein} and Dirac's book \cite{dirac}---which are physics-related items. Next, citing two of Knuth's books: \textit{Fundamental Algorithms} \cite{knuth-fa} and \textit{The Art of Computer Programming} \cite{knuthwebsite}.
+
+%\medskip
+
+%\printbibliography %Prints bibliography
+
+
+\end{document}
+
+% ----------
