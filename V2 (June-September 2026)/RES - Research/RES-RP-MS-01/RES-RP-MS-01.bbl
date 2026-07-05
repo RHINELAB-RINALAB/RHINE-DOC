@@ -1,0 +1,412 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global/global}
+    \entry{behler2007}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=eb5240658f030eb9bd974d7ce12c74d2}{%
+           family={Behler},
+           familyi={B\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6f595160245adfcee55d0a5e4cdcd751}{%
+           family={Parrinello},
+           familyi={P\bibinitperiod},
+           given={Michele},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{67aefa9eeeefbd2f0f38051faa418680}
+      \strng{fullhash}{67aefa9eeeefbd2f0f38051faa418680}
+      \strng{fullhashraw}{67aefa9eeeefbd2f0f38051faa418680}
+      \strng{bibnamehash}{67aefa9eeeefbd2f0f38051faa418680}
+      \strng{authorbibnamehash}{67aefa9eeeefbd2f0f38051faa418680}
+      \strng{authornamehash}{67aefa9eeeefbd2f0f38051faa418680}
+      \strng{authorfullhash}{67aefa9eeeefbd2f0f38051faa418680}
+      \strng{authorfullhashraw}{67aefa9eeeefbd2f0f38051faa418680}
+      \field{labelalpha}{BP07}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review Letters}
+      \field{number}{14}
+      \field{title}{Generalized Neural-Network Representation of High-Dimensional Potential-Energy Surfaces}
+      \field{volume}{98}
+      \field{year}{2007}
+      \field{pages}{146401}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.98.146401
+      \endverb
+    \endentry
+    \entry{cahn1958}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=52dbce452736c579ce3afd0bc41401e2}{%
+           family={Cahn},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=615753f3c0be7941ef6c9f7de03513e4}{%
+           family={Hilliard},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{803d7022f245ce9165424789e4bba28f}
+      \strng{fullhash}{803d7022f245ce9165424789e4bba28f}
+      \strng{fullhashraw}{803d7022f245ce9165424789e4bba28f}
+      \strng{bibnamehash}{803d7022f245ce9165424789e4bba28f}
+      \strng{authorbibnamehash}{803d7022f245ce9165424789e4bba28f}
+      \strng{authornamehash}{803d7022f245ce9165424789e4bba28f}
+      \strng{authorfullhash}{803d7022f245ce9165424789e4bba28f}
+      \strng{authorfullhashraw}{803d7022f245ce9165424789e4bba28f}
+      \field{labelalpha}{CH58}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Chemical Physics}
+      \field{number}{2}
+      \field{title}{Free Energy of a Nonuniform System. I. Interfacial Free Energy}
+      \field{volume}{28}
+      \field{year}{1958}
+      \field{pages}{258\bibrangedash 267}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1063/1.1744102
+      \endverb
+    \endentry
+    \entry{george2010}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=89e1a9172ffd1a115351cb519f525d7e}{%
+           family={George},
+           familyi={G\bibinitperiod},
+           given={Steven\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{89e1a9172ffd1a115351cb519f525d7e}
+      \strng{fullhash}{89e1a9172ffd1a115351cb519f525d7e}
+      \strng{fullhashraw}{89e1a9172ffd1a115351cb519f525d7e}
+      \strng{bibnamehash}{89e1a9172ffd1a115351cb519f525d7e}
+      \strng{authorbibnamehash}{89e1a9172ffd1a115351cb519f525d7e}
+      \strng{authornamehash}{89e1a9172ffd1a115351cb519f525d7e}
+      \strng{authorfullhash}{89e1a9172ffd1a115351cb519f525d7e}
+      \strng{authorfullhashraw}{89e1a9172ffd1a115351cb519f525d7e}
+      \field{labelalpha}{Geo10}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chemical Reviews}
+      \field{number}{1}
+      \field{title}{Atomic Layer Deposition: An Overview}
+      \field{volume}{110}
+      \field{year}{2010}
+      \field{pages}{111\bibrangedash 131}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1021/cr900056b
+      \endverb
+    \endentry
+    \entry{hung2017}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=d4a337f0dbfa98044ebdec16e53d2cc5}{%
+           family={Hung},
+           familyi={H\bibinitperiod},
+           given={Hui-Chih},
+           giveni={H\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=4f82a34969d0bfb4f521a21db64dcaf6}{%
+           family={Chiu},
+           familyi={C\bibinitperiod},
+           given={Yu-Chih},
+           giveni={Y\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=103e17411347dc099e07bcbf481f9dfb}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Muh-Cherng},
+           giveni={M\bibinithyphendelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{70d60eb75b1905ae29f616ae4b7f1ab1}
+      \strng{fullhash}{70d60eb75b1905ae29f616ae4b7f1ab1}
+      \strng{fullhashraw}{70d60eb75b1905ae29f616ae4b7f1ab1}
+      \strng{bibnamehash}{70d60eb75b1905ae29f616ae4b7f1ab1}
+      \strng{authorbibnamehash}{70d60eb75b1905ae29f616ae4b7f1ab1}
+      \strng{authornamehash}{70d60eb75b1905ae29f616ae4b7f1ab1}
+      \strng{authorfullhash}{70d60eb75b1905ae29f616ae4b7f1ab1}
+      \strng{authorfullhashraw}{70d60eb75b1905ae29f616ae4b7f1ab1}
+      \field{labelalpha}{HCW17}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Semiconductor Manufacturing}
+      \field{number}{3}
+      \field{title}{Analysis of Competition Between {IDM} and Fabless-Foundry Business Models in the Semiconductor Industry}
+      \field{volume}{30}
+      \field{year}{2017}
+      \field{pages}{254\bibrangedash 260}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/TSM.2017.2699739
+      \endverb
+    \endentry
+    \entry{kittel2004}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=2c6d8b1aea5118299879670708080fe1}{%
+           family={Kittel},
+           familyi={K\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{2c6d8b1aea5118299879670708080fe1}
+      \strng{fullhash}{2c6d8b1aea5118299879670708080fe1}
+      \strng{fullhashraw}{2c6d8b1aea5118299879670708080fe1}
+      \strng{bibnamehash}{2c6d8b1aea5118299879670708080fe1}
+      \strng{authorbibnamehash}{2c6d8b1aea5118299879670708080fe1}
+      \strng{authornamehash}{2c6d8b1aea5118299879670708080fe1}
+      \strng{authorfullhash}{2c6d8b1aea5118299879670708080fe1}
+      \strng{authorfullhashraw}{2c6d8b1aea5118299879670708080fe1}
+      \field{labelalpha}{Kit04}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{8th}
+      \field{title}{Introduction to Solid State Physics}
+      \field{year}{2004}
+    \endentry
+    \entry{kohn1965}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d2a8bde13282602825b96a25268a04f1}{%
+           family={Kohn},
+           familyi={K\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+        {{hash=8c5d5491b7080d30de9586d406a88c87}{%
+           family={Sham},
+           familyi={S\bibinitperiod},
+           given={Lu\bibnamedelima Jeu},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{723c7466bc57d4c65b87812b76a159c9}
+      \strng{fullhash}{723c7466bc57d4c65b87812b76a159c9}
+      \strng{fullhashraw}{723c7466bc57d4c65b87812b76a159c9}
+      \strng{bibnamehash}{723c7466bc57d4c65b87812b76a159c9}
+      \strng{authorbibnamehash}{723c7466bc57d4c65b87812b76a159c9}
+      \strng{authornamehash}{723c7466bc57d4c65b87812b76a159c9}
+      \strng{authorfullhash}{723c7466bc57d4c65b87812b76a159c9}
+      \strng{authorfullhashraw}{723c7466bc57d4c65b87812b76a159c9}
+      \field{labelalpha}{KS65}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review}
+      \field{number}{4A}
+      \field{title}{Self-Consistent Equations Including Exchange and Correlation Effects}
+      \field{volume}{140}
+      \field{year}{1965}
+      \field{pages}{A1133\bibrangedash A1142}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1103/PhysRev.140.A1133
+      \endverb
+    \endentry
+    \entry{lee2011}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7e3f793793af554c0708b3c3cda8c118}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={June\bibnamedelima Gunn},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boca Raton}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press}%
+      }
+      \strng{namehash}{7e3f793793af554c0708b3c3cda8c118}
+      \strng{fullhash}{7e3f793793af554c0708b3c3cda8c118}
+      \strng{fullhashraw}{7e3f793793af554c0708b3c3cda8c118}
+      \strng{bibnamehash}{7e3f793793af554c0708b3c3cda8c118}
+      \strng{authorbibnamehash}{7e3f793793af554c0708b3c3cda8c118}
+      \strng{authornamehash}{7e3f793793af554c0708b3c3cda8c118}
+      \strng{authorfullhash}{7e3f793793af554c0708b3c3cda8c118}
+      \strng{authorfullhashraw}{7e3f793793af554c0708b3c3cda8c118}
+      \field{labelalpha}{Lee11}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Computational Materials Science: An Introduction}
+      \field{year}{2011}
+    \endentry
+    \entry{martin2004}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a7400824f190fa020763ff41d573646b}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Richard\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a7400824f190fa020763ff41d573646b}
+      \strng{fullhash}{a7400824f190fa020763ff41d573646b}
+      \strng{fullhashraw}{a7400824f190fa020763ff41d573646b}
+      \strng{bibnamehash}{a7400824f190fa020763ff41d573646b}
+      \strng{authorbibnamehash}{a7400824f190fa020763ff41d573646b}
+      \strng{authornamehash}{a7400824f190fa020763ff41d573646b}
+      \strng{authorfullhash}{a7400824f190fa020763ff41d573646b}
+      \strng{authorfullhashraw}{a7400824f190fa020763ff41d573646b}
+      \field{labelalpha}{Mar04}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Electronic Structure: Basic Theory and Practical Methods}
+      \field{year}{2004}
+    \endentry
+    \entry{maysze2004}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=fd8173b79f72a063406474463633d007}{%
+           family={May},
+           familyi={M\bibinitperiod},
+           given={Gary\bibnamedelima S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=0368503a4c8dbadc87fba75b046d54c9}{%
+           family={Sze},
+           familyi={S\bibinitperiod},
+           given={Simon\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{78766ff091326638b257117e1f6cf455}
+      \strng{fullhash}{78766ff091326638b257117e1f6cf455}
+      \strng{fullhashraw}{78766ff091326638b257117e1f6cf455}
+      \strng{bibnamehash}{78766ff091326638b257117e1f6cf455}
+      \strng{authorbibnamehash}{78766ff091326638b257117e1f6cf455}
+      \strng{authornamehash}{78766ff091326638b257117e1f6cf455}
+      \strng{authorfullhash}{78766ff091326638b257117e1f6cf455}
+      \strng{authorfullhashraw}{78766ff091326638b257117e1f6cf455}
+      \field{labelalpha}{MS04}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fundamentals of Semiconductor Fabrication}
+      \field{year}{2004}
+    \endentry
+    \entry{plummer2000}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=a48e6a867eaa1c40613a71ffffa4d819}{%
+           family={Plummer},
+           familyi={P\bibinitperiod},
+           given={James\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=f819d0b09608d418e7a43c18a115cc43}{%
+           family={Deal},
+           familyi={D\bibinitperiod},
+           given={Michael\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=2c76ad19699215be8234d604b3d040af}{%
+           family={Griffin},
+           familyi={G\bibinitperiod},
+           given={Peter\bibnamedelima B.},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Upper Saddle River, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{40c7caf0aff413ac22c07103c2075430}
+      \strng{fullhash}{40c7caf0aff413ac22c07103c2075430}
+      \strng{fullhashraw}{40c7caf0aff413ac22c07103c2075430}
+      \strng{bibnamehash}{40c7caf0aff413ac22c07103c2075430}
+      \strng{authorbibnamehash}{40c7caf0aff413ac22c07103c2075430}
+      \strng{authornamehash}{40c7caf0aff413ac22c07103c2075430}
+      \strng{authorfullhash}{40c7caf0aff413ac22c07103c2075430}
+      \strng{authorfullhashraw}{40c7caf0aff413ac22c07103c2075430}
+      \field{labelalpha}{PDG00}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Silicon {VLSI} Technology: Fundamentals, Practice and Modeling}
+      \field{year}{2000}
+    \endentry
+    \entry{sze2006}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=0368503a4c8dbadc87fba75b046d54c9}{%
+           family={Sze},
+           familyi={S\bibinitperiod},
+           given={Simon\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3a098cf0efb234b77c1016e613b83730}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Kwok\bibnamedelima K.},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{b21c62d6facff3cf52ca6502da222427}
+      \strng{fullhash}{b21c62d6facff3cf52ca6502da222427}
+      \strng{fullhashraw}{b21c62d6facff3cf52ca6502da222427}
+      \strng{bibnamehash}{b21c62d6facff3cf52ca6502da222427}
+      \strng{authorbibnamehash}{b21c62d6facff3cf52ca6502da222427}
+      \strng{authornamehash}{b21c62d6facff3cf52ca6502da222427}
+      \strng{authorfullhash}{b21c62d6facff3cf52ca6502da222427}
+      \strng{authorfullhashraw}{b21c62d6facff3cf52ca6502da222427}
+      \field{labelalpha}{SN06}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{title}{Physics of Semiconductor Devices}
+      \field{year}{2006}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
