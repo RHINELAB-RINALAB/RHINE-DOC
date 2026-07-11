@@ -1,6 +1,6 @@
-PWD e:\Core\Public Directory\RHINALAB-RHINELAB\rhine-lab-docs\R0 - Document Short-form Template\Template 4 - Proposal Template
+PWD e:\Core\Public Directory\RHINALAB-RHINELAB\RHINELAB@UNIG-2-LOGIT\rhine-lab-doc-source-gen\V1 (April-June 2026)\R0 - Document Short-form Template\Template 4 - Proposal Template
 INPUT C:\Users\Admin\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT e:\Core\Public Directory\RHINALAB-RHINELAB\rhine-lab-docs\R0 - Document Short-form Template\Template 4 - Proposal Template\main.tex
+INPUT e:\Core\Public Directory\RHINALAB-RHINELAB\RHINELAB@UNIG-2-LOGIT\rhine-lab-doc-source-gen\V1 (April-June 2026)\R0 - Document Short-form Template\Template 4 - Proposal Template\main.tex
 OUTPUT main.log
 INPUT D:\MikTek\tex\latex\base\article.cls
 INPUT D:\MikTek\tex\latex\base\article.cls
@@ -392,6 +392,7 @@ INPUT D:\MikTek\tex\latex\mlmodern\omxmlmex.fd
 INPUT D:\MikTek\fonts\tfm\public\mlmodern\mlmex10.tfm
 INPUT D:\MikTek\fonts\tfm\public\mlmodern\ec-mlmr9.tfm
 INPUT D:\MikTek\fonts\tfm\public\mlmodern\ec-mlmbx9.tfm
+INPUT D:\MikTek\fonts\tfm\public\mlmodern\ec-mlmri9.tfm
 INPUT D:\MikTek\fonts\tfm\public\mlmodern\ec-mlmcsc10.tfm
 INPUT D:\MikTek\fonts\tfm\public\mlmodern\ec-mlmr8.tfm
 INPUT D:\MikTek\fonts\tfm\public\mlmodern\ec-mlmbx8.tfm
@@ -399,11 +400,16 @@ INPUT C:\Users\Admin\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT D:\MikTek\fonts\enc\dvips\lm\lm-ec.enc
 INPUT D:\MikTek\fonts\tfm\public\mlmodern\ec-mlmbx12.tfm
 INPUT D:\MikTek\fonts\tfm\public\mlmodern\ec-mlmbx10.tfm
+INPUT D:\MikTek\tex\latex\mlmodern\ts1mlmr.fd
+INPUT D:\MikTek\tex\latex\mlmodern\ts1mlmr.fd
+INPUT D:\MikTek\tex\latex\mlmodern\ts1mlmr.fd
+INPUT D:\MikTek\fonts\tfm\public\mlmodern\ts1-mlmr10.tfm
+INPUT D:\MikTek\fonts\enc\dvips\lm\lm-ts1.enc
+INPUT D:\MikTek\fonts\tfm\public\mlmodern\ec-mlmri10.tfm
 INPUT D:\MikTek\tex\latex\mlmodern\t1mlmss.fd
 INPUT D:\MikTek\tex\latex\mlmodern\t1mlmss.fd
 INPUT D:\MikTek\tex\latex\mlmodern\t1mlmss.fd
 INPUT D:\MikTek\fonts\tfm\public\mlmodern\ec-mlmss10.tfm
-INPUT D:\MikTek\fonts\tfm\public\mlmodern\ec-mlmri10.tfm
 INPUT D:\MikTek\fonts\tfm\public\mlmodern\rm-mlmr10.tfm
 INPUT D:\MikTek\fonts\tfm\public\mlmodern\rm-mlmr7.tfm
 INPUT D:\MikTek\fonts\tfm\public\mlmodern\rm-mlmr5.tfm
@@ -443,6 +449,8 @@ INPUT D:\MikTek\fonts\type1\public\mlmodern\mlmri10.pfb
 INPUT D:\MikTek\fonts\type1\public\mlmodern\mlmri10.pfb
 INPUT D:\MikTek\fonts\type1\public\mlmodern\mlmri7.pfb
 INPUT D:\MikTek\fonts\type1\public\mlmodern\mlmri7.pfb
+INPUT D:\MikTek\fonts\type1\public\mlmodern\mlmri9.pfb
+INPUT D:\MikTek\fonts\type1\public\mlmodern\mlmri9.pfb
 INPUT D:\MikTek\fonts\type1\public\mlmodern\mlmss10.pfb
 INPUT D:\MikTek\fonts\type1\public\mlmodern\mlmss10.pfb
 INPUT D:\MikTek\fonts\type1\public\mlmodern\mlmtt10.pfb

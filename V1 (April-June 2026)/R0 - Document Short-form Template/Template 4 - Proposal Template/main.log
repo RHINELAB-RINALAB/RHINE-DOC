@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.13)  20 APR 2026 23:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2026.6.5)  11 JUL 2026 23:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"e:/Core/Public Directory/RHINALAB-RHINELAB/rhine-lab-docs/R0 - Document Short-form Template/Template 4 - Proposal Template/main.tex"
-(e:/Core/Public Directory/RHINALAB-RHINELAB/rhine-lab-docs/R0 - Document Short-form Template/Template 4 - Proposal Template/main.tex
+**"e:/Core/Public Directory/RHINALAB-RHINELAB/RHINELAB@UNIG-2-LOGIT/rhine-lab-doc-source-gen/V1 (April-June 2026)/R0 - Document Short-form Template/Template 4 - Proposal Template/main.tex"
+(e:/Core/Public Directory/RHINALAB-RHINELAB/RHINELAB@UNIG-2-LOGIT/rhine-lab-doc-source-gen/V1 (April-June 2026)/R0 - Document Short-form Template/Template 4 - Proposal Template/main.tex
 LaTeX2e <2025-06-01>
 L3 programming layer <2025-05-26>
 (D:\MikTek\tex/latex/base\article.cls
@@ -1065,7 +1065,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 LaTeX Font Warning: Font shape `T1/mlmr/bx/sc' undefined
-(Font)              using `T1/mlmr/bx/n' instead on input line 119.
+(Font)              using `T1/mlmr/bx/n' instead on input line 121.
 
 [1{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{D:/MikTek/fonts/enc/dvips/lm/lm-ec.enc}
 
@@ -1102,12 +1102,15 @@ LaTeX Font Warning: Font shape `T1/mlmr/bx/sc' undefined
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
+LaTeX Font Info:    Trying to load font information for TS1+mlmr on input line 174.
+ (D:\MikTek\tex/latex/mlmodern\ts1mlmr.fd
+File: ts1mlmr.fd 2021/01/11 v1.0 Font defs for mlmodern
+)
 
 [2
 
-]
-LaTeX Font Info:    Trying to load font information for T1+mlmss on input line 175.
+{D:/MikTek/fonts/enc/dvips/lm/lm-ts1.enc}]
+LaTeX Font Info:    Trying to load font information for T1+mlmss on input line 188.
  (D:\MikTek\tex/latex/mlmodern\t1mlmss.fd
 File: t1mlmss.fd 2021/01/11 v1.0 Font defs for mlmodern
 )
@@ -1116,18 +1119,20 @@ File: t1mlmss.fd 2021/01/11 v1.0 Font defs for mlmodern
 
 [4]
 LaTeX Font Info:    External font `mlmex10' loaded for size
-(Font)              <10> on input line 241.
+(Font)              <10> on input line 258.
 LaTeX Font Info:    External font `mlmex10' loaded for size
-(Font)              <7> on input line 241.
+(Font)              <7> on input line 258.
 LaTeX Font Info:    External font `mlmex10' loaded for size
-(Font)              <5> on input line 241.
-LaTeX Font Info:    Trying to load font information for T1+mlmtt on input line 244.
+(Font)              <5> on input line 258.
+LaTeX Font Info:    Trying to load font information for T1+mlmtt on input line 261.
  (D:\MikTek\tex/latex/mlmodern\t1mlmtt.fd
 File: t1mlmtt.fd 2021/01/11 v1.0 Font defs for mlmodern
 )
 
 [5]
-runsystem(latexminted cleantemp  --timestamp 20260420231037 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+
+[6]
+runsystem(latexminted cleantemp  --timestamp 20260711230025 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
 
  (main.aux)
  ***********
@@ -1139,23 +1144,23 @@ L3 programming layer <2025-05-26>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D61FC8729767763111B46F8100D12E33;1472.
+(rerunfilecheck)             Checksum: 4919AAF27414F937BDAAF14127CB197D;1590.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38685 strings out of 468187
- 791820 string characters out of 5448666
+ 38727 strings out of 468187
+ 793430 string characters out of 5448668
  1765477 words of memory out of 5000000
- 66620 multiletter control sequences out of 15000+600000
- 693773 words of font info for 75 fonts, out of 8000000 for 9000
+ 66654 multiletter control sequences out of 15000+600000
+ 698401 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,12n,101p,869b,1795s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<D:/MikTek/fonts/type1/public/mlmodern/mlmbx10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmbx12.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmbx8.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmbx9.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmcsc10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmr10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmr12.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmr9.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmri10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmri7.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmss10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmtt10.pfb>
-Output written on main.pdf (5 pages, 235180 bytes).
+ 98i,12n,101p,871b,1795s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<D:/MikTek/fonts/type1/public/mlmodern/mlmbx10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmbx12.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmbx8.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmbx9.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmcsc10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmr10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmr12.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmr9.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmri10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmri7.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmri9.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmss10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmtt10.pfb>
+Output written on main.pdf (6 pages, 255390 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 208 PDF objects out of 1000 (max. 8388607)
+ 50 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
