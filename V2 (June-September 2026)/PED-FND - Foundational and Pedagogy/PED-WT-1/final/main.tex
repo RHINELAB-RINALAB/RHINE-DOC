@@ -1,0 +1,286 @@
+\documentclass[10pt]{article}
+
+\usepackage{arxiv}
+\usepackage{etoolbox,enumitem}
+
+\AtBeginDocument{
+
+  \setlength{\parskip}{0pt}%
+  \setlength{\parindent}{15pt}%
+
+  % Math spacing
+  \setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt}%
+  \setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt}%
+
+  % Floats
+  \setlength{\textfloatsep}{8pt plus 2pt minus 2pt}%
+  \setlength{\floatsep}{8pt plus 2pt minus 2pt}%
+  \setlength{\intextsep}{8pt plus 2pt minus 2pt}%
+  \setlength{\abovecaptionskip}{4pt}%
+  \setlength{\belowcaptionskip}{0pt}%
+}
+
+% Lists (itemize/enumerate)
+\setlist{itemsep=2pt, topsep=2pt, parsep=0pt, partopsep=0pt}
+
+\makeatletter
+\def\fps@figure{!t}
+\def\fps@table{!t}
+\makeatother
+
+\emergencystretch=3em
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{silence}
+\WarningFilter{latex}{Command \showhyphens}
+\usepackage{microtype}      % microtypography
+\microtypesetup{activate=true}    % ensure microtype is on (final mode)
+% \flushbottom                      % fill pages evenly
+\usepackage{lipsum}		% Can be removed after putting your text content
+\usepackage{float} % For [H] float specifier
+\usepackage{graphicx}
+\usepackage{doi}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{titling}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{cleveref}
+\usepackage{bm}
+
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+\renewcommand{\topfraction}{0.98}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.90}
+
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{0pt}
+\setlength{\abovedisplayskip}{8pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{8pt plus 2pt minus 2pt}
+
+\usepackage[section]{placeins}
+\usepackage{caption}
+
+\setlength{\parindent}{15pt}
+\setlength{\parskip}{0pt}
+
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\setlength{\abovecaptionskip}{1pt}
+
+\setlength{\textfloatsep}{1pt}
+\setlength{\floatsep}{1pt}
+
+
+\title{Problem set on quantum physics - conceptual and theoretical}
+\author{
+  %Ziv Chen$^{\text{a,c}}$\thanks{Corresponding author: \texttt{ziv.chen@campus.technion.ac.il}} \quad
+  %Gal G. Shaviner$^{\text{b}}$ \quad 
+  %Hemanth Chandravamsi$^{\text{b}}$ \quad
+  %Shimon Pisnoy$^{\text{b}}$ \quad \\
+  %Steven H. Frankel$^{\text{b,c}}$ \quad
+  %Uzi Pereg$^{\text{a,c}}$
+  %\vspace{5pt} \\
+  %\small{$^{\text{a}}$The Andrew and Erna Viterbi Faculty of Electrical \& Computer Engineering,} \\ [-0.25em]
+  %\small{Technion - Israel Institute of Technology, Haifa, Israel.} \\
+  %\small{$^{\text{b}}$Faculty of Mechanical Engineering, Technion - Israel Institute of Technology, Haifa, Israel.} \\
+  %\small{$^{\text{c}}$Helen Diller Quantum Center, Technion - Israel Institute of Technology, Haifa, Israel.} \\
+  Bui Gia Khanh (Fujimiya Amane) - RHINELAB@CAD \\
+  {\small Principal Researcher, RHINELAB Advanced Research Laboratory}
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Just a problem set mainly about quantum physics and up perhaps to quantum field theory. 
+
+By default, of analysis and consideration, this document is tagged and defined as contents for \textbf{PED-WT-1}, i.e. it is \textbf{PED-WT-1A}. 
+\end{abstract}
+
+\keywords{Problem set, quantum physics, quantum mechanics, quantum field theory}
+
+
+\clearpage
+
+\section{Clarification of Classicality}\label{sec:ClassicalProb}
+
+The following set up the precondition of the \textbf{classical physics} of the environment before quantum mechanics. Some of them are revisions, some are acute presentation and understanding thereof. 
+
+\begin{enumerate}[itemsep=1pt,topsep=1pt]
+  \item Determine the core central of classical physics. Starts with pre-Newtonian physics.
+  \item State and analyze the \textbf{assumptions, setup, necessity and capturing targets} of Newtonian formalism. 
+  \item State and analyze in same nature, of \textbf{Lagrangian formalism}. 
+  \item Similarly, for Hamiltonian formalism. 
+  \item Are you aware of certain \textbf{alternative representation}, pre-1900s formalism in the same kind of those above? If not, can you think of some? Write them down and formalise it?
+  \item State and analyze the \textbf{scalability argument}: all of the above formalism assumes the world is \textit{extensible enough} that their extracted principles, are, in a way, the most general and most completed, that can be used to describe \textit{large systems}, and \textit{small systems} in arbitrary scale. Is this apparent in those above formalism? How are they exhibited? Give example on where that succeed? Analyze the implication and structural extension, for example, given $n$, what would then happen if we have $n+m$, assumed \textbf{discrete particles}, such that $n\ll m$? 
+  \item Clarify the role and \textbf{structure, usage, what has been used} of the mathematical language up to this point. 
+  \item Why is Hamiltonian physics used in the majority of the cases afterward for theoretical physics, as well as also for the later formed quantum physics?
+  \item From that, \textit{state and classify} the central object of study in classical physics, the \textbf{physical world} that is classical physics. What is the objects in analysis? What is the properties of this object? 
+  \item We can separate the physics architecture into two parts: \textbf{physical world} and \textbf{realization world}. Realization world contains fields as the notion, force as the notion, and time, evolution, space, etc. In simpler term, it is where that is separated from \textbf{physical world} as for only observables, what you see, the object you can touch, not math, and certainly not fields, which are taken as `spooky action from a distance'. State them under classical view and their rules, laws and equivalent notion under contemporary classical theoretical physics. 
+  \item Same sense as two questions above, state and analyze of similarly, for: kinematic, dynamics, electrostatic, electrodynamics, thermodynamics, fluid dynamics, classical thermal physics, classical plasma physics, classical atomic theory, classical energy formalism, classical dynamics, classical many-body dynamics, optical physics, statistical mechanics, acoustic and wave mechanics (music and sound), harmonic theory, classical gravitation and potential fields, classical orbital mechanics. 
+  \item Clarify the role and \textbf{structure, usage, what has been used} of the mathematical language up to this point. 
+  \item Reflection and summary on those discoveries. 
+  \item Have you found the \textbf{boundary conditions} and \textbf{assumption load} of the classical physics scheme? If not, why? 
+  \item Clarify and determine, at least ten, problems with classical physics? 
+\end{enumerate}
+
+Answer those questions in order if preferable, however you can skip one if it proves to be too hard or time-consuming. Write, and analyze \textbf{as rigorous and as long, verbose, analytical and thoughtful} as possible. You are not allowed to write briefly or so, but to write it long, with reflection, personal opinions, thoughts, extension and expansion of views and insights. Analyze from all facets: philosophically, historically, accessibility consideration of contemporary knowledge at the time, and rigorous analytical formation of the ideas. 
+
+\section{Quantum observation}
+
+The following considers the main central spine of what to become of quantum physics, at least in its way. 
+\begin{enumerate}[itemsep=1pt,topsep=1pt]
+  \item Quantum physics is said to have been originated from Max Planck's explanation of black-body radiation. Explain this phenomenon and its surrounding experimental setup, and also the thought experiment. 
+  \item Provide, in that sense, your own list of experiments and setup, about black-body radiation, both to validate the existence of the body, and different properties of concern. 
+  \item Should it be, the resurgence of \textbf{quanta}, as well as the origination of quantum physics, stems from the classical dilemma between \textbf{continuous} and \textbf{discreteness}. Consider this, and analyze how it affected classical physics, and in the upcoming quantum physics, what is the advantage and disadvantage thereof for one to use the \textbf{discrete view} that would be seen in quantum physics? 
+  \item Quantum optics of the time states, for atoms of the walls of the black body behave like tiny \textbf{electromagnetic oscillators} (Q: why is this a model at all?), each with a characteristic frequency of oscillation. As it says, an oscillator has energies (Q: Why energy?) given by $E_{n}=n h \mu$, with $n$ energy levels (Q: what is the idea of having energy level and the implication?), oscillators can absorb energy from the cavity or emit energy into the cavity only in discrete units called quanta, i.e. $\Delta E_{n}=\Delta n h \mu$ or just $h\mu$ (Q: It seems like quanta are \textit{stable and similar to each other}, and also there is an exclusion rule here, analysis?). Spectral energy equation gives \begin{equation}
+    u_{v} = \frac{8\pi h\mu^{3}}{c^{3}} \frac{dv}{\exp{\left(h\mu /kT\right)}-1}
+  \end{equation} 
+  Analyze the whole chains and if able, remake the experimental setup, reformulate the quantum hypothesis? What are the assumptions? 
+  \item Explain the photoelectric's effect \textbf{quanta formalism}, especially in the photoelectric equation: 
+  \begin{equation}
+    h\mu = h\mu_{0} + \frac{1}{2} mv^{2}.
+  \end{equation}
+  This is for $h\mu$ the energy of the incident photon, $h\mu_{0}$ is the work function of the surface, and $v_{0}$ is the threshold frequency. The rest mass of photon is said as zero. Recreate the experiment and its constraints? 
+  \item Compton effect is given of $X$-ray on monochromatic wavelength $\lambda$ (Q: What if you have experiment on non-monochromatic lights?), impacting on a graphite block (Q: What if it is something else?), the scattered wavelength after the interaction, $\lambda'$, is given by: \begin{equation}
+    \lambda' - \lambda = \frac{h}{m_{0}c} (1-\cos{(\phi)})
+  \end{equation}
+  The factor $h/m_{0}c$ is called the \textbf{Compton wavelength}. Analyze this experiment and reconstruction? 
+  \item 
+  \item The \textbf{Stern-Gerlach experiment} concerns Otto Stern and Walther Gerlach (1922) on their experiment consists of an oven, that produced a beam of neutral atoms, a region of space with an \textbf{inhomogeneous magnetic field}, and a detector for the atom at the end. The magnetic field is expected to interact with the neutral atom, by $E=\bm{\mu}\cdot \bm{B}$, which results in a force $\nabla (\bm{\mu}\cdot \bm{B})$, along the $z$-axis. The structure of the neutral atom itself has a \textit{magnetic moment} from a classical view, such that when in motion, it produces loops of current that give rise to magnetic moments. A loop of area $A$ and current $I$ produces a magnetic moment $\mu = IA$, and then for speed up to $v$, circle radius $r$, then $\mu =( q/2m)L$ as the formulation, $L=mrv$. The intrinsic angular momentum, or called \textbf{spin} of the object, born from the reason that why not, if we imagine the atom having orbital angular momentum $\mathbf{L}$, and thus also gives the \textbf{gyromagnetic ratio} $g$, written of: 
+  \begin{equation}
+    \bm{\mu} = g \cdot \frac{q}{2m} \mathbf{S}
+  \end{equation}
+  for spin $\mathbf{S}$. When they interacts, experiment result that Stern and Gerlach observed was that there are two deflections routes, indicating there are two possible values of the $z$-component of the electron spin. The magnitudes of these deflections are consistent so much so that $S_{z}=\pm \hbar /2$ for reduced Planck constant, and is the evidence for the apparent \textbf{quantization} of electron's spin angular momentum. Analyze, reconstruct, derive, and dissect the experiment of its assumptions? What can be extended of this experiment? What can be attributed to fluctuation and variations, setting impurities? What is intrinsic that would contribute to the observations? Can, under assumptions, that \textbf{least action principle} acts on this apparent resultant of the discretization, instead of giving continuous distribution of deflection of spin components? Another question, should it be saying of the \textbf{inheren chaotic interactions} of microscopic scale that certain amount of electron was missing, or so much that the thermal oven is actually not giving us randomized distribution of magnetic moment from the start? 
+  \item The \textbf{sequential Stern-Gerlach experiment} (Einstein-Ehrenfest-Heisenberg, 1922-1923). In basic terms, it suggests the testing of multiple aligned setups. It tests for a series of \textbf{Stern-Gerlach on $x,y,z$-axis}, denoted $SG\mathbf{x}$, $SG\mathbf{y}$, and $SG\mathbf{z}$. If an atom's spin is filtered to be "spin-up" along the \(z\)-axis, passing it through a second apparatus measuring the \(x\)-axis splits the beam into two equal paths. However, as observed in the experiment taken by Frisch and Segrè, if you filter the \(x\)-axis output and measure the \(z\)-axis again, the beam splits again into up and down. Analysis and recreation of the experiment? 
+  \item The \textbf{Einstein-de Hass effect} is a bridge linking mechanics, magnetism, and topology as it is often considered. ANalyze this experiment in its most simplified version? 
+  \item The \textbf{Mach-Zehnder Interferometer experiment} contains the quantum phenomenon observed of single-particle interference experiment. If a source that emits only one particle at a time, is used in a classic double slit experiment, an interference patterns will emerge. This pattern is built up over multiple passes of identical particles. Interestingly, the pattern could be switched on and off even after light has emerged from the interferometer. The Mach-Zehnder interferometer is an amplitude splitting interferometer which divides the beams into two paths, as shown in the picture thereof.
+\end{enumerate}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.7\textwidth]{img/mach.png}
+\end{figure}
+
+The explanation is often as followed\footnote{\url{https://quantumphysics-consciousness.eu/index.php/en/the-mach-zehnder-interferometer-explained/}}. 
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.5\textwidth]{img/mach2.png}
+  \caption{The Mach-Zehnder with plate beam splitters.}
+\end{figure}
+There, the explanation is followed from the website (as I will take it): 
+
+\begin{quote}
+  We follow first the wave U travelling along the upper path 1-2-4 going to D1. Reflection at beam splitter 1 gives a $180^{\circ}$ phase shift. Then another $180^{\circ}$ phase shift happens at full mirror 2. There is no reflection at beam splitter 4 when going straight to D1. Total phase shift thus adds up to $360^{\circ}$. The wave D travelling along the lower path 1-3-4 going to D1 will experience 180o phase shift at mirror 3 and a 180o phase shift at beam splitter 4. Adds also up to $360^{\circ}$. So the phase difference in the recombined wave going from beam splitter 4 to D1 is zero. This means constructive interference, the waves add up. D1 receives light.
+
+  Now we follow the waves that should reach D2. The wave U travelling along 1-2-4 receives a $180^{\circ}$ phase shift at beam splitter 1. Another $180^{\circ}$ phase shift at full mirror 2. Then finally zero phase shift by the reflection from glass to air at beam splitter 4 in the direction of D2. Total is thus $360^{\circ}$. The wave D travelling along 1-3-4 receives only one phase shift at mirror 3 of $180^{\circ}$. So the recombined two waves going from beam splitter 4 to detector D2 will interfere with phase difference $180^{\circ}$, which means fully opposite phases. Which means destructive interference. D2 receives no light.
+\end{quote}
+
+Analyze and explain this explanation? Formalise it, and provide structural derivation for the effect? Play with it also, if you will. 
+
+\section{Quantum formalism}
+
+This part is basically the \textbf{reformulation and thus, on principles, of quantum mechanics}. While there are not so many problems and so on, Section~\ref{sec:ClassicalProb} has all the required questions, just interpreted to ask for quantum physics. The fields of research in question 11 is replaced by quantum-version and quantum extensions of them. In a sense, think about \textbf{quantum formalism}, and answer all 15 questions for that formalism or so. 
+
+Aside from such, some inherently quantum formalism and quantum-specific field point are to be seen and analyzed. We will list them as followed. 
+
+\begin{enumerate}[itemsep=1pt,topsep=1pt]
+  \item Explain the quantum formalism, its setting, realization and necessity of moving from classical physics upward. 
+  \item Explain and analyze the \textbf{backtracking requirement} of natural science - for any preceding theory of the natural world, it must contain clarification, derivation, formulation and incorporation of previous theories, in one form or another. How can this be done when one form quantum physics? 
+  \item What is the \textbf{quantum} in physics here? What is classified as quantum of such? 
+  \item If, quantum stems from \textit{quanta} and thus is discrete, what is being discretized? What is being taken continuously? Why? What is the role of the Planck constant $h$ at that? 
+  \item What is, the introduction and the role of the sudden inclusion of the probability language? Analyze the mathematical language and its role of presentation. 
+  \item Between the physical world and the realization world, explore and formalise the shape of that world in quantum physics - namely for example, between observables, measurements, observers, phase spaces, configuration space, and wavefunction spaces. Problem regarding those structures? Determination of quantities?
+  \item How one can then introduce the mathematical langauge that would be used here for quantum physics? List them out, of nature. Do not commit to any particular interpretation or representation, but only the requiring apparatus and components to satisfy this quantum modelling. 
+  \item How one then introduces \textbf{dynamics} into the quantum world? Explain and outline, analyze the necessary components. 
+  \item Explain, if able, and expand or formalise in your own way or so, matrix-based mechanics, pilot wave theory, wave mechanics of Schrödinger, Path Integral Formulation of Feynman? Connect to the above question? 
+  \item Analyze the statistical nature of quantum mechanics, at that? For example, what gave rise to the Ehrenfest's equation, famously written of \(m \frac{d}{dt} \langle x \rangle = \langle p \rangle\)\(\frac{d}{dt} \langle p \rangle = - \langle \nabla V(x) \rangle\) or \(\frac{d}{dt} \langle p \rangle = - \langle \nabla V(x) \rangle\)?
+  \item What are interpretations of quantum mechanics, explore and analyze the famous one? Dissecting their assumptions and interpretations? 
+\end{enumerate}
+
+If you have times, extend the 15 questions and its spirit of analysis, from Section~\ref{sec:ClassicalProb} into the following topic - note that all of those theories are \textbf{not true}, inherently, and they must be analyzed of their nature, either claims on approximation, or intrinsic ontological reality (that is, they think their theory is the world operating). Such includes: 
+\begin{enumerate}[itemsep=1pt,topsep=1pt]
+  \item \textbf{Quantization} consideration, the first and second-quantization. The $n$-quantization theory. 
+  \item Theory of angular momentum in quantum physics. 
+  \item Spin-$1/2$ system and finite rotation. 
+  \item Symmetry, symmetric groups and presentations. 
+  \item Density operators. 
+  \item Ensembles mechanics, and formulation, statistical ensembles and quanta. 
+  \item Density functional theory and its assumptions, approximation and impossibility of finding. Density Approximation Theory (DSA) is the empirical and realistic version of such. 
+  \item Eigenvalues and Eigenstates of Angular Momentum. Implication and non-eigenvalue quantum systems. 
+  \item Oscillator approximation models, Schwinger's Oscillator Model, Schrödinger central potential. 
+  \item Bell's Inequality and its philosophical implication. 
+  \item Approximation of quantum physics: \textbf{Perturbation Theory}, time-dependent or time-independent, relativistic perturbation theory, variational methods (time-dependent potentials), scattering theory (Born approximation, Eikonal approximation, etc.). 
+\end{enumerate}
+
+\section{Quantum problems}
+
+There exists many problems regarding quantum theory and its problem. Notable one, we will specify in here. The easiest clarification and question thereof, can be seen from \textbf{Stern-Gerlach electron-spin collapse} mechanism, which is still not resolved. For most of this part, please explore and refer to \cite{prokhorov2026quantummechanicsproblemsparadoxes}, i.e. the texts of "Quantum Mechanics: Problems and Paradoxes". 
+
+
+\section{Quantum Field Theory}
+
+Quantum field theory inherited classical field theory. For a quick introduction. We can go as followed. Instead of tracking, as theoretical mechanics intended, of a finite number of particles coordinate $q_{i}(t)$ as functions of time, field theory assigns the \textbf{proxy mathematical object} - to every single point on the spacetime manifold - be it scalar, vector, tensor, and group, ring, field structure (Q: What would be their effect - should it just be tracking or it alters our view of the physical world?). Classical field by then, possess an infinite number of degrees of freedom, transforming the governing equation from ODE to PDE spatially. \textbf{Prerequisite} for this is the notion of \textbf{action}\footnote{For starter, action integral is given by \begin{equation}
+  S[q(t)] = \int_{t_{1}}^{t_2} L(q,\dot{q})\: dt
+\end{equation}where $q(t)$ is the assumed dynamical variable.} and Lagrangian mechanics, which includes the \textbf{Euler-Lagrange equation}\footnote{The Euler-Lagrange equation is given by \begin{equation}
+  \frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} + \frac{\partial L}{\partial q} = 0,
+\end{equation}}. We note that often time, the equation of motion for the system under field theory is rewritten, famously and most mainstream being used as: 
+\begin{equation}
+  \frac{\partial}{\partial t} \left( \frac{\partial \mathcal{L}}{\partial \left(\frac{\partial \phi_i}{\partial t}\right)} \right) + \frac{\partial}{\partial x} \left( \frac{\partial \mathcal{L}}{\partial \left(\frac{\partial \phi_i}{\partial x}\right)} \right) + \frac{\partial}{\partial y} \left( \frac{\partial \mathcal{L}}{\partial \left(\frac{\partial \phi_i}{\partial y}\right)} \right) + \frac{\partial}{\partial z} \left( \frac{\partial \mathcal{L}}{\partial \left(\frac{\partial \phi_i}{\partial z}\right)} \right) - \frac{\partial \mathcal{L}}{\partial \phi_i} = 0
+\end{equation}
+or written shortly using the four gradient as
+\begin{equation}
+  \partial_\mu \left( \frac{\partial \mathcal{L}}{\partial (\partial_\mu \phi_i)} \right) - \frac{\partial \mathcal{L}}{\partial \phi_i} = 0
+\end{equation}
+
+Under loose notion of ontological beginning, a \textbf{field} can be considered fundamentally defined as a physical quantity that is uniquely and continuously assigned to every single point throughout space, and is either stable or transferred through time evolution. As field theory indicted, $t$ is non-dynamical (now indexing), $(x,y,z)$ or any given $q(\cdot)$ is given as continuous spatial mapping,  for dynamical variables now being, for example, the \textbf{field flux} $\mathcal{\vec{F}}$. 
+
+Under spacetime 4-vector formulation, a \textbf{classical field} is a continuous family of dynamical variables $\Phi{\mathbf{x}}(t)$, one variable for each space point $\mathbf{x}=(x,y,z)$, and there exists a set for all such field, of $\{\Phi_{\mathbf{x}}(t)\}$. The above family is a function $\Phi(\mathbf{x},t)$ of all 4 spacetime coordinates $(x,y,z,t)$, in a way or another; note that space coordinate now functions as the indexing and label for the dynamics variables $\Phi_{\mathbf{x}}(t)$, and only to ground the spatial disposition of the object or physics. 
+
+As such, the Lagrangian $L[\Phi(\mathbf{x}),\dot{\Phi}(\mathbf{x})]$ for a classical field $\Phi$, is a functional of the entire space configuration of the field $\Phi(\mathbf{x})$, and its time derivative, written of
+\begin{equation}
+  \dot{\Phi}(\mathbf{x}) = \frac{\partial \Phi(\mathbf{x},t)}{\partial t}
+\end{equation}
+at any particular time. In many field-related theories, this is often replaced for to be a \textbf{density} instead, because we do not allow interactions at a distance. Thus, you would have
+\begin{equation}
+  L = \int d^{3} \mathbf{x} \mathcal{L}(\Phi, \nabla \Phi, \dot{\Phi})
+\end{equation}
+for $L$ Lagrangian now is a space integral of the \textbf{Lagrangian density}\footnote{In short, in classical physics, the Lagrangian function expresses the dynamics of a physical system. In a field theory, dealing with an infinite number of degrees of freedom, the Lagrangian takes the form of a density function. As opposed to dealing with a finite set of particles, field theories attempt to describe an infinite set of variables - the field's value at every point in space. The concept of the Lagrangian function needs to evolve into Lagrangian density where it captures the dynamics of field theories. Through Lagrangian Density, physicists can derive the equations of motion for the field. We note that here, \textbf{infinite} just means too difficult to bother to count. \textbf{Question:} Can there be non-density `Lagrangian density'?}, which is an ordinary local function of the field $\Phi$ and its space and time derivatives. This kind of formalism gave rise to, for example, the intricate quantum field formalism of the \textbf{Klein-Gordon Lagrangian density}, as:
+\begin{equation}
+  \mathcal{L}_{\mathsf{KG}} = \frac{1}{2} (\partial^{\mu} \phi \partial_{\mu} \phi - m^{2}\phi^{2})
+\end{equation}
+Here, $\phi$ is a scalar field, i.e. the quantum field with no spin of particular object, $\partial^{\mu}$ as the four-gradient. The much more classical result, can come off also for the Lagrangian density formalism of the \textbf{action Lagrangian density}, written under all $4$-coordinate system, as 
+\begin{equation}
+  S = \int \: dt \int \: d^{3}x \mathcal{L} 
+\end{equation}
+At the end of this, resulting Action is a scalar quantity, which doesn't change under transformations of coordinates - a transformation to a different viewpoint, so to speak.
+\subsection{Problem}
+
+I did not finish this part (for now). So uh, go do the other sections, please. 
+% References
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}

@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber main"] 1783159297.41277 "main.bcf" "main.bbl" "main" 1783159309.34435 0
-  "main.bcf" 1783159308 108180 38d268e2b0aab1b0471f29b9332d8f48 "pdflatex"
+["biber main"] 1783159297.41277 "main.bcf" "main.bbl" "main" 1783922322.65893 0
+  "main.bcf" 1783922322 108180 38d268e2b0aab1b0471f29b9332d8f48 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1783159305.3512 "e:/Core/Public Directory/RHINALAB-RHINELAB/RHINELAB@UNIG-2-LOGIT/rhine-lab-doc-source-gen/V2 (June-September 2026)/PED-FND - Foundational and Pedagogy/PED-WT-2/main.tex" "main.pdf" "main" 1783159309.34553 0
+["pdflatex"] 1783922318.39205 "e:/Core/Public Directory/RHINALAB-RHINELAB/RHINELAB@UNIG-2-LOGIT/rhine-lab-doc-source-gen/V2 (June-September 2026)/PED-FND - Foundational and Pedagogy/PED-WT-2/main.tex" "main.pdf" "main" 1783922322.6601 0
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1780238419 6794477 1696acab82d42864081c62939ca5de18 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary10.tfm" 1752636001 848 f478e0761563bbc369eca609a1741348 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary6.tfm" 1752636008 848 068dd119e13b75777e62821af7d4f2a6 ""
@@ -245,12 +245,12 @@
   "D:/MikTek/tex/latex/upquote/upquote.sty" 1335534756 1088 517e01cde97c1c0baf72e69d43aa5a2e ""
   "D:/MikTek/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "D:/MikTek/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "e:/Core/Public Directory/RHINALAB-RHINELAB/RHINELAB@UNIG-2-LOGIT/rhine-lab-doc-source-gen/V2 (June-September 2026)/PED-FND - Foundational and Pedagogy/PED-WT-2/main.tex" 1783159284 4794 a27e407939426cb864b04aae80058bc0 ""
-  "main.aux" 1783159308 1112 dd41ad00de96d64afe602d5b043f6653 "pdflatex"
+  "e:/Core/Public Directory/RHINALAB-RHINELAB/RHINELAB@UNIG-2-LOGIT/rhine-lab-doc-source-gen/V2 (June-September 2026)/PED-FND - Foundational and Pedagogy/PED-WT-2/main.tex" 1783846174 5027 4aa112c7ab1e1702faa25dc1004c39d9 ""
+  "main.aux" 1783922322 1233 0bf37e6d49398f9ef0f2ec0731aeeef2 "pdflatex"
   "main.bbl" 1783159301 486 76d65a242ec496c9b4361af646ff12cb "biber main"
-  "main.out" 1783159308 660 f359b3590834ae5a8b3aad7d8eb978dc "pdflatex"
-  "main.run.xml" 1783159308 2305 fc711571100a98a2ee4dfa54db7994f0 "pdflatex"
-  "main.tex" 1783159284 4794 a27e407939426cb864b04aae80058bc0 ""
+  "main.out" 1783922322 829 0bffc8b4aea626337f338a1bead45206 "pdflatex"
+  "main.run.xml" 1783922322 2305 fc711571100a98a2ee4dfa54db7994f0 "pdflatex"
+  "main.tex" 1783846174 5027 4aa112c7ab1e1702faa25dc1004c39d9 ""
   "preamble.tex" 1731035769 2610 eececfef08342827abc459f065be7565 ""
   (generated)
   "main.aux"

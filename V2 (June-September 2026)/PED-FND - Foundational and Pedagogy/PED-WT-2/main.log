@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2026.6.5)  4 JUL 2026 19:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2026.6.5)  13 JUL 2026 14:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1213,7 +1213,7 @@ LaTeX Font Warning: Font shape `T1/mlmr/bx/sc' undefined
 [2
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260704190145 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20260713145839 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
 
  (main.aux)
  ***********
@@ -1225,23 +1225,23 @@ L3 programming layer <2025-05-26>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F359B3590834AE5A8B3AAD7D8EB978DC;660.
+(rerunfilecheck)             Checksum: 0BFFC8B4AEA626337F338A1BEAD45206;829.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39928 strings out of 468187
- 804353 string characters out of 5448668
+ 39930 strings out of 468187
+ 804373 string characters out of 5448668
  1776034 words of memory out of 5000000
- 67862 multiletter control sequences out of 15000+600000
+ 67863 multiletter control sequences out of 15000+600000
  675983 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,12n,101p,855b,1795s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/MikTek/fonts/type1/public/mlmodern/mlmbx10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmbx12.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmbx8.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmbx9.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmcsc10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmr10.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmr12.pfb><D:/MikTek/fonts/type1/public/mlmodern/mlmr9.pfb>
-Output written on main.pdf (2 pages, 138474 bytes).
+Output written on main.pdf (2 pages, 142862 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
