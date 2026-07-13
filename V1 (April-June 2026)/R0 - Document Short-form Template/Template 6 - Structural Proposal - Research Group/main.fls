@@ -1,6 +1,6 @@
-PWD c:\Users\thinkbook\Documents\RHINELAB Documents\RHINE-DOC\V1 (April-June 2026)\R0 - Document Short-form Template\Template 4 - Proposal Template
+PWD c:\Users\thinkbook\Documents\RHINELAB Documents\RHINE-DOC\V1 (April-June 2026)\R0 - Document Short-form Template\Template 6 - Structural Proposal - Research Group
 INPUT C:\Users\thinkbook\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\thinkbook\Documents\RHINELAB Documents\RHINE-DOC\V1 (April-June 2026)\R0 - Document Short-form Template\Template 4 - Proposal Template\main.tex
+INPUT c:\Users\thinkbook\Documents\RHINELAB Documents\RHINE-DOC\V1 (April-June 2026)\R0 - Document Short-form Template\Template 6 - Structural Proposal - Research Group\main.tex
 OUTPUT main.log
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -384,7 +384,6 @@ INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\tex\latex\mlmodern\omxmlm
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\mlmex10.tfm
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\ec-mlmr9.tfm
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\ec-mlmbx9.tfm
-INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\ec-mlmri9.tfm
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\ec-mlmcsc10.tfm
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\ec-mlmr8.tfm
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\ec-mlmbx8.tfm
@@ -392,16 +391,11 @@ INPUT C:\Users\thinkbook\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ec.enc
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\ec-mlmbx12.tfm
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\ec-mlmbx10.tfm
-INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\tex\latex\mlmodern\ts1mlmr.fd
-INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\tex\latex\mlmodern\ts1mlmr.fd
-INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\tex\latex\mlmodern\ts1mlmr.fd
-INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\ts1-mlmr10.tfm
-INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
-INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\ec-mlmri10.tfm
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\tex\latex\mlmodern\t1mlmss.fd
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\tex\latex\mlmodern\t1mlmss.fd
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\tex\latex\mlmodern\t1mlmss.fd
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\ec-mlmss10.tfm
+INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\ec-mlmri10.tfm
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\rm-mlmr10.tfm
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\rm-mlmr7.tfm
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mlmodern\rm-mlmr5.tfm
@@ -441,8 +435,6 @@ INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\type1\public\mlmode
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\type1\public\mlmodern\mlmri10.pfb
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\type1\public\mlmodern\mlmri7.pfb
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\type1\public\mlmodern\mlmri7.pfb
-INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\type1\public\mlmodern\mlmri9.pfb
-INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\type1\public\mlmodern\mlmri9.pfb
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\type1\public\mlmodern\mlmss10.pfb
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\type1\public\mlmodern\mlmss10.pfb
 INPUT C:\Users\thinkbook\AppData\Local\Programs\MiKTeX\fonts\type1\public\mlmodern\mlmtt10.pfb
